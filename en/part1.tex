@@ -2,7 +2,7 @@
 
 \input{preamble.tex}
 
-\subtitle{Part 1: The Basics}
+\subtitle{Part 1: Fonaments}
 
 \begin{document}
 
@@ -16,21 +16,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Why \LaTeX{}?}
+\begin{frame}{Per què \LaTeX{}?}
 \begin{itemize}
-\item It makes beautiful documents
+\item Fa documents amb una bona presentació
 \begin{itemize}
-\item Especially mathematics
+\item Especialment per a matemàtiques
 \end{itemize}
 %
-\item It was created by scientists, for scientists
+\item Creat per científics, per a científics
 \begin{itemize}
-\item A large and active community
+\item Una comunitat gran i activa
 \end{itemize}
 %
-\item It is powerful --- you can extend it
+\item És potent --- podeu estendre-ho
 \begin{itemize}
-\item Packages for papers, presentations, spreadsheets, \ldots
+\item Paquets per a treballs, presentacions, fulls de càlcul, \ldots
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -38,35 +38,35 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{How does it work?}
+\begin{frame}[fragile]{Com funciona?}
 \begin{itemize}
-\item You write your document in \texttt{plain text} with \cmd{commands} that
-describe its structure and meaning.
-\item The \texttt{latex} program processes your text and commands to produce a
-beautifully formatted document.
+\item Escriviu el document a \texttt{text pla} amb \cmd{ordres} que
+descriuen la seva estructura i significat.
+\item El programa \texttt{latex} processa el text i les ordres per a produir un
+document amb un format bonic.
 \end{itemize}
 \vskip 2ex
 \begin{center}
 \begin{minted}[frame=single]{latex}
-The rain in Spain falls \emph{mainly} on the plain.
+La pluja cau \emph{principalment} a la plana.
 \end{minted}
 \vskip 2ex
 \tikz\node[single arrow,fill=gray,font=\ttfamily\bfseries,%
   rotate=270,xshift=-1em]{latex};
 \vskip 2ex
-\fbox{The rain in Spain falls \emph{mainly} on the plain.}
+\fbox{La pluja cau \emph{principalment} a la plana.}
 \end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{More examples of commands and their output\ldots}
+\begin{frame}[fragile]{Més exemples d'ordres i la seva sortida\ldots}
 \begin{exampletwoup}
 \begin{itemize}
-\item Tea
-\item Milk
-\item Biscuits
+\item Mel
+\item Llet
+\item Galetes
 \end{itemize}
 \end{exampletwoup}
 \vskip 2ex
@@ -82,39 +82,39 @@ The rain in Spain falls \emph{mainly} on the plain.
 \end{equation}
 \end{exampletwoup}
 
-\tiny{Image license: \href{https://pixabay.com/en/animal-apple-attractive-beautiful-1239390/}{CC0}}
+\tiny{Imatge: \href{https://pixabay.com/en/animal-apple-attractive-beautiful-1239390/}{CC0}}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Attitude adjustment}
+\begin{frame}[fragile]{Canvi d'actitud}
 
 \begin{itemize}
-\item Use commands to describe `what it is', not `how it looks'.
-\item Focus on your content.
-\item Let \LaTeX{} do its job.
+\item Usa ordres per descriure `el què', no `com es veu'.
+\item Centra't en el teu contingut.
+\item Deixa que \LaTeX{} faci la seva feina.
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{The Basics}
+\section{Fonaments}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Getting started}
+\subsection{Començant}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}
-\item A minimal \LaTeX{} document:
+\item Un document de \LaTeX{} mínim:
 \inputminted[frame=single]{latex}{basics.tex}
-\item Commands start with a \emph{backslash} \keystrokebftt{\bs}.
-\item Every document starts with a \cmdbs{documentclass} command.
-\item The \emph{argument} in curly braces \keystrokebftt{\{} \keystrokebftt{\}} tells \LaTeX{} what kind of document we are creating: an \bftt{article}.
-\item A percent sign \keystrokebftt{\%} starts a \emph{comment} --- \LaTeX{}
-will ignore the rest of the line.
+\item Les ordres comencen amb una \emph{barra inversa} \keystrokebftt{\bs}.
+\item Cada document comença amb una ordre \cmdbs{documentclass}.
+\item L'\emph{argument} entre claus \keystrokebftt{\{} \keystrokebftt{\}} li diu a \LaTeX{} quin tipus de document estem creant: un \bftt{article}.
+\item Un signe de percentatge \keystrokebftt{\%} inicia un \emph{comentari} --- \LaTeX{}
+ ignorarà la resta de la línia.
 \end{itemize}
 \end{frame}
 
@@ -123,42 +123,40 @@ will ignore the rest of the line.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{} with \wllogo}
 \begin{itemize}
-\item Overleaf is a website for writing documents in \LaTeX.
-\item It `compiles' your \LaTeX{} automatically to show you the results.
+\item Overleaf és un lloc web per escriure documents a \LaTeX.
+\item `Compila' el teu \LaTeX{}  automàticament per a mostrar-te els resultats. 
 \vskip 2em
 \begin{center}
 \fbox{\href{\wlnewdoc{basics.tex}}{%
-Click here to open the example document in \wllogo{}}}
+Feu clic aquí per a obrir el document d'exemple a \wllogo{}}}
 \\[1ex]\scriptsize{}
-For best results, please use \href{http://www.google.com/chrome}{Google Chrome} or a recent \href{http://www.mozilla.org/en-US/firefox/new/}{FireFox}.
+Per obtenir els millors resultats, utilitzeu Google Chrome o un FireFox recent.
 \end{center}
 \vskip 2ex
-\item As we go through the following slides, try out the examples by typing them
-into the example document on Overleaf.
-\item \textbf{No really, you should try them out as we go!}
+\item A mesura que anem passant per les següents diapositives, proveu els exemples escrivint-los en el document d'exemple sobre Overleaf.
+\item \textbf{En serio, fes-ho a mesura que anem avançant!}
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Typesetting Text}
+\subsection{Escrivint Text}
 \begin{frame}[fragile]{\insertsubsection{}}
 \small
 \begin{itemize}
-\item Type your text between \cmdbegin{document} and \cmdend{document}.
-\item For the most part, you can just type your text normally.
-\begin{exampletwouptiny}
-Words are separated by one or more
-spaces.
+\item Escriviu el text entre \cmdbegin{document} i \cmdend{document}.
+\item En la seva major part, només has d'escriure el text amb normalitat.
 
-Paragraphs are separated by one
-or more blank lines.
-\end{exampletwouptiny}
-\item Space in the source file is collapsed in the output.
+\begin{itemize}
+    \item Les paraules estan separades per \textbf{almenys} un espai.
+    \item Els paràgrafs estan separats per \textbf{almenys} una línia en blanc.
+\end{itemize}
+
+\item Els espais del fitxer d'origen es col·lapsen a la sortida. 
 \begin{exampletwouptiny}
-The   rain       in Spain
-falls mainly on the plain.
+La  pluja     cau 
+principalment    a la plana
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -166,28 +164,28 @@ falls mainly on the plain.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Caveats}
+\begin{frame}[fragile]{\insertsubsection{}: Compte}
 \small
 \begin{itemize}
-\item Quotation marks are a bit tricky:\\
-use a backtick \keystroke{\`{}} on the left and an apostrophe \keystroke{\'{}} on the right.
+\item Les cometes són una mica complicades:\\
+useu un accent obert (\textit{backtick}) \keystroke{\`} a l'esquerra i un apòstrof (cometes simples) \keystroke{'} a la dreta.
 \begin{exampletwouptiny}
-Single quotes: `text'.
+Cometes simples: `text'.
 
-Double quotes: ``text''.
+Cometes dobles: ``text''.
 \end{exampletwouptiny}
 
-\item Some common characters have special meanings in \LaTeX:\\[1ex]
+\item Alguns caràcters comuns tenen significats especials a \LaTeX:\\[1ex]
 \begin{tabular}{cl}
-\keystrokebftt{\%} & percent sign              \\
-\keystrokebftt{\#} & hash (pound / sharp) sign \\
+\keystrokebftt{\%} & signe percentatge         \\
+\keystrokebftt{\#} & coixinet (sostingut)      \\
 \keystrokebftt{\&} & ampersand                 \\
-\keystrokebftt{\$} & dollar sign               \\
+\keystrokebftt{\$} & signe de dòlar            \\
 \end{tabular}
-\item If you just type these, you'll get an error. If you want one to appear in
-the output, you have to \emph{escape} it by preceding it with a backslash.
+\item Si només els escriviu, obtindreu un error. 
+    Si voleu que apareguin a la sortida, heu d'\textit{escapar-lo} precedint-lo amb una barra inversa \keystroke{\textbackslash}.
 \begin{exampletwoup}
-\$\%\&\#!
+\$, \%, \&, \#!
 \end{exampletwoup}
 \end{itemize}
 \end{frame}
@@ -202,7 +200,7 @@ it does, it stops with an error, which you must fix before it will produce
 any output.
 \item For example, if you misspell \cmdbs{emph} as \cmdbs{meph}, \LaTeX{} will
 stop with an ``undefined control sequence'' error, because ``meph'' is not
-one of the commands it knows.
+one of the ordres it knows.
 \end{itemize}
 \begin{block}{Advice on Errors}
 \begin{enumerate}
@@ -250,14 +248,14 @@ click here to see my solution}}.
 \item Why are dollar signs \keystrokebftt{\$} special? We use them to mark mathematics in text.\\[1ex]
 \begin{exampletwouptiny}
 % not so good:
-Let a and b be distinct positive
-integers, and let c = a - b + 1.
+Let a i b be distinct positive
+integers, i let c = a - b + 1.
 
 % much better:
-Let $a$ and $b$ be distinct positive
-integers, and let $c = a - b + 1$.
+Let $a$ i $b$ be distinct positive
+integers, i let $c = a - b + 1$.
 \end{exampletwouptiny}
-\item Always use dollar signs in pairs --- one to begin the mathematics, and one
+\item Always use dollar signs in pairs --- one to begin the mathematics, i one
 to end it.
 \item \LaTeX{} handles spacing automatically; it ignores your spaces.
 \begin{exampletwouptiny}
@@ -273,14 +271,14 @@ Let $y = m x + b$ be \ldots
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{}: Notation}
 \begin{itemize}
-\item Use caret \keystrokebftt{\^} for superscripts and underscore \keystrokebftt{\_} for subscripts.
+\item Use caret \keystrokebftt{\^} for superscripts i underscore \keystrokebftt{\_} for subscripts.
 \begin{exampletwouptiny}
 $y = c_2 x^2 + c_1 x + c_0$
 \end{exampletwouptiny}
 \vskip 2ex
 
 \item Use curly braces \keystrokebftt{\{} \keystrokebftt{\}} to group
-superscripts and subscripts.
+superscripts i subscripts.
 \begin{exampletwouptiny}
 $F_n = F_n-1 + F_n-2$     % oops!
 
@@ -288,7 +286,7 @@ $F_n = F_{n-1} + F_{n-2}$ % ok!
 \end{exampletwouptiny}
 \vskip 2ex
 
-\item There are commands for Greek letters and common notation.
+\item There are ordres for Greek letters i common notation.
 \begin{exampletwouptiny}
 $\mu = A e^{Q/RT}$
 
@@ -302,8 +300,8 @@ $\Omega = \sum_{k=1}^{n} \omega_k$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{}: Displayed Equations}
 \begin{itemize}
-\item If it's big and scary, \emph{display} it on its own line using
-\cmdbegin{equation} and \cmdend{equation}.\\[2ex]
+\item If it's big i scary, \emph{display} it on its own line using
+\cmdbegin{equation} i \cmdend{equation}.\\[2ex]
 \begin{exampletwouptiny}
 The roots of a quadratic equation
 are given by
@@ -311,7 +309,7 @@ are given by
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}
          {2a}
 \end{equation}
-where $a$, $b$ and $c$ are \ldots
+where $a$, $b$ i $c$ are \ldots
 \end{exampletwouptiny}
 \vskip 1em
 {\scriptsize Caution: \LaTeX{} mostly ignores your spaces in mathematics, but it
@@ -326,7 +324,7 @@ mathematics.}
 \begin{frame}[fragile]{Interlude: Environments}
 \begin{itemize}
 \item \bftt{equation} is an \emph{environment} --- a context.
-\item A command can produce different output in different contexts.
+\item A ordre can produce different output in different contexts.
 \begin{exampletwouptiny}
 We can write
 $ \Omega = \sum_{k=1}^{n} \omega_k $
@@ -337,9 +335,9 @@ in text, or we can write
 to display it.
 \end{exampletwouptiny}
 \vskip 2ex
-\item Note how the $\Sigma$ is bigger in the \bftt{equation} environment, and
-how the subscripts and superscripts change position, even though we used the
-same commands.
+\item Note how the $\Sigma$ is bigger in the \bftt{equation} environment, i
+how the subscripts i superscripts change position, even though we used the
+same ordres.
 \vskip 1em
 {\scriptsize In fact, we could have written \bftt{\$...\$} as
 \cmdbegin{math}\bftt{...}\cmdend{math}.}
@@ -351,11 +349,11 @@ same commands.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Interlude: Environments}
 \begin{itemize}
-\item The \cmdbs{begin} and \cmdbs{end} commands are used to create many
+\item The \cmdbs{begin} i \cmdbs{end} ordres are used to create many
 different environments.
 \vskip 2ex
 
-\item The \bftt{itemize} and \bftt{enumerate} environments generate lists.
+\item The \bftt{itemize} i \bftt{enumerate} environments generate lists.
 \begin{exampletwouptiny}
 \begin{itemize} % for bullet points
 \item Biscuits
@@ -376,21 +374,21 @@ different environments.
 \begin{frame}[fragile]{Interlude: Packages}
 
 \begin{itemize}
-\item All of the commands and environments we've used so far are built into
+\item All of the ordres i environments we've used so far are built into
 \LaTeX.
 
-\item \emph{Packages} are libraries of extra commands and environments. There
+\item \emph{Packages} are libraries of extra ordres i environments. There
 are thousands of freely available packages.
 
 \item We have to load each of the packages we want to use with a
-\cmdbs{usepackage} command in the \emph{preamble}.
+\cmdbs{usepackage} ordre in the \emph{preamble}.
 
 \item Example: \bftt{amsmath} from the American Mathematical Society.
 \begin{minted}[fontsize=\small,frame=single]{latex}
 \documentclass{article}
 \usepackage{amsmath} % preamble
 \begin{document}
-% now we can use commands from amsmath here...
+% now we can use ordres from amsmath here...
 \end{document}
 \end{minted}
 \end{itemize}
@@ -408,7 +406,7 @@ are thousands of freely available packages.
 \end{equation*}
 \end{exampletwouptiny}
 \item \LaTeX{} treats adjacent letters as variables multiplied together, which
-is not always what you want. \bftt{amsmath} defines commands for many common
+is not always what you want. \bftt{amsmath} defines ordres for many common
 mathematical operators.
 \begin{exampletwouptiny}
 \begin{equation*} % bad!
@@ -464,9 +462,9 @@ line.
 \begin{frame}[fragile]{Typesetting Exercise 2}
 
 \begin{block}{Typeset this in \LaTeX:}
-Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically
-distributed random variables with $\operatorname{E}[X_i] = \mu$ and
-$\operatorname{Var}[X_i] = \sigma^2 < \infty$, and let
+Let $X_1, X_2, \ldots, X_n$ be a sequence of independent i identically
+distributed random variables with $\operatorname{E}[X_i] = \mu$ i
+$\operatorname{Var}[X_i] = \sigma^2 < \infty$, i let
 \begin{equation*}
 S_n = \frac{1}{n}\sum_{i=1}^{n} X_i
 \end{equation*}
@@ -479,7 +477,7 @@ $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $N(0, \sigma^2)$.
 Click to open this exercise in \wllogo{}}}
 \end{center}
 \begin{itemize}
-\item Hint: the command for $\infty$ is \cmdbs{infty}.
+\item Hint: the ordre for $\infty$ is \cmdbs{infty}.
 \item Once you've tried,
 \fbox{\href{\wlnewdoc{basics-exercise-2-solution.tex}}{%
 click here to see my solution}}.
@@ -494,7 +492,7 @@ click here to see my solution}}.
 \item Congrats! You've already learned how to \ldots
 \begin{itemize}
 \item Typeset text in \LaTeX.
-\item Use lots of different commands.
+\item Use lots of different ordres.
 \item Handle errors when they arise.
 \item Typeset some beautiful mathematics.
 \item Use several different environments.
@@ -502,7 +500,7 @@ click here to see my solution}}.
 \end{itemize}
 \item That's amazing!
 \item In Part 2, we'll see how to use \LaTeX{} to write structured documents
-with sections, cross references, figures, tables and bibliographies. See you
+with sections, cross references, figures, tables i bibliographies. See you
 then!
 \end{itemize}
 \end{frame}

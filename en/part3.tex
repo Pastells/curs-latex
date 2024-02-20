@@ -4,8 +4,8 @@
 
 \subtitle{Part 3: Not Just Papers: Presentations \& More}
 
-\newcommand{\alice}[1]{\todo[color=green!40]{#1}}
-\newcommand{\bob}[1]{\todo[color=purple!40]{#1}}
+\newordre{\alice}[1]{\todo[color=green!40]{#1}}
+\newordre{\bob}[1]{\todo[color=purple!40]{#1}}
 
 \begin{document}
 
@@ -48,9 +48,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection}
 \begin{itemize}
-\item You write your document in \texttt{plain text} with \cmd{commands} that
-describe its structure and meaning.
-\item The \texttt{latex} program processes your text and commands to produce a
+\item You write your document in \texttt{plain text} with \cmd{ordres} that
+describe its structure i meaning.
+\item The \texttt{latex} program processes your text i ordres to produce a
 beautifully formatted document.
 \end{itemize}
 \vskip 2ex
@@ -69,12 +69,12 @@ The rain in Spain falls \emph{mainly} on the plain.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Commands \& Arguments}
+\begin{frame}[fragile]{\insertsection: ordres \& Arguments}
 \begin{itemize}
-\item A command starts with a \emph{backslash} \keystrokebftt{\bs}.
-\item Some commands take an \emph{argument} in curly braces \keystrokebftt{\{}
+\item A ordre starts with a \emph{backslash} \keystrokebftt{\bs}.
+\item Some ordres take an \emph{argument} in curly braces \keystrokebftt{\{}
 \keystrokebftt{\}}.
-\item Some commands also take \emph{optional arguments} in square brackets \keystrokebftt{[} \keystrokebftt{]}.
+\item Some ordres also take \emph{optional arguments} in square brackets \keystrokebftt{[} \keystrokebftt{]}.
 \vskip 2ex
 \begin{exampletwouptiny}
 \includegraphics[
@@ -94,10 +94,10 @@ The rain in Spain falls \emph{mainly} on the plain.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection: Environments}
 \begin{itemize}
-\item The \cmdbs{begin} and \cmdbs{end} commands are used to create many
+\item The \cmdbs{begin} i \cmdbs{end} ordres are used to create many
 different environments --- contexts.
 
-\item The \bftt{itemize} and \bftt{enumerate} environments make lists.
+\item The \bftt{itemize} i \bftt{enumerate} environments make lists.
 \vskip 2ex
 \begin{exampletwouptiny}
 \begin{itemize} % for bullet points
@@ -130,15 +130,15 @@ different environments --- contexts.
 \item Use dollar signs \keystrokebftt{\$} to mark mathematics in text.\\[1ex]
 \begin{exampletwouptiny}
 % not so good:
-Let a and b be distinct positive
-integers, and let c = a - b + 1.
+Let a i b be distinct positive
+integers, i let c = a - b + 1.
 
 % much better:
-Let $a$ and $b$ be distinct positive
-integers, and let $c = a - b + 1$.
+Let $a$ i $b$ be distinct positive
+integers, i let $c = a - b + 1$.
 \end{exampletwouptiny}
 \vskip 2ex
-\item Always use dollar signs in pairs --- one to begin the mathematics, and one
+\item Always use dollar signs in pairs --- one to begin the mathematics, i one
 to end it.
 \vskip 1em
 {\scriptsize In fact, we could have written \bftt{\$...\$} as
@@ -152,10 +152,10 @@ to end it.
 \begin{frame}[fragile]{\insertsection: Document Structure}
 \begin{itemize}{\small
 \item Starts with the \cmdbs{documentclass} --- what type of document.
-\item Metadata (\cmdbs{title} and \cmdbs{author}) and packages in the
+\item Metadata (\cmdbs{title} i \cmdbs{author}) i packages in the
 preamble.
-\item Content between \cmdbegin{document} and \cmdend{document}.
-\item The \cmdbs{maketitle} command creates the title; \cmdbs{section} commands
+\item Content between \cmdbegin{document} i \cmdend{document}.
+\item The \cmdbs{maketitle} ordre creates the title; \cmdbs{section} ordres
 create numbered sections.
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
@@ -180,7 +180,7 @@ create numbered sections.
 Click to open this exercise in \wllogo{}}}
 \end{center}
 \vskip 2ex
-\item Add \LaTeX{} commands to the text to make it look like this one:
+\item Add \LaTeX{} ordres to the text to make it look like this one:
 \begin{center}
 \fbox{\href{\fileuri/recap-exercise-solution.pdf}{%
 Click to open the model document}}
@@ -189,9 +189,9 @@ Click to open the model document}}
 
 \begin{block}{Hints}
 \begin{itemize}
-\item Use the \bftt{enumerate} and \bftt{itemize} environments for lists.
+\item Use the \bftt{enumerate} i \bftt{itemize} environments for lists.
 \item To typeset a \keystrokebftt{\%} percent sign, \emph{escape} it with a backslash (\cmdbs{\%}).
-\item To typeset the equation, use \cmdbs{frac} for the fraction and the \cmdbs{left(} and \cmdbs{right)} commands for the parentheses.
+\item To typeset the equation, use \cmdbs{frac} for the fraction i the \cmdbs{left(} i \cmdbs{right)} ordres for the parentheses.
 \end{itemize}
 \end{block}
 \end{frame}
@@ -257,9 +257,9 @@ Click to open the example document in \wllogo{}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection: Sections}
 \begin{itemize}
-\item You can use \cmdbs{section}s to group your \bftt{frame}s, and
+\item You can use \cmdbs{section}s to group your \bftt{frame}s, i
 \bftt{beamer} will use them to create an automatic outline.
-\item To generate an outline, use the \cmdbs{tableofcontents} command. Here's
+\item To generate an outline, use the \cmdbs{tableofcontents} ordre. Here's
 one for this presentation. The \bftt{currentsection} option highlights the current section.
 \vskip 2ex
 \begin{exampletwouptiny}
@@ -275,7 +275,7 @@ one for this presentation. The \bftt{currentsection} option highlights the curre
 \begin{columns}
 \begin{column}{0.4\textwidth}
 \begin{itemize}
-\item Use the \bftt{columns} and \bftt{column} environments to break the slide
+\item Use the \bftt{columns} i \bftt{column} environments to break the slide
 into columns.
 \item The argument for each \bftt{column} determines its width.
 \item See also the \bftt{multicol} package, which automatically breaks your
@@ -379,7 +379,7 @@ Gadget & 2   & 399.99  \\
 Cable  & 3   & 19.99   \\\hline
 \end{tabular}
 \end{exampletwouptiny}
-\item Use an ampersand \keystrokebftt{\&} to separate columns and a double backslash \keystrokebftt{\bs}\keystrokebftt{\bs} to start a new row.
+\item Use an ampersand \keystrokebftt{\&} to separate columns i a double backslash \keystrokebftt{\bs}\keystrokebftt{\bs} to start a new row.
 \end{itemize}
 \end{frame}
 
@@ -429,7 +429,7 @@ for a large collection of themes.
 \begin{frame}[fragile]{\insertsection: Animation}
 \begin{itemize}
 \item A frame can generate multiple slides.
-\item Use the \cmdbs{pause} command to show only part of a slide.
+\item Use the \cmdbs{pause} ordre to show only part of a slide.
 \vskip 2ex
 \begin{exampletwouptinynoframe}
 \begin{itemize}
@@ -439,7 +439,7 @@ for a large collection of themes.
 \end{exampletwouptinynoframe}
 \vskip 2ex
 \item There many more clever ways of making animations in \bftt{beamer}; see
-also the \cmdbs{only}, \cmdbs{alt}, and \cmdbs{uncover} commands.
+also the \cmdbs{only}, \cmdbs{alt}, i \cmdbs{uncover} ordres.
 \end{itemize}
 \end{frame}
 
@@ -457,13 +457,13 @@ Recreate Peter Norvig's excellent ``Gettysburg Powerpoint Presentation'' in \bft
 Click to open this exercise in \wllogo{}}}
 \end{center}
 \vskip 2ex
-\item Download this image to your computer and upload it to \wllogo{} via the
+\item Download this image to your computer i upload it to \wllogo{} via the
 files menu.
 \begin{center}
 \fbox{\href{\fileuri/gettysburg_graph.png?dl=1}{Click to download image}}
 \end{center}
 \vskip 2ex
-\item Add \LaTeX{} commands to the text to make it look like this one:
+\item Add \LaTeX{} ordres to the text to make it look like this one:
 \begin{center}
 \fbox{\href{\fileuri/beamer-exercise-solution.pdf}{%
 Click to open the model document}}
@@ -528,8 +528,8 @@ draw surprisingly complicated things.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection: Lines}
 \begin{itemize}
-\item Arrow heads and line styles are specified as options to the \cmdbs{draw} command.
-\item End each draw command with a \keystrokebftt{;} semicolon.
+\item Arrow heads i line styles are specified as options to the \cmdbs{draw} ordre.
+\item End each draw ordre with a \keystrokebftt{;} semicolon.
 \vskip 1ex
 \begin{exampletwouptiny}
 \begin{tikzpicture}
@@ -592,7 +592,7 @@ draw surprisingly complicated things.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection: Shapes}
 \begin{itemize}
-\item \tikzname{} has built-in commands for simple shapes.
+\item \tikzname{} has built-in ordres for simple shapes.
 \vskip 1ex
 \begin{exampletwouptiny}
 \begin{tikzpicture}
@@ -685,17 +685,17 @@ Draw this in \tikzname:\footnote{Based on \url{http://xkcd.com/1022}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection}
 \begin{itemize}
-\item The \cmdbs{todo} command from the \bftt{todonotes} package is great for
-leaving notes to yourself and your collaborators.
+\item The \cmdbs{todo} ordre from the \bftt{todonotes} package is great for
+leaving notes to yourself i your collaborators.
 \begin{exampletwouptiny}
 \todo{add results}
 \todo[color=blue!20]{fix method}
 \end{exampletwouptiny}
 \vskip 2ex
-\item Pro Tip: define your own commands with \cmdbs{newcommand}
+\item Pro Tip: define your own ordres with \cmdbs{newordre}
 \begin{minted}[fontsize=\scriptsize,frame=single]{latex}
-\newcommand{\alice}[1]{\todo[color=green!40]{#1}}
-\newcommand{\bob}[1]{\todo[color=purple!40]{#1}}
+\newordre{\alice}[1]{\todo[color=green!40]{#1}}
+\newordre{\bob}[1]{\todo[color=purple!40]{#1}}
 \end{minted}
 This can save a lot of typing:
 \begin{exampletwouptiny}
@@ -714,7 +714,7 @@ This can save a lot of typing:
     \begin{itemize}
     \item Only inline notes are supported with beamer, but margin notes are
     supported for normal documents.
-    \item There is also a handy \cmdbs{listoftodos} command.
+    \item There is also a handy \cmdbs{listoftodos} ordre.
     \end{itemize}
   \end{column}
   \begin{column}{0.6\textwidth}
@@ -733,7 +733,7 @@ This can save a lot of typing:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection}
 \begin{itemize}
-\item Now that you've seen how \LaTeX{} can replace Word and PowerPoint, what
+\item Now that you've seen how \LaTeX{} can replace Word i PowerPoint, what
 about Excel?
 \item Homework: try the \fbox{\href{http://www.ctan.org/pkg/spreadtab}{\bftt{spreadtab} package}}!
 \end{itemize}
@@ -744,7 +744,7 @@ about Excel?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \begin{center}
-Thanks, and happy \TeX{}ing!
+Thanks, i happy \TeX{}ing!
 \end{center}
 \end{frame}
 
