@@ -61,7 +61,7 @@ La pluja cau \emph{principalment} a la plana.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Més exemples d'ordres i la seva sortida\ldots}
+\begin{frame}[fragile]{Més exemples d'ordres i la seva sortida \ldots}
 \begin{exampletwoup}
 \begin{itemize}
 \item Mel
@@ -195,20 +195,18 @@ Cometes dobles: ``text''.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Handling Errors}
 \begin{itemize}
-\item \LaTeX{} can get confused when it is trying to compile your document. If
-it does, it stops with an error, which you must fix before it will produce
-any output.
-\item For example, if you misspell \cmdbs{emph} as \cmdbs{meph}, \LaTeX{} will
-stop with an ``undefined control sequence'' error, because ``meph'' is not
-one of the ordres it knows.
+\item \LaTeX{} es pot confondre quan està intentant compilar el vostre document. 
+    Si ho fa, s'atura amb un error, que heu de solucionar abans de produir cap sortida.
+\item Per exemple, si escriviu malament \cmdbs{emph} com a \cmdbs{meph}, \LaTeX{} s'aturarà amb un error 
+``undefined control sequence'', perquè ``meph'' no és una de les ordres que coneix.
 \end{itemize}
-\begin{block}{Advice on Errors}
+\begin{block}{Consells sobre Errors}
 \begin{enumerate}
-\item Don't panic! Errors happen.
-\item Fix them as soon as they arise --- if what you just typed caused an error,
-you can start your debugging there.
-\item If there are multiple errors, start with the first one --- the cause may
-even be above it.
+\item No t'espantis! És comú trobar errors.
+\item Arregleu-los tan aviat com apareguin, si el que acabeu d'escriure
+ha provocat un error, comenceu per allà. 
+\item Si hi ha diversos errors, comenceu pel primer:
+la causa fins i tot pot estar per sobre.
 \end{enumerate}
 \end{block}
 \end{frame}
@@ -216,7 +214,7 @@ even be above it.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Typesetting Exercise 1}
+\begin{frame}[fragile]{Exercici 1}
 
 \begin{block}{Typeset this in \LaTeX:
 \footnote{\url{http://en.wikipedia.org/wiki/Economy_of_the_United_States}}}
@@ -242,26 +240,25 @@ click here to see my solution}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Typesetting Mathematics}
-\begin{frame}[fragile]{\insertsubsection{}: Dollar Signs}
+\subsection{Escrivint Matemàtiques}
+\begin{frame}[fragile]{\insertsubsection{}: Símbols de dòlar}
 \begin{itemize}
-\item Why are dollar signs \keystrokebftt{\$} special? We use them to mark mathematics in text.\\[1ex]
+\item Per què són especials els símbols de dòlar \keystrokebftt{\$}? Els utilitzem per marcar matemàtiques dins el text.\\[1ex]
 \begin{exampletwouptiny}
-% not so good:
-Let a i b be distinct positive
-integers, i let c = a - b + 1.
+% meh:
+Siguin a i b nombres enters 
+positius, i sigui c = a - b - 1
 
-% much better:
-Let $a$ i $b$ be distinct positive
-integers, i let $c = a - b + 1$.
+% millor:
+Siguin $a$ i $b$ nombres enters 
+positius, i sigui $c = a - b + 1$.
 \end{exampletwouptiny}
-\item Always use dollar signs in pairs --- one to begin the mathematics, i one
-to end it.
-\item \LaTeX{} handles spacing automatically; it ignores your spaces.
+\item Utilitza sempre els símbols de dòlar amb parelles -- u per començar les matemàtiques, i un per acabar-les.
+\item \LaTeX{} ignora els espais i els ajusta automàticament.
 \begin{exampletwouptiny}
-Let $y=mx+b$ be \ldots
+$y=ax^2+bx+c$ \ldots
 
-Let $y = m x + b$ be \ldots
+$y = a x^2 + b x + c $ \ldots
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -269,16 +266,15 @@ Let $y = m x + b$ be \ldots
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Notation}
+\begin{frame}[fragile]{\insertsubsection{}: Notació}
 \begin{itemize}
-\item Use caret \keystrokebftt{\^} for superscripts i underscore \keystrokebftt{\_} for subscripts.
+\item Accent circumflex \keystrokebftt{\^} per superíndexs i barra baixa \keystrokebftt{\_} pels subíndexs.
 \begin{exampletwouptiny}
 $y = c_2 x^2 + c_1 x + c_0$
 \end{exampletwouptiny}
 \vskip 2ex
 
-\item Use curly braces \keystrokebftt{\{} \keystrokebftt{\}} to group
-superscripts i subscripts.
+\item Useu claus \keystrokebftt{\{} \keystrokebftt{\}} per agrupar els índexs.
 \begin{exampletwouptiny}
 $F_n = F_n-1 + F_n-2$     % oops!
 
@@ -286,7 +282,7 @@ $F_n = F_{n-1} + F_{n-2}$ % ok!
 \end{exampletwouptiny}
 \vskip 2ex
 
-\item There are ordres for Greek letters i common notation.
+\item Hi ha ordres per a les lletres gregues en notació comuna. 
 \begin{exampletwouptiny}
 $\mu = A e^{Q/RT}$
 
@@ -487,21 +483,18 @@ click here to see my solution}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{End of Part 1}
+\begin{frame}{Final de la primera part}
 \begin{itemize}
-\item Congrats! You've already learned how to \ldots
+\item Ja hem aprés \ldots 
 \begin{itemize}
-\item Typeset text in \LaTeX.
-\item Use lots of different ordres.
-\item Handle errors when they arise.
-\item Typeset some beautiful mathematics.
-\item Use several different environments.
-\item Load packages.
+\item Escriure text amb \LaTeX.
+\item Utilitzar diferents ordres.
+\item Tractar errors quan apareixen. 
+\item Escriure matemàtiques. 
+\item Utilitzar diversos entorns diferents.
+\item Carregar paquets.
 \end{itemize}
-\item That's amazing!
-\item In Part 2, we'll see how to use \LaTeX{} to write structured documents
-with sections, cross references, figures, tables i bibliographies. See you
-then!
+\item A la segona part, veurem com utilitzar \LaTeX{} per escriure documents amb seccions, referències creuades, figures, taules i bibliografia. Fins llavors!
 \end{itemize}
 \end{frame}
 
