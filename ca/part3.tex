@@ -4,8 +4,8 @@
 
 \subtitle{Part 3: Not Just Papers: Presentations \& More}
 
-\newordre{\alice}[1]{\todo[color=green!40]{#1}}
-\newordre{\bob}[1]{\todo[color=purple!40]{#1}}
+\newcommand{\alice}[1]{\todo[color=green!40]{#1}}
+\newcommand{\bob}[1]{\todo[color=purple!40]{#1}}
 
 \begin{document}
 
@@ -692,10 +692,10 @@ leaving notes to yourself i your collaborators.
 \todo[color=blue!20]{fix method}
 \end{exampletwouptiny}
 \vskip 2ex
-\item Pro Tip: define your own ordres with \cmdbs{newordre}
+\item Pro Tip: define your own ordres with \cmdbs{newcommand}
 \begin{minted}[fontsize=\scriptsize,frame=single]{latex}
-\newordre{\alice}[1]{\todo[color=green!40]{#1}}
-\newordre{\bob}[1]{\todo[color=purple!40]{#1}}
+\newcommand{\alice}[1]{\todo[color=green!40]{#1}}
+\newcommand{\bob}[1]{\todo[color=purple!40]{#1}}
 \end{minted}
 This can save a lot of typing:
 \begin{exampletwouptiny}
