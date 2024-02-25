@@ -30,7 +30,7 @@
 %
 \item És potent --- podeu estendre-ho
 \begin{itemize}
-\item Paquets per a treballs, presentacions, fulls de càlcul, \ldots
+\item Paquets per a treballs, presentacions, tesis, \ldots
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -48,13 +48,13 @@ document amb un format bonic.
 \vskip 2ex
 \begin{center}
 \begin{minted}[frame=single]{latex}
-La pluja cau \emph{principalment} a la plana.
+La \textit{fonologia} estudia els \textbf{fonemes}.
 \end{minted}
 \vskip 2ex
 \tikz\node[single arrow,fill=gray,font=\ttfamily\bfseries,%
   rotate=270,xshift=-1em]{latex};
 \vskip 2ex
-\fbox{La pluja cau \emph{principalment} a la plana.}
+\fbox{La \textit{fonologia} estudia els \textbf{fonemes}.}
 \end{center}
 \end{frame}
 
@@ -121,10 +121,10 @@ La pluja cau \emph{principalment} a la plana.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{} with \wllogo}
+\begin{frame}[fragile]{\insertsubsection{} amb \wllogo}
 \begin{itemize}
 \item Overleaf és un lloc web per escriure documents a \LaTeX.
-\item `Compila' el teu \LaTeX{}  automàticament per a mostrar-te els resultats. 
+\item `Compila' el teu \LaTeX{}  automàticament\footnote{Ctrl + Enter, o premeu `Recompile'} per a mostrar-te els resultats. 
 \vskip 2em
 \begin{center}
 \fbox{\href{\wlnewdoc{basics.tex}}{%
@@ -155,8 +155,8 @@ Per obtenir els millors resultats, utilitzeu Google Chrome o un FireFox recent.
 
 \item Els espais del fitxer d'origen es col·lapsen a la sortida. 
 \begin{exampletwouptiny}
-La  pluja     cau 
-principalment    a la plana
+La          fonologia
+    estudia els fonemes 
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -185,7 +185,7 @@ Cometes dobles: ``text''.
 \item Si només els escriviu, obtindreu un error. 
     Si voleu que apareguin a la sortida, heu d'\textit{escapar-lo} precedint-lo amb una barra inversa \keystroke{\textbackslash}.
 \begin{exampletwoup}
-\$, \%, \&, \#!
+\$, \%, \&, \#
 \end{exampletwoup}
 \end{itemize}
 \end{frame}
@@ -193,19 +193,18 @@ Cometes dobles: ``text''.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Handling Errors}
+\begin{frame}[fragile]{Com Tractar Errors}
 \begin{itemize}
 \item \LaTeX{} es pot confondre quan està intentant compilar el vostre document. 
     Si ho fa, s'atura amb un error, que heu de solucionar abans de produir cap sortida.
-\item Per exemple, si escriviu malament \cmdbs{emph} com a \cmdbs{meph}, \LaTeX{} s'aturarà amb un error 
-``undefined control sequence'', perquè ``meph'' no és una de les ordres que coneix.
+\item Per exemple, si escriviu malament \cmdbs{textbf} com a \cmdbs{textfb}, \LaTeX{} s'aturarà amb un error 
+``undefined control sequence'', perquè ``textfb'' no és una de les ordres que coneix.
 \end{itemize}
 \begin{block}{Consells sobre Errors}
 \begin{enumerate}
 \item No t'espantis! És comú trobar errors.
-\item Arregleu-los tan aviat com apareguin, si el que acabeu d'escriure
-ha provocat un error, comenceu per allà. 
-\item Si hi ha diversos errors, comenceu pel primer:
+\item Arregle'ls tan aviat com apareguin, si el que acabes d'escriure ha provocat un error, comença per allà. 
+\item Si hi ha diversos errors, comença pel primer:
 la causa fins i tot pot estar per sobre.
 \end{enumerate}
 \end{block}
@@ -216,7 +215,7 @@ la causa fins i tot pot estar per sobre.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Exercici 1}
 
-\begin{block}{Typeset this in \LaTeX:
+\begin{block}{Escriu això amb \LaTeX:
 \footnote{\url{http://en.wikipedia.org/wiki/Economy_of_the_United_States}}}
 In March 2006, Congress raised that ceiling an additional \$0.79 trillion to
 \$8.97 trillion, which is approximately 68\% of GDP. As of October 4, 2008, the
@@ -226,14 +225,14 @@ to \$11.3 trillion.
 \vskip 2ex
 \begin{center}
 \fbox{\href{\wlnewdoc{basics-exercise-1.tex}}{%
-Click to open this exercise in \wllogo{}}}
+Clica per obrir l'exercici a \wllogo{}}}
 \end{center}
 
 \begin{itemize}
-\item Hint: watch out for characters with special meanings!
-\item Once you've tried,
+\item Pista: vigila amb els caràcters amb significat especial! 
+\item Un cop ho hagis provat,
 \fbox{\href{\wlnewdoc{basics-exercise-1-solution.tex}}{%
-click here to see my solution}}.
+clica aquí per veure la solució}}.
 \end{itemize}
 \end{frame}
 
@@ -253,7 +252,7 @@ positius, i sigui c = a - b - 1
 Siguin $a$ i $b$ nombres enters 
 positius, i sigui $c = a - b + 1$.
 \end{exampletwouptiny}
-\item Utilitza sempre els símbols de dòlar amb parelles -- u per començar les matemàtiques, i un per acabar-les.
+\item Utilitza sempre els símbols de dòlar amb parelles -- un per començar les matemàtiques, i un per acabar-les.
 \item \LaTeX{} ignora els espais i els ajusta automàticament.
 \begin{exampletwouptiny}
 $y=ax^2+bx+c$ \ldots
@@ -294,30 +293,30 @@ $\Omega = \sum_{k=1}^{n} \omega_k$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Displayed Equations}
-\begin{itemize}
-\item If it's big i scary, \emph{display} it on its own line using
-\cmdbegin{equation} i \cmdend{equation}.\\[2ex]
-\begin{exampletwouptiny}
-The roots of a quadratic equation
-are given by
-\begin{equation}
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}
-         {2a}
-\end{equation}
-where $a$, $b$ i $c$ are \ldots
-\end{exampletwouptiny}
-\vskip 1em
-{\scriptsize Caution: \LaTeX{} mostly ignores your spaces in mathematics, but it
-can't handle blank lines in equations --- don't put blank lines in your
-mathematics.}
-\end{itemize}
-\end{frame}
+% \begin{frame}[fragile]{\insertsubsection{}: Displayed Equations}
+% \begin{itemize}
+% \item If it's big i scary, \emph{display} it on its own line using
+% \cmdbegin{equation} i \cmdend{equation}.\\[2ex]
+% \begin{exampletwouptiny}
+% The roots of a quadratic equation
+% are given by
+% \begin{equation}
+% x = \frac{-b \pm \sqrt{b^2 - 4ac}}
+%          {2a}
+% \end{equation}
+% where $a$, $b$ i $c$ are \ldots
+% \end{exampletwouptiny}
+% \vskip 1em
+% {\scriptsize Caution: \LaTeX{} mostly ignores your spaces in mathematics, but it
+% can't handle blank lines in equations --- don't put blank lines in your
+% mathematics.}
+% \end{itemize}
+% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Interlude: Environments}
+\begin{frame}[fragile]{Entorns}
 \begin{itemize}
 \item \bftt{equation} is an \emph{environment} --- a context.
 \item A ordre can produce different output in different contexts.
@@ -343,7 +342,7 @@ same ordres.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Interlude: Environments}
+\begin{frame}[fragile]{Entorns 2}
 \begin{itemize}
 \item The \cmdbs{begin} i \cmdbs{end} ordres are used to create many
 different environments.
