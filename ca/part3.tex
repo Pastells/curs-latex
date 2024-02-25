@@ -2,10 +2,10 @@
 
 \input{preamble.tex}
 
-\subtitle{Part 3: Not Just Papers: Presentations \& More}
+\subtitle{Part 3: Presentacions i altres}
 
-\newcommand{\alice}[1]{\todo[color=green!40]{#1}}
-\newcommand{\bob}[1]{\todo[color=purple!40]{#1}}
+\newcommand{\mar}[1]{\todo[color=green!40]{#1}}
+\newcommand{\andreu}[1]{\todo[color=purple!40]{#1}}
 
 \begin{document}
 
@@ -678,29 +678,29 @@ Draw this in \tikzname:\footnote{Based on \url{http://xkcd.com/1022}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Notes with \protect\bftt{todonotes}}
+\section{Anotacions amb \protect\bftt{todonotes}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection}
 \begin{itemize}
-\item The \cmdbs{todo} ordre from the \bftt{todonotes} package is great for
-leaving notes to yourself i your collaborators.
+\item L'ordre \cmdbs{todo} del paquet \bftt{todonotes} és útil per deixar notes  
+per a un mateix o per co"laboradors.
 \begin{exampletwouptiny}
-\todo{add results}
-\todo[color=blue!20]{fix method}
+\todo{afegir resultats}
+\todo[color=blue!20]{arreglar taula}
 \end{exampletwouptiny}
 \vskip 2ex
-\item Pro Tip: define your own ordres with \cmdbs{newcommand}
+\item Fes-ho senzill: defineix les teves pròpies ordres amb \cmdbs{newcommand}
 \begin{minted}[fontsize=\scriptsize,frame=single]{latex}
-\newcommand{\alice}[1]{\todo[color=green!40]{#1}}
-\newcommand{\bob}[1]{\todo[color=purple!40]{#1}}
+\newcommand{\mar}[1]{\todo[color=green!40]{#1}}
+\newcommand{\andreu}[1]{\todo[color=purple!40]{#1}}
 \end{minted}
-This can save a lot of typing:
+Ja no cal escriure tant:
 \begin{exampletwouptiny}
-\alice{add results}
-\bob{fix method}
+\mar{afegir resultats}
+\andreu{arreglar taula}
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
@@ -712,9 +712,9 @@ This can save a lot of typing:
 \begin{columns}
   \begin{column}{0.4\textwidth}
     \begin{itemize}
-    \item Only inline notes are supported with beamer, but margin notes are
-    supported for normal documents.
-    \item There is also a handy \cmdbs{listoftodos} ordre.
+    \item Amb beamer només s'admeten les notes en línia, 
+        però les notes de marge són compatibles amb els documents normals.
+    \item També es poden enumerar les notes amb l'ordre \cmdbs{listoftodos}.
     \end{itemize}
   \end{column}
   \begin{column}{0.6\textwidth}
