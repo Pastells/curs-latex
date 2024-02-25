@@ -35,7 +35,7 @@ media-graphics.pdf: media-graphics.tex
 
 bib-example.pdf: bib-example.tex bib-example.bib
 	pdflatex bib-example
-	bibtex bib-example
+	biber bib-example
 	pdflatex bib-example
 	pdflatex bib-example
 

@@ -2,7 +2,7 @@
 
 \input{preamble.tex}
 
-\subtitle{Part 2: Structured Documents \& More}
+\subtitle{Part 2: Documents Estructurats}
 
 \begin{document}
 
@@ -16,12 +16,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Structured Documents}
+\section{Documents Estructurats}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Outline}
+\begin{frame}{Continguts}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
 \end{multicols}
@@ -54,12 +54,12 @@ For best results, please use \href{http://www.google.com/chrome}{Google Chrome} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Title i Abstract}
+\subsection{Títol i Abstract}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}{\small
-\item Tell \LaTeX{} the \cmdbs{title} i \cmdbs{author} names in the preamble.
-\item Then use \cmdbs{maketitle} in the document to actually create the title.
-\item Use the \bftt{abstract} environment to make an abstract.
+\item A \LaTeX{}, \cmdbs{title}, \cmdbs{author} i \cmdbs{date} es defineixen al preàmbul. 
+\item Dins el document, \cmdbs{maketitle} crea el títol.
+\item Utilitza l'entorn \bftt{abstract} per crear un resum.
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
@@ -73,11 +73,12 @@ For best results, please use \href{http://www.google.com/chrome}{Google Chrome} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Sections}
+\subsection{Seccions}
 \begin{frame}{\insertsubsection}
 \begin{itemize}{\small
-\item Just use \cmdbs{section} i \cmdbs{subsection}.
-\item Can you guess what \cmdbs{section*} i \cmdbs{subsection*} do?
+    \item Només cal fer servir \cmdbs{section} i \cmdbs{subsection} 
+        (\textcolor{magenta}{\href{https://www.overleaf.com/learn/latex/Sections_and_chapters}{hi ha més nivells}})
+\item Què creus que fan \cmdbs{section*} i \cmdbs{subsection*}?
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
@@ -91,7 +92,7 @@ For best results, please use \href{http://www.google.com/chrome}{Google Chrome} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Labels i Cross-References}
+\subsection{Etiquetes i Referències Creuades}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}{\small
 \item Use \cmdbs{label} i \cmdbs{ref} for automatic numbering.
@@ -110,7 +111,7 @@ equations.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Exercise}
+\subsection{Exercici}
 \begin{frame}[fragile]{Structured Documents Exercise}
 
 \begin{block}{Typeset this short paper in \LaTeX:
@@ -139,12 +140,12 @@ click here to see my solution}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Figures i Tables}
+\section{Figures i Taules}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Outline}
+\begin{frame}{Continguts}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
 \end{multicols}
@@ -153,12 +154,11 @@ click here to see my solution}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Graphics}
+\subsection{Gràfics}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}
-\item Requires the \bftt{graphicx} package, which provides the
-\cmdbs{includegraphics} ordre.
-\item Supported graphics formats include JPEG, PNG i PDF (usually).
+\item El paquet \bftt{graphicx} inclou l'ordre \cmdbs{includegraphics}.
+\item Aquest paquet admet JPG, JPEG, Supported graphics formats include JPEG, PNG i PDF (usually).
 \end{itemize}
 \begin{exampletwouptiny}
 \includegraphics[
@@ -169,23 +169,22 @@ click here to see my solution}}.
   angle=270]{gerbil}
 \end{exampletwouptiny}
 
-\tiny{Image license: \href{https://pixabay.com/en/animal-apple-attractive-beautiful-1239390/}{CC0}}
+\tiny{Imatge: \href{https://pixabay.com/en/animal-apple-attractive-beautiful-1239390/}{CC0}}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Interlude: Optional Arguments}
+\begin{frame}[fragile]{Incís: Aruments Opcionals}
 \begin{itemize}
-\item We use square brackets \keystrokebftt{[} \keystrokebftt{]} for optional
-arguments, instead of braces \keystrokebftt{\{} \keystrokebftt{\}}.
-\item \cmdbs{includegraphics} accepts optional arguments that allow you to transform the
-image when it is included. For example, \bftt{width=0.3\cmdbs{textwidth}} makes
-the image take up 30\% of the width of the surrounding text (\cmdbs{textwidth}).
-\item \cmdbs{documentclass} accepts optional arguments, too. Example:
+\item Fem servir claudators \keystrokebftt{[} \keystrokebftt{]} per arguments opcionals,
+en comptes de claus \keystrokebftt{\{} \keystrokebftt{\}}.
+\item \cmdbs{includegraphics} admet arguments opcionals per modificar la imatge. 
+Per exemple, \bftt{width=0.3\cmdbs{textwidth}} fa que la image ocupi un 30\% de l'amplada
+del text (\cmdbs{textwidth}).
+\item \cmdbs{documentclass} també admet arguments opcionals. Exemple:
 \mint{latex}|\documentclass[12pt,twocolumn]{article}|
-\vskip 3ex
-makes the text bigger (12pt) i puts it into two columns.
+augmenta el tamany de text (12pt) i fa servir 2 columnes (molt típic d'articles acadèmics).
 \item Where do you find out about these? See the slides at the end of this
 presentation for links to more information.
 \end{itemize}
@@ -209,36 +208,71 @@ presentation for links to more information.
 \includegraphics[width=\textwidth,clip,trim=2in 5in 3in 1in]{media-graphics.pdf}
 \end{minipage}
 
-\tiny{Image license: \href{https://pixabay.com/en/animal-apple-attractive-beautiful-1239390/}{CC0}}
+\tiny{Imatge: \href{https://pixabay.com/en/animal-apple-attractive-beautiful-1239390/}{CC0}}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Tables}
+\subsection{Taules}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}
-\item Tables in \LaTeX{} take some getting used to.
-\item Use the \bftt{tabular} environment from the \bftt{tabularx} package.
-\item The argument specifies column alignment --- \textbf{l}eft, \textbf{r}ight, \textbf{r}ight.
+\item Les taules amb \LaTeX{} són una mica complexes. 
+\item Cal el paquet \bftt{tabularx}.
+\item L'argument especifica l'alineament de les columnes --- \textbf{l}eft, \textbf{c}enter, \textbf{r}ight.
 \begin{exampletwouptiny}
-\begin{tabular}{lrr}
+\begin{tabular}{lcr}
 Item   & Qty & Unit \$ \\
 Widget & 1   & 199.99  \\
 Gadget & 2   & 399.99  \\
 Cable  & 3   & 19.99   \\
 \end{tabular}
 \end{exampletwouptiny}
-\item It also specifies vertical lines; use \cmdbs{hline} for horizontal lines.
+\item \keystrokebftt{\&} marca el separador de columna i \keystrokebftt{\bs\bs} el final de línia. 
 \begin{exampletwouptiny}
-\begin{tabular}{|l|r|r|} \hline
-Item   & Qty & Unit \$ \\\hline
+\begin{table}
+\centering % centra la taula
+\begin{tabular}{lcr}
+Item   & Qty & Unit \$ \\
 Widget & 1   & 199.99  \\
 Gadget & 2   & 399.99  \\
-Cable  & 3   & 19.99   \\\hline
+Cable  & 3   & 19.99   \\
+\end{tabular}
+\caption{\label{taula:items}Aww\ldots.}
+\end{table}
+\end{exampletwouptiny}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsubsection ~2}
+\begin{itemize}
+\item Els separadors \keystrokebftt{|} dins l'argument fan línies verticals (millor evitar-les), \cmdbs{hline} fa línies horizontals. 
+\begin{exampletwouptiny}
+\begin{tabular}{|l|r|r|}
+\hline
+Item   & Qty & Unit \$ \\
+\hline
+Widget & 1   & 199.99  \\
+Gadget & 2   & 399.99  \\
+Cable  & 3   & 19.99   \\
+\hline
 \end{tabular}
 \end{exampletwouptiny}
-\item Use an ampersand \keystrokebftt{\&} to separate columns i a double backslash \keystrokebftt{\bs}\keystrokebftt{\bs} to start a new row (like in the \bftt{align*} environment that we saw in part 1).
+\item El paquet \keystrokebftt{booktabs} proporciona les ordres \cmdbs{toprule}, \cmdbs{midrule} i \cmdbs{bottomrule}. 
+\begin{exampletwouptiny}
+\begin{tabular}{lrr}
+\toprule
+Item   & Qty & Unit \$ \\
+\midrule
+Widget & 1   & 199.99  \\
+Gadget & 2   & 399.99  \\
+Cable  & 3   & 19.99   \\
+\bottomrule
+\end{tabular}
+\end{exampletwouptiny}
 \end{itemize}
 \end{frame}
 
@@ -246,12 +280,12 @@ Cable  & 3   & 19.99   \\\hline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \addtocontents{toc}{\newpage}
-\section{Bibliographies}
+\section{Bibliografies}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Outline}
+\begin{frame}{Continguts}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
 \end{multicols}
@@ -263,9 +297,9 @@ Cable  & 3   & 19.99   \\\hline
 \subsection{bib\TeX}
 \begin{frame}[fragile]{\insertsubsection{} 1}
 \begin{itemize}
-\item Put your references in a \bftt{.bib} file in `bibtex' database format:
+\item Poseu les referències a un fitxer \bftt{.bib} en format `bibtex':
 \inputminted[fontsize=\scriptsize,frame=single]{latex}{bib-example.bib}
-\item Most reference managers can export to bibtex format.
+\item La majoria de gestors i buscadors d'articles ofereixen aquesta opció. 
 \end{itemize}
 \end{frame}
 
@@ -274,17 +308,16 @@ Cable  & 3   & 19.99   \\\hline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{} 2}
 \begin{itemize}
-\item Each entry in the \bftt{.bib} file has a \emph{key} that you can use to
-reference it in the document. For example, \bftt{Jacobson1999Towards} is the key for this article:
+\item Cada entrada del fitxer \bftt{.bib} té una clau que serveix per referenciar-la dins el text.
+Per exemple, \bftt{Jacobson1999Towards} és la clau d'aquest article:
 \begin{minted}[fontsize=\small,frame=single]{latex}
 @Article{Jacobson1999Towards,
   author = {Van Jacobson},
   ...
 }
 \end{minted}
-\item It's a good idea to use a key based on the name, year i title.
-\item \LaTeX{} can automatically format your in-text citations i generate a
-list of references; it knows most standard styles, i you can design your own.
+\item És bona idea canviar la clau que trobeu per defecte a una que contingui nom any i títol.
+\item \LaTeX{} formatejarà automàticament les cites en el format adequat (Science, APA, Chicago \ldots), tant dins al text com a l'apartat de referències.
 \end{itemize}
 \end{frame}
 
@@ -293,9 +326,8 @@ list of references; it knows most standard styles, i you can design your own.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{} 3}
 \begin{itemize}
-\item Use the \bftt{natbib} package\footnote{There is a new package with more
-  features named \bftt{biblatex} but most of the articles templates still use
-  \bftt{natbib}.} with \cmdbs{citet} i \cmdbs{citep}.
+    \item Feu servir el paquet \bftt{biblatex}\footnote{Hi ha un altre paquet (més vell) de referència, \bftt{natbib}. És possible que us el trobeu a alguna plantilla.}
+ amb \cmdbs{cite} i \cmdbs{citetext}.
 \item Reference \cmdbs{bibliography} at the end, i specify a \cmdbs{bibliographystyle}.
 \end{itemize}
 \begin{minipage}{0.55\linewidth}
@@ -310,7 +342,7 @@ list of references; it knows most standard styles, i you can design your own.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Exercise}
+\subsection{Exercici}
 \begin{frame}[fragile]{Exercise: Putting it All Together}
 
 Add an image i a bibliography to the paper from the previous exercise.
@@ -332,12 +364,12 @@ Add an image i a bibliography to the paper from the previous exercise.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{What's Next?}
+\section{Què més?}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Outline}
+\begin{frame}{Continguts}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
 \end{multicols}
@@ -346,11 +378,11 @@ Add an image i a bibliography to the paper from the previous exercise.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{More Neat Things}
+\subsection{Altres coses interessants}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}
-\item Add the \cmdbs{tableofcontents} ordre to generate a table of contents
-from the \cmdbs{section} ordres.
+\item L'ordre \cmdbs{tableofcontents} genera un índex automàticament a partir  
+dels títols de les seccions i subseccions.
 
 \item Change the \cmdbs{documentclass} to
 \mint{latex}!\documentclass{scrartcl}!
@@ -371,11 +403,11 @@ $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{More Neat Packages}
+\subsection{Altres paquets}
 \begin{frame}{\insertsubsection}
 \begin{itemize}
-\item \bftt{beamer}: for presentations (like this one!)
-\item \bftt{todonotes}: comments i TODO management
+\item \bftt{beamer}: per presentacion (com aquesta!)
+\item \bftt{todonotes}: comenataris i coses pendents (TODO
 \item \bftt{tikz}: make amazing graphics
 \item \bftt{pgfplots}: create graphs in \LaTeX
 \item \bftt{listings}: source code printer for \LaTeX
@@ -383,57 +415,40 @@ $$
 \item \bftt{gchords}, \bftt{guitar}: guitar chords i tabulature
 \item \bftt{cwpuzzle}: crossword puzzles
 \end{itemize}
-See \url{https://www.overleaf.com/latex/examples} i \url{http://texample.net}
-for examples of (most of) these packages.
+Vegeu \url{https://www.overleaf.com/latex/examples} i \url{http://texample.net}
+per exemples.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Installing \LaTeX{}}
+\subsection{Instalar \LaTeX{}}
 \begin{frame}{\insertsubsection}
 \begin{itemize}
-\item To run \LaTeX{} on your own computer, you'll want to use a \LaTeX{}
-\emph{distribution}. A distribution includes a \bftt{latex} program
-and (typically) several thousand packages.
+\item Per fer servir \LaTeX{} al vostre ordinador, us caldrà una \emph{distribution}: 
+    inclou el programa \bftt{latex} i un munt de paquets. 
 \begin{itemize}
-\item On Windows: \href{http://miktex.org/}{Mik\TeX} or \href{http://tug.org/texlive/}{\TeX Live}
-\item On Linux: \href{http://tug.org/texlive/}{\TeX Live}
-\item On Mac: \href{http://tug.org/mactex/}{Mac\TeX}
+\item Windows: \href{http://miktex.org/}{Mik\TeX} o \href{http://tug.org/texlive/}{\TeX Live}
+\item Linux: \href{http://tug.org/texlive/}{\TeX Live}
+\item Mac: \href{http://tug.org/mactex/}{Mac\TeX}
 \end{itemize}
-\item You'll also want a text editor with \LaTeX{} support. See \url{http://en.wikipedia.org/wiki/Comparison_of_TeX_editors} for a list of (many) options.
-\item You'll also have to know more about how \bftt{latex} i its related tools
-work --- see the resources on the next slide.
+\item També us caldrà un editor amb suport per \LaTeX{}. A \url{http://en.wikipedia.org/wiki/Comparison_of_TeX_editors} hi teniu una llista exhaustiva.
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Online Resources}
+\subsection{Referències Online}
 \begin{frame}{\insertsubsection}
 \begin{itemize}
-\item \href{https://www.overleaf.com/learn}{The Overleaf Learn Wiki} ---
-hosts these slides, more tutorials i reference material
-\item \href{http://en.wikibooks.org/wiki/LaTeX}{The \LaTeX{} Wikibook} ---
-excellent tutorials i reference material.
-\item \href{http://tex.stackexchange.com/}{\TeX{} Stack Exchange} --- ask
-questions i get excellent answers incredibly quickly
-\item \href{http://www.latex-community.org/}{\LaTeX{} Community} --- a large
-online forum
-\item \href{http://ctan.org/}{Comprehensive \TeX{} Archive Network (CTAN)} ---
-over four thousand packages plus documentation
-\item Google will usually get you to one of the above.
+\item \href{https://www.overleaf.com/learn}{The Overleaf Learn Wiki} --- tutorials i material de referència.
+\item \href{http://en.wikibooks.org/wiki/LaTeX}{The \LaTeX{} Wikibook} --- més tutorials i material de referència.
+\item \href{http://tex.stackexchange.com/}{\TeX{} Stack Exchange} --- preguntes i respostes 
+\item \href{http://www.latex-community.org/}{\LaTeX{} Community} --- fòrum 
+\item \href{http://ctan.org/}{Comprehensive \TeX{} Archive Network (CTAN)} --- documentació de paquets.
+\item Qualsevol buscador us portarà a alguna d'aquestes pàgines.
 \end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\begin{center}
-Thanks, i happy \TeX{}ing!
-\end{center}
 \end{frame}
 
 \end{document}
