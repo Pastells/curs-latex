@@ -344,51 +344,92 @@ same ordres.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Entorns 2}
 \begin{itemize}
-\item The \cmdbs{begin} i \cmdbs{end} ordres are used to create many
-different environments.
+\item Les ordres \cmdbs{begin} i \cmdbs{end} es fan servir per delimitar diferents entorns.
 \vskip 2ex
 
-\item The \bftt{itemize} i \bftt{enumerate} environments generate lists.
+\item Els entorns \bftt{itemize} i \bftt{enumerate} generen llistes de punts i numèriques. 
 \begin{exampletwouptiny}
-\begin{itemize} % for bullet points
-\item Biscuits
-\item Tea
+\begin{itemize} % per punts 
+    \item Galetes
+    \item Iogurt
 \end{itemize}
 
-\begin{enumerate} % for numbers
-\item Biscuits
-\item Tea
+\begin{enumerate} % per nombres
+    \item Galetes
+    \item Iogurt
 \end{enumerate}
 \end{exampletwouptiny}
+\item No és necessari, però és bona pràctica augmentar el sagnat del text dins d'un entorn. 
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Interlude: Packages}
+\begin{frame}[fragile]{Incís: Paquets}
 
 \begin{itemize}
-\item All of the ordres i environments we've used so far are built into
-\LaTeX.
+\item Totes les ordres i entorns que hem vist fins ara estan integrades a \LaTeX.
 
-\item \emph{Packages} are libraries of extra ordres i environments. There
-are thousands of freely available packages.
+\item Els \emph{Paquets} són llibreries que contenen ordres i entorns addicionals. N'hi ha milers de gratuïts.
 
-\item We have to load each of the packages we want to use with a
-\cmdbs{usepackage} ordre in the \emph{preamble}.
+\item Si volem fer servir un paquet l'hem de carregar amb l'ordre 
+\cmdbs{usepackage} en el \emph{preàmbul}.
 
-\item Example: \bftt{amsmath} from the American Mathematical Society.
+\item Exemple: \bftt{linguex} per exemples lingüístics. 
 \begin{minted}[fontsize=\small,frame=single]{latex}
 \documentclass{article}
-\usepackage{amsmath} % preamble
+\usepackage{linguex} % preàmbul
 \begin{document}
-% now we can use ordres from amsmath here...
+% ja podem fer servir ordres de linguex ... 
 \end{document}
 \end{minted}
 \end{itemize}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{linguex}
+\begin{frame}[fragile]{\insertsubsection{}: exemples}
+\begin{itemize}
+\item Les 3 ordres bàsiques de linguex són \cmdbs{ex.}, \cmdbs{a.} i \cmdbs{b.}. 
+\item \cmdbs{ex.} inicia l'exemple, i cal una línia en blanc per acabar-lo.
+\begin{exampletwouptiny2}
+\ex. Primer nivell de l'exemple
+\a. Segon nivell de l'exemple
+\b. Seguim al segon nivell 
+\a. Tercer nivell 
+\b. Ja veieu com va 
+\b. i podem seguir \dots
+
+\ex. 
+\a. podem deixar buit 
+\b. el primer nivell
+\c. si volem ser ordenats
+\d. podem fer servir
+\e. tot l'abecedari
+\b. tot i que no cal
+
+\end{exampletwouptiny2}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{linguex}
+\begin{frame}[fragile]{\insertsubsection{}: glosses}
+\begin{itemize}
+\item Linguex és molt últil per morfologia. 
+\item \cmdbs{ex.} inicia l'exemple, i cal una línia en blanc per acabar-lo.
+\begin{exampletwouptiny2}
+\ex. exemple 
+
+Nou par\`agraf
+\end{exampletwouptiny2}
+\end{itemize}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -4,6 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[catalan]{babel}
+\usepackage{linguex}
 \usepackage{amsmath}
 \usepackage{color}
 \usepackage{minted}
@@ -90,6 +91,21 @@
    \end{minipage}
    \end{tabular}}}
 
+\newenvironment{exampletwouptiny2}
+  {\VerbatimEnvironment
+   \begin{VerbatimOut}{example.out}}
+  {\end{VerbatimOut}
+   \setlength{\parindent}{0pt}
+   \fbox{\begin{tabular}{l|l}
+   \begin{minipage}{0.35\linewidth}
+     \inputminted[fontsize=\tiny,resetmargins]{latex}{example.out}
+   \end{minipage} &
+   \begin{minipage}{0.60\linewidth}
+     \setlength{\parskip}{6pt plus 1pt minus 1pt}%
+     \raggedright\scriptsize\input{example.out}
+   \end{minipage}
+   \end{tabular}}}
+
 \newenvironment{exampletwouptinynoframe}
   {\VerbatimEnvironment
    \begin{VerbatimOut}{example.out}}
@@ -108,6 +124,5 @@
 \title{Introducció Interactiva a \LaTeX}
 \author{Pol Pastells}
 \titlegraphic{%
-\includegraphics[height=24pt]{overleaf} \quad
 \includegraphics[height=24pt]{logo_UB.png}
 }
