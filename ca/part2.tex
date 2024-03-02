@@ -64,7 +64,7 @@ For best results, please use \href{http://www.google.com/chrome}{Google Chrome} 
   {structure-title.tex}
 \end{minipage}
 \begin{minipage}{0.35\linewidth}
-\includegraphics[width=\textwidth,clip,trim=2.2in 7in 2.2in 2in]{structure-title.pdf}
+\includegraphics[width=1.3\textwidth,clip,trim=2.4in 7in 2.4in 2in]{structure-title.pdf}
 \end{minipage}
 \end{frame}
 
@@ -93,16 +93,15 @@ For best results, please use \href{http://www.google.com/chrome}{Google Chrome} 
 \subsection{Etiquetes i Referències Creuades}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}{\small
-\item Use \cmdbs{label} i \cmdbs{ref} for automatic numbering.
-\item The \bftt{amsmath} package provides \cmdbs{eqref} for referencing
-equations.
+\item \cmdbs{label} serveix per etiquetar i \cmdbs{ref} per referenciar.
+\item Les dues serveixen per seccions, figures, taules, exemples de linguex \dots
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
   {structure-crossref.tex}
 \end{minipage}
 \begin{minipage}{0.35\linewidth}
-\includegraphics[width=\textwidth,clip,trim=1.8in 6in 1.6in 1in]{structure-crossref.pdf}
+\includegraphics[width=\textwidth,clip,trim=1.5in 6in 4in 1in]{structure-crossref.pdf}
 \end{minipage}
 \end{frame}
 
@@ -156,18 +155,18 @@ click here to see my solution}}.
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}
 \item El paquet \bftt{graphicx} inclou l'ordre \cmdbs{includegraphics}.
-\item Aquest paquet admet JPG, JPEG, Supported graphics formats include JPEG, PNG i PDF (usually).
+\item Aquest paquet admet JPG, JPEG, PNG i PDF.
 \end{itemize}
 \begin{exampletwouptiny}
 \includegraphics[
-  width=0.5\textwidth]{gerbil}
+  width=0.6\textwidth]{khaleesi.jpg}
 
 \includegraphics[
-  width=0.3\textwidth,
-  angle=270]{gerbil}
+  width=0.4\textwidth,
+  angle=270
+  ]{khaleesi} % no cal posar el format 
 \end{exampletwouptiny}
 
-\tiny{Imatge: \href{https://pixabay.com/en/animal-apple-attractive-beautiful-1239390/}{CC0}}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -206,7 +205,6 @@ presentation for links to more information.
 \includegraphics[width=\textwidth,clip,trim=2in 5in 3in 1in]{media-graphics.pdf}
 \end{minipage}
 
-\tiny{Imatge: \href{https://pixabay.com/en/animal-apple-attractive-beautiful-1239390/}{CC0}}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -236,7 +234,7 @@ Widget & 1   & 199.99  \\
 Gadget & 2   & 399.99  \\
 Cable  & 3   & 19.99   \\
 \end{tabular}
-\caption{\label{taula:items}Aww\ldots.}
+\caption{\label{taula:items}Aww\dots.}
 \end{table}
 \end{exampletwouptiny}
 \end{itemize}
@@ -315,7 +313,7 @@ Per exemple, \bftt{Jacobson1999Towards} és la clau d'aquest article:
 }
 \end{minted}
 \item És bona idea canviar la clau que trobeu per defecte a una que contingui nom any i títol.
-\item \LaTeX{} formatejarà automàticament les cites en el format adequat (Science, APA, Chicago \ldots), tant dins al text com a l'apartat de referències.
+\item \LaTeX{} formatejarà automàticament les cites en el format adequat (Science, APA, Chicago \dots), tant dins al text com a l'apartat de referències.
 \end{itemize}
 \end{frame}
 
@@ -598,7 +596,7 @@ F(x) = \int_{a}^{x}{f(t) dt}
 \subsection{Typography tweaks}
 \begin{frame}{\insertsubsection}
 \begin{tabular}{lll}
-& character name & used mainly for \ldots \\\hline
+& character name & used mainly for \dots \\\hline
 \bftt{\bs} & backslash                 & ordres, tables \\
 \bftt{\{}  & open brace                & ordres \\
 \bftt{\}}  & close brace               & ordres \\
@@ -616,13 +614,13 @@ F(x) = \int_{a}^{x}{f(t) dt}
 %\vskip 1ex
 %{\scriptsize
 %\begin{tabular}{ll}
-%\cmdbs{begin}\bftt{\{document\}}\ldots\cmdbs{end}\bftt{\{document\}} &
+%\cmdbs{begin}\bftt{\{document\}}\dots\cmdbs{end}\bftt{\{document\}} &
 %  document environment \\
-%\cmdbs{begin}\bftt{\{itemize\}}\ldots\cmdbs{end}\bftt{\{itemize\}} &
+%\cmdbs{begin}\bftt{\{itemize\}}\dots\cmdbs{end}\bftt{\{itemize\}} &
 %  itemized list environment \\
-%\bftt{\$\ldots\$}     & \emph{in-text} math environment \\
-%\bftt{\$\$\ldots\$\$} & \emph{displayed} math environment \\
-%\cmdbs{begin}\bftt{\{equation\}}\ldots\cmdbs{end}\bftt{\{equation\}} &
+%\bftt{\$\dots\$}     & \emph{in-text} math environment \\
+%\bftt{\$\$\dots\$\$} & \emph{displayed} math environment \\
+%\cmdbs{begin}\bftt{\{equation\}}\dots\cmdbs{end}\bftt{\{equation\}} &
 %  displayed math environment w/ number
 %\end{tabular}
 %}
