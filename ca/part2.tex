@@ -213,30 +213,31 @@ presentation for links to more information.
 \subsection{Taules}
 \begin{frame}[fragile]{\insertsubsection}
 \begin{itemize}
-\item Les taules amb \LaTeX{} són una mica complexes. 
+\item Les taules amb \LaTeX{} són una mica complexes.
 \item Cal el paquet \bftt{tabularx}.
 \item L'argument especifica l'alineament de les columnes --- \textbf{l}eft, \textbf{c}enter, \textbf{r}ight.
-\begin{exampletwouptiny}
-\begin{tabular}{lcr}
-Item   & Qty & Unit \$ \\
-Widget & 1   & 199.99  \\
-Gadget & 2   & 399.99  \\
-Cable  & 3   & 19.99   \\
+\begin{exampletwouptiny2}
+\begin{tabular}{lcr} 
+    Item   & Qty & Unit \$ \\
+    Widget & 1   & 199.99  \\
+    Gadget & 2   & 399.99  \\
+    Cable  & 3   & 19.99   \\
 \end{tabular}
-\end{exampletwouptiny}
+\end{exampletwouptiny2}
 \item \keystrokebftt{\&} marca el separador de columna i \keystrokebftt{\bs\bs} el final de línia. 
-\begin{exampletwouptiny}
-\begin{table}
-\centering % centra la taula
-\begin{tabular}{lcr}
-Item   & Qty & Unit \$ \\
-Widget & 1   & 199.99  \\
-Gadget & 2   & 399.99  \\
-Cable  & 3   & 19.99   \\
-\end{tabular}
-\caption{\label{taula:items}Aww\dots.}
+\begin{exampletwouptiny2}
+\begin{table}  
+    \centering % centra la taula
+    \begin{tabular}{lcr}
+        Item   & Qty & Unit \$ \\
+        Widget & 1   & 199.99  \\
+        Gadget & 2   & 399.99  \\
+        Cable  & 3   & 19.99   \\
+    \end{tabular}
+    \caption{Descriu preus.}
+    \label{taula:items}
 \end{table}
-\end{exampletwouptiny}
+\end{exampletwouptiny2}
 \end{itemize}
 \end{frame}
 
@@ -248,25 +249,25 @@ Cable  & 3   & 19.99   \\
 \item Els separadors \keystrokebftt{|} dins l'argument fan línies verticals (millor evitar-les), \cmdbs{hline} fa línies horizontals. 
 \begin{exampletwouptiny}
 \begin{tabular}{|l|r|r|}
-\hline
-Item   & Qty & Unit \$ \\
-\hline
-Widget & 1   & 199.99  \\
-Gadget & 2   & 399.99  \\
-Cable  & 3   & 19.99   \\
-\hline
+    \hline
+    Item   & Qty & Unit \$ \\
+    \hline
+    Widget & 1   & 199.99  \\
+    Gadget & 2   & 399.99  \\
+    Cable  & 3   & 19.99   \\
+    \hline
 \end{tabular}
 \end{exampletwouptiny}
 \item El paquet \keystrokebftt{booktabs} proporciona les ordres \cmdbs{toprule}, \cmdbs{midrule} i \cmdbs{bottomrule}. 
 \begin{exampletwouptiny}
 \begin{tabular}{lrr}
-\toprule
-Item   & Qty & Unit \$ \\
-\midrule
-Widget & 1   & 199.99  \\
-Gadget & 2   & 399.99  \\
-Cable  & 3   & 19.99   \\
-\bottomrule
+    \toprule
+    Item   & Qty & Unit \$ \\
+    \midrule
+    Widget & 1   & 199.99  \\
+    Gadget & 2   & 399.99  \\
+    Cable  & 3   & 19.99   \\
+    \bottomrule
 \end{tabular}
 \end{exampletwouptiny}
 \end{itemize}
@@ -294,6 +295,7 @@ Cable  & 3   & 19.99   \\
 \begin{frame}[fragile]{\insertsubsection{} 1}
 \begin{itemize}
 \item Poseu les referències a un fitxer \bftt{.bib} en format `bibtex':
+\vskip 1ex
 \inputminted[fontsize=\scriptsize,frame=single]{latex}{bib-example.bib}
 \item La majoria de gestors i buscadors d'articles ofereixen aquesta opció. 
 \end{itemize}
@@ -322,16 +324,16 @@ Per exemple, \bftt{Jacobson1999Towards} és la clau d'aquest article:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{} 3}
 \begin{itemize}
-    \item Feu servir el paquet \bftt{biblatex}\footnote{Hi ha un altre paquet (més vell) de referència, \bftt{natbib}. És possible que us el trobeu a alguna plantilla.}
+\item Feu servir el paquet \bftt{biblatex}\footnote{Hi ha un altre paquet (més vell) de referència, \bftt{natbib}. És possible que us el trobeu a alguna plantilla.}
  amb \cmdbs{cite} i \cmdbs{citetext}.
-\item Reference \cmdbs{bibliography} at the end, i specify a \cmdbs{bibliographystyle}.
+\item Al final del document poseu \cmdbs{printbibliography} 
 \end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
   {bib-example.tex}
 \end{minipage}
 \begin{minipage}{0.35\linewidth}
-\includegraphics[width=\textwidth,clip,trim=1.8in 5in 1.8in 1in]{bib-example.pdf}
+\includegraphics[width=1.4\textwidth,clip,trim=1.8in 5in 1.6in 1in]{bib-example.pdf}
 \end{minipage}
 \end{frame}
 
@@ -339,20 +341,20 @@ Per exemple, \bftt{Jacobson1999Towards} és la clau d'aquest article:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Exercici}
-\begin{frame}[fragile]{Exercise: Putting it All Together}
+\begin{frame}[fragile]{Exercici: Pose-m'ho tot junt}
 
-Add an image i a bibliography to the paper from the previous exercise.
+Afegiu una imatge i bibliografia a l'article de l'exercici anterior.
 
 \begin{enumerate}
-\item Download these example files to your computer.
+\item Baixau-vos aquests fitxers d'exemple.
 
 \begin{center}
-\fbox{\href{\fileuri/gerbil.jpg?dl=1}{Click to download example image}}
+\fbox{\href{\fileuri/gerbil.jpg?dl=1}{Clica per baixar imatge d'exemple}}
 
-\fbox{\href{\fileuri/bib-exercise.bib?dl=1}{Click to download example bib file}}
+\fbox{\href{\fileuri/bib-exercise.bib?dl=1}{Clica per descarregar fitxer bib d'exemple}}
 \end{center}
 
-\item Upload them to Overleaf (use the project menu).
+\item Pujeu-los a Overleaf.
 
 \end{enumerate}
 \end{frame}
