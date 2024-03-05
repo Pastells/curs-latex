@@ -2,13 +2,11 @@
 % Common preamble for all three parts.
 %
 \documentclass{beamer}
-\mode<presentation>
-{
-  \usetheme{metropolis}
-  \geometry{paperwidth=140mm,paperheight=105mm}
-  \metroset{block=fill}
-  \metroset{sectionpage=none}
-} 
+\usetheme{metropolis}
+\usepackage{lmodern}
+\geometry{paperwidth=140mm,paperheight=105mm}
+\metroset{block=fill}
+\metroset{sectionpage=none}
 \setbeamerfont{title}{size=\Huge}
 \setbeamerfont{author}{size=\Large}
 \setbeamerfont{date}{size=\Large}
@@ -46,6 +44,7 @@
 \newcommand{\cmdend}[1]{\cmdbs{end\lcb}\bftt{#1}\cmd{\rcb}}
 
 \newcommand{\wllogo}{\textbf{Overleaf}}
+\newcommand{\zero}{$\varnothing$}
 
 % this is where the example source files are loaded from
 % do not include a trailing slash
@@ -80,10 +79,10 @@
   {\end{VerbatimOut}
    \setlength{\parindent}{0pt}
    \fbox{\begin{tabular}{l|l}
-   \begin{minipage}{0.55\linewidth}
+   \begin{minipage}{0.5\linewidth}
      \inputminted[fontsize=\small,resetmargins]{latex}{example.out}
    \end{minipage} &
-   \begin{minipage}{0.35\linewidth}
+   \begin{minipage}{0.4\linewidth}
      \input{example.out}
    \end{minipage}
    \end{tabular}}}
@@ -94,12 +93,12 @@
   {\end{VerbatimOut}
    \setlength{\parindent}{0pt}
    \fbox{\begin{tabular}{l|l}
-   \begin{minipage}{0.55\linewidth}
+   \begin{minipage}{0.50\linewidth}
      \inputminted[fontsize=\scriptsize,resetmargins]{latex}{example.out}
    \end{minipage} &
-   \begin{minipage}{0.35\linewidth}
-     \setlength{\parskip}{6pt plus 1pt minus 1pt}%
-     \raggedright\scriptsize\input{example.out}
+   \begin{minipage}{0.45\linewidth}
+     %\setlength{\parskip}{6pt plus 1pt minus 1pt}%
+     \scriptsize\input{example.out}
    \end{minipage}
    \end{tabular}}}
 
@@ -113,8 +112,8 @@
      \inputminted[fontsize=\tiny,resetmargins]{latex}{example.out}
    \end{minipage} &
    \begin{minipage}{0.60\linewidth}
-     \setlength{\parskip}{6pt plus 1pt minus 1pt}%
-     \raggedright\scriptsize\input{example.out}
+     %\setlength{\parskip}{6pt plus 1pt minus 1pt}%
+     \scriptsize\input{example.out}
    \end{minipage}
    \end{tabular}}}
 
@@ -128,8 +127,8 @@
      \inputminted[fontsize=\scriptsize,resetmargins]{latex}{example.out}
    \end{minipage} &
    \begin{minipage}{0.35\linewidth}
-     \setlength{\parskip}{6pt plus 1pt minus 1pt}%
-     \raggedright\scriptsize\input{example.out}
+     %\setlength{\parskip}{6pt plus 1pt minus 1pt}%
+     \scriptsize\input{example.out}
    \end{minipage}
    \end{tabular}}
 

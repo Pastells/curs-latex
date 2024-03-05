@@ -180,7 +180,7 @@ Cometes dobles: ``text''.
 \keystrokebftt{\&} & et (ampersand)            \\
 \keystrokebftt{\$} & signe de dòlar            \\
 \end{tabular}
-\item Si només els escriviu, obtindreu un error. 
+\item Si només els escriviu, segurament obtindreu un error. 
     Si voleu que apareguin a la sortida, heu d'\textit{escapar-lo} precedint-lo amb una barra inversa \keystroke{\textbackslash}.
 \begin{exampletwoup}
 \$, \%, \&, \#
@@ -394,12 +394,11 @@ same ordres.
 \item Les 3 ordres bàsiques de linguex són \cmdbs{ex.}, \cmdbs{a.} i \cmdbs{b.}. 
 \item \cmdbs{ex.} inicia l'exemple, i cal una línia en blanc per acabar-lo.
 \begin{exampletwouptiny2}
+\ex. Exemple
+
 \ex. Primer nivell de l'exemple
 \a. Segon nivell de l'exemple
 \b. Seguim al segon nivell 
-\a. Tercer nivell 
-\b. Ja veieu com va 
-\b. i podem seguir \dots
 
 Com hem vist a \Last \dots
 
@@ -436,9 +435,10 @@ En canvi a \Next veiem \dots
 \b. Fures
 
 \end{exampletwouptiny2}
-\item Les ordres \cmdbs{c.}, \cmdbs{d.}, etc.~són còpies de \cmdbs{b.}.
 \end{itemize}
+
 \end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -447,7 +447,7 @@ En canvi a \Next veiem \dots
 \begin{frame}[fragile]{\insertsubsection{}: glosses}
 \begin{itemize}
 \item Linguex és molt últil per morfologia. 
-\item Per glossar un exemple afegim `g' després de l'última lletra de l'ordre i linguex s'encarrega d'alinear les paraules.
+\item Per glossar un exemple afegim `g' després de l'última lletra de l'ordre i linguex s'encarrega d'alinear les paraules (cal \keystrokebftt{\bs\bs}  per marcar el final de línia).
 \begin{exampletwouptiny2}
 \ex.\a. No gloss
 \bg. This is a first gloss\\
@@ -458,6 +458,36 @@ Dies ist nicht die erste Glosse\\
 This is not the first gloss\\
 
 \end{exampletwouptiny2}
+\item Podem afegir una tercera línia de traducció amb \cmdbs{glt} (gloss translation).
+\begin{exampletwouptiny2}
+\exg. 
+Martin-ek Diego-\zero{} ikusi du \\
+Martin-ERG Diego-ABS vist ha \\
+\glt `En Martin ha vist en Diego'
+
+\end{exampletwouptiny2}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{linguex}
+\begin{frame}[fragile]{\insertsubsection{}: glosses 2}
+\begin{itemize}
+\item Podem modificar les glosses perquè tinguin l'aspecte que vulguem.
+\begin{exampletwouptiny}
+\renewcommand{\eachwordone}{\itshape}
+\renewcommand{\eachwordtwo}{\tiny}
+
+\exg. 
+Martin-ek Diego-\zero{} ikusi du \\
+Martin-ERG Diego-ABS vist ha \\
+\glt `En Martin ha vist en Diego'
+
+
+\end{exampletwouptiny}
 \end{itemize}
 
 \end{frame}
