@@ -15,6 +15,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[catalan]{babel}
 \usepackage{linguex}
+\usepackage[linguistics]{forest}
 \usepackage{amsmath}
 \usepackage{color}
 \usepackage{minted}
@@ -131,6 +132,8 @@
      \scriptsize\input{example.out}
    \end{minipage}
    \end{tabular}}
+
+\newenvironment{MyMinted}{\VerbatimEnvironment\begin{minted}[fontsize=\scriptsize]{latex}}{\end{minted}} 
 
 \title{Fonaments de \LaTeX}
 \author{Pol Pastells}

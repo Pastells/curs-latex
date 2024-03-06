@@ -420,7 +420,6 @@ En canvi a \Next veiem \dots
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{linguex}
 \begin{frame}[fragile]{\insertsubsection{}: exemples 2}
 \begin{itemize}
 \item Per acabar un sol nivell s'utilitza \cmdbs{z.} 
@@ -439,11 +438,28 @@ En canvi a \Next veiem \dots
 
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsubsection{}: gramaticalitat}
+\begin{itemize}
+    \item Linguex admet els símbols *, ?, \# i \% per judicis de gramaticalitat (els posa al davant)\footnote{recordeu que \# i \% s'escriuen amb una \bs~al davant}.
+\begin{exampletwouptiny2}
+\ex. 
+\a. Exemple ben format 
+\b. * Agramatical frase? 
+\b. ** i molt agramatical molt
+\b. \# El formatge l'hi he posat 
+\c. ? Hi han maduixes 
+
+\end{exampletwouptiny2}
+\end{itemize}
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{linguex}
 \begin{frame}[fragile]{\insertsubsection{}: glosses}
 \begin{itemize}
 \item Linguex és molt últil per morfologia. 
@@ -473,7 +489,6 @@ Martin-ERG Diego-ABS vist ha \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{linguex}
 \begin{frame}[fragile]{\insertsubsection{}: glosses 2}
 \begin{itemize}
 \item Podem modificar les glosses perquè tinguin l'aspecte que vulguem.
@@ -488,6 +503,49 @@ Martin-ERG Diego-ABS vist ha \\
 
 
 \end{exampletwouptiny}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsubsection{}: claudators}
+\begin{itemize}
+\item Amb l'ordre \cmdbs{exi.} es pot fer servir notació amb claudators
+\item Si l'exemple conté una glossa, cal saltar-se elements amb `\{\}'
+\begin{MyMinted}
+\exi.
+\a.  [SC that [ST John$_i$  [Sv $t_i$ likes Mary ]]]
+\bg. [SC dass [ST Peter$_i$ [Sv $t_i$ Mari liebt ]]] \\
+{} that {} Peter {} {} Mary loves \\
+\glt `that Peter loves Mary'
+\end{MyMinted}
+\exi.
+\a.  [SC that [ST John$_i$  [Sv $t_i$ likes Mary ]]]
+\bg. [SC dass [ST Peter$_i$ [Sv $t_i$ Mari liebt ]]] \\
+{} that {} Peter {} {} Mary loves \\
+\glt `that Peter loves Mary'
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Extra}
+\begin{frame}[fragile]{\insertsubsection{}: arbres}
+\begin{itemize}
+\item Hi ha dos paquets importants per fer arbres: forest i tikz-qtree.  
+\item Mireu els manuals per saber quin uns convé.
+\begin{exampletwouptiny}
+\ex. \begin{forest}
+[SC[C][ST[T][SV[V][SN]]]]
+\end{forest}
+
+\end{exampletwouptiny}
+\item \textcolor{magenta}{\href{https://ling.auf.net/lingbuzz/003391}{Guia forest}}
 \end{itemize}
 
 \end{frame}
