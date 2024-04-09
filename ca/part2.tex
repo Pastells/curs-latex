@@ -28,7 +28,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\insertsection}
+\begin{frame}{Documents Estructurats}
 \begin{itemize}
 \item In Part 1, we learned about ordres i environments for typesetting text
 and mathematics.
@@ -53,7 +53,7 @@ For best results, please use \href{http://www.google.com/chrome}{Google Chrome} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Títol i Abstract}
-\begin{frame}[fragile]{\insertsubsection}
+\begin{frame}[fragile]{Títol i Resum}
 \begin{itemize}{\small
 \item A \LaTeX{}, \cmdbs{title}, \cmdbs{author} i \cmdbs{date} es defineixen al preàmbul. 
 \item Dins el document, \cmdbs{maketitle} crea el títol.
@@ -72,10 +72,10 @@ For best results, please use \href{http://www.google.com/chrome}{Google Chrome} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Seccions}
-\begin{frame}{\insertsubsection}
+\begin{frame}{Seccions}
 \begin{itemize}{\small
     \item Només cal fer servir \cmdbs{section} i \cmdbs{subsection} 
-        (\textcolor{magenta}{\href{https://www.overleaf.com/learn/latex/Sections_and_chapters}{hi ha més nivells}})
+        (\href{https://www.overleaf.com/learn/latex/Sections_and_chapters}{hi ha més nivells})
 \item Què creus que fan \cmdbs{section*} i \cmdbs{subsection*}?
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
@@ -91,7 +91,7 @@ For best results, please use \href{http://www.google.com/chrome}{Google Chrome} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Etiquetes i Referències Creuades}
-\begin{frame}[fragile]{\insertsubsection}
+\begin{frame}[fragile]{Etiquetes i Referències Creuades}
 \begin{itemize}{\small
 \item \cmdbs{label} serveix per etiquetar i \cmdbs{ref} per referenciar.
 \item Les dues serveixen per seccions, figures, taules, exemples de linguex \dots
@@ -152,7 +152,7 @@ click here to see my solution}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Gràfics}
-\begin{frame}[fragile]{\insertsubsection}
+\begin{frame}[fragile]{Gràfics}
 \begin{itemize}
 \item El paquet \bftt{graphicx} inclou l'ordre \cmdbs{includegraphics}.
 \item Aquest paquet admet JPG, JPEG, PNG i PDF.
@@ -191,7 +191,7 @@ presentation for links to more information.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection[fragile]{Floats}
-\begin{frame}{\insertsubsection}
+\begin{frame}{Floats}
 \begin{itemize}
 \item Allow \LaTeX{} to decide where the figure will go (it can ``float'').
 \item You can also give the figure a caption, which can be referenced with
@@ -211,7 +211,7 @@ presentation for links to more information.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Taules}
-\begin{frame}[fragile]{\insertsubsection}
+\begin{frame}[fragile]{Taules}
 \begin{itemize}
 \item Les taules amb \LaTeX{} són una mica complexes.
 \item Cal el paquet \bftt{tabularx}.
@@ -244,7 +244,7 @@ presentation for links to more information.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection ~2}
+\begin{frame}[fragile]{Taules 2}
 \begin{itemize}
 \item Els separadors \keystrokebftt{|} dins l'argument fan línies verticals (millor evitar-les), \cmdbs{hline} fa línies horizontals. 
 \begin{exampletwouptiny}
@@ -292,7 +292,7 @@ presentation for links to more information.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{bib\TeX}
-\begin{frame}[fragile]{\insertsubsection{} 1}
+\begin{frame}[fragile]{bib\TeX{} 1}
 \begin{itemize}
 \item Poseu les referències a un fitxer \bftt{.bib} en format `bibtex':
 \vskip 1ex
@@ -304,7 +304,7 @@ presentation for links to more information.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{} 2}
+\begin{frame}[fragile]{bib\TeX{} 2}
 \begin{itemize}
 \item Cada entrada del fitxer \bftt{.bib} té una clau que serveix per referenciar-la dins el text.
 Per exemple, \bftt{Jacobson1999Towards} és la clau d'aquest article:
@@ -322,7 +322,7 @@ Per exemple, \bftt{Jacobson1999Towards} és la clau d'aquest article:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{} 3}
+\begin{frame}[fragile]{bib\TeX{} 3}
 \begin{itemize}
 \item Feu servir el paquet \bftt{biblatex}\footnote{Hi ha un altre paquet (més vell) de referència, \bftt{natbib}. És possible que us el trobeu a alguna plantilla.}
  amb \cmdbs{cite} i \cmdbs{citetext}.
@@ -377,7 +377,7 @@ Afegiu una imatge i bibliografia a l'article de l'exercici anterior.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Altres coses interessants}
-\begin{frame}[fragile]{\insertsubsection}
+\begin{frame}[fragile]{Altres}
 \begin{itemize}
 \item L'ordre \cmdbs{tableofcontents} genera un índex automàticament a partir  
 dels títols de les seccions i subseccions.
@@ -402,10 +402,9 @@ $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Altres paquets}
-\begin{frame}{\insertsubsection}
+\begin{frame}{Més paquets}
 \begin{itemize}
-\item \bftt{beamer}: per presentacion (com aquesta!)
-\item \bftt{beamer}: per presentacion (com aquesta!)
+\item \bftt{beamer}: per presentacions (com aquesta!)
 \item \bftt{todonotes}: comenataris i coses pendents (TODO)
 \item \bftt{tikz}: gràfics, una mica difícil. 
 \item \bftt{tikz-qtree}: arbres per sintaxi, relacions genètiques \dots 
@@ -419,9 +418,9 @@ per exemples.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Instalar \LaTeX{}}
-\begin{frame}{\insertsubsection}
+\begin{frame}{Instalar \LaTeX}
 \begin{itemize}
-\item Per fer servir \LaTeX{} al vostre ordinador, us caldrà una \emph{distribution}: 
+\item Per fer servir \LaTeX{} al vostre ordinador, us caldrà una \emph{distribució}: 
     inclou el programa \bftt{latex} i un munt de paquets. 
 \begin{itemize}
 \item Windows: \href{http://miktex.org/}{Mik\TeX} o \href{http://tug.org/texlive/}{\TeX Live}
@@ -436,18 +435,19 @@ per exemples.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Exemples comentats}
-\begin{frame}{\insertsubsection}
+\begin{frame}{Exemples comentats}
 De senzill a complex:
 \begin{itemize}
-    \item \textcolor{magenta}{\href{https://www.overleaf.com/read/rgxbsfvqsgbw\#ba04b9}{Breu transcripció fonètica}} --- amb tipa (comentat) o tipauni. 
-    \item \textcolor{magenta}{\href{https://www.overleaf.com/read/mxysfjcnnppm\#294a25}{Treball de transcripció fonètica}} --- més extens que l'anterior, barreja de tipa i unicode.
-    \item \textcolor{magenta}{\href{https://www.overleaf.com/read/sxkcdfrpmbcb\#10abd3}{Treball morfologia basca}} --- conté:
+    \item \href{https://www.overleaf.com/read/rgxbsfvqsgbw\#ba04b9}{Breu transcripció fonètica} --- amb \bftt{tipauni} o \bftt{tipa} (comentat). 
+    \item \href{https://www.overleaf.com/read/mxysfjcnnppm\#294a25}{Treball de transcripció fonètica} --- més extens que l'anterior, barreja de \bftt{tipa} i unicode.
+    \item \href{https://www.overleaf.com/read/sxkcdfrpmbcb\#10abd3}{Treball morfologia basca} --- conté:
 \begin{itemize}
     \item Un treball estructurat amb diversos fitxers, glosses personalitzades, taules amb format avançat i exemples de bibliografia tant amb biblatex com amb apacite.
-    \item Una presentació amb beamer.
+    \item Una presentació amb \bftt{beamer}.
 \end{itemize}
-\item Finalment, us pot ser útil \textcolor{magenta}{\href{https://www.overleaf.com/read/vsdvmbzywdrn\#d43fce}{aquesta plantilla senzilla}}.
 \end{itemize}
+
+Finalment, us pot ser útil \href{https://www.overleaf.com/read/vsdvmbzywdrn\#d43fce}{aquesta plantilla senzilla}.
 
 \end{frame}
 
@@ -455,7 +455,7 @@ De senzill a complex:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Referències Online}
-\begin{frame}{\insertsubsection}
+\begin{frame}{Referències Online}
 \begin{itemize}
 \item \href{https://www.overleaf.com/learn}{The Overleaf Learn Wiki} --- tutorials i material de referència.
 \item \href{http://en.wikibooks.org/wiki/LaTeX}{The \LaTeX{} Wikibook} --- més tutorials i material de referència.
@@ -593,8 +593,8 @@ F(x) = \int_{a}^{x}{f(t) dt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Typography tweaks}
-\begin{frame}{\insertsubsection}
+\subsection{Tipografia}
+\begin{frame}{Tipografia}
 \begin{tabular}{lll}
 & character name & used mainly for \dots \\\hline
 \bftt{\bs} & backslash                 & ordres, tables \\

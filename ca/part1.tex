@@ -18,7 +18,7 @@
 \begin{itemize}
 \item Fa documents amb una bona presentació
 \begin{itemize}
-\item Especialment per a matemàtiques
+\item Especialment per a matemàtiques i lingüística
 \end{itemize}
 %
 \item Creat per científics, per a científics
@@ -28,7 +28,7 @@
 %
 \item És potent --- podeu estendre-ho
 \begin{itemize}
-\item Paquets per a treballs, presentacions, tesis, \dots
+\item Paquets per a treballs, presentacions, tesis \dots
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -40,6 +40,7 @@
 \begin{itemize}
 \item Escriviu el document a \texttt{text pla} amb \cmd{ordres} que
 descriuen la seva estructura i significat.
+\item Usa ordres per descriure `el contingut', no `el format'.
 \item El programa \texttt{latex} processa el text i les ordres per a produir un
 document amb un format bonic.
 \end{itemize}
@@ -59,7 +60,7 @@ La \textit{fonologia} estudia els \textbf{fonemes}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Més exemples d'ordres i la seva sortida \dots}
+\begin{frame}[fragile]{Exemples d'ordres i la seva sortida}
 \begin{exampletwoup}
 \begin{itemize}
 \item Mel
@@ -83,17 +84,6 @@ La \textit{fonologia} estudia els \textbf{fonemes}.
 \tiny{Imatge: \href{https://pixabay.com/en/animal-apple-attractive-beautiful-1239390/}{CC0}}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Canvi d'actitud}
-
-\begin{itemize}
-\item Usa ordres per descriure `el què', no `com es veu'.
-\item Centra't en el teu contingut.
-\item Deixa que \LaTeX{} faci la seva feina.
-\end{itemize}
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -104,7 +94,7 @@ La \textit{fonologia} estudia els \textbf{fonemes}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Començant}
-\begin{frame}[fragile]{\insertsubsection}
+\begin{frame}[fragile]{Començant}
 \begin{itemize}
 \item Un document de \LaTeX{} mínim:
 \inputminted[frame=single]{latex}{basics.tex}
@@ -119,7 +109,7 @@ La \textit{fonologia} estudia els \textbf{fonemes}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{} amb \wllogo}
+\begin{frame}[fragile]{\wllogo}
 \begin{itemize}
 \item Overleaf és un lloc web per escriure documents a \LaTeX.
 \item `Compila' el teu \LaTeX{}  automàticament\footnote{Ctrl + Enter, o premeu `Recompile'} per a mostrar-te els resultats. 
@@ -128,41 +118,42 @@ La \textit{fonologia} estudia els \textbf{fonemes}.
 \fbox{\href{\wlnewdoc{basics.tex}}{%
 Feu clic aquí per a obrir el document d'exemple a \wllogo{}}}
 \\[1ex]\scriptsize{}
-Per obtenir els millors resultats, utilitzeu Google Chrome o un FireFox recent.
+%Per obtenir els millors resultats, utilitzeu Google Chrome o un FireFox recent.
 \end{center}
 \vskip 2ex
 \item A mesura que anem passant per les següents diapositives, proveu els exemples escrivint-los en el document d'exemple sobre Overleaf.
-\item \textbf{En serio, fes-ho a mesura que anem avançant!}
+\item \textbf{Vinga, feu-ho a mesura que anem avançant!}
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Escrivint Text}
-\begin{frame}[fragile]{\insertsubsection{}}
+\subsection{Escriure Text}
+\begin{frame}[fragile]{Escriure Text}
 \small
 \begin{itemize}
 \item Escriviu el text entre \cmdbegin{document} i \cmdend{document}.
 \item En la seva major part, només has d'escriure el text amb normalitat.
 
 \begin{itemize}
-    \item Les paraules estan separades per \textbf{almenys} un espai.
+    \item Les paraules estan separades per \textbf{com a mínim} un espai.
     \item Els paràgrafs estan separats per \textbf{almenys} una línia en blanc.
 \end{itemize}
 
-\item Els espais del fitxer d'origen es col·lapsen a la sortida. 
+\item Els espais del fitxer d'origen es co"lapsen a la sortida. 
 \begin{exampletwouptiny}
 La          fonologia
     estudia els fonemes 
 \end{exampletwouptiny}
+\item Pot ser útil començar cada frase en una nova línia (sobretot amb \href{https://git-scm.com/}{Git}).
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Compte}
+\begin{frame}[fragile]{Escriure Text: Compte}
 \small
 \begin{itemize}
 \item Les cometes són una mica complicades:\\
@@ -191,7 +182,7 @@ Cometes dobles: ``text''.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Com Tractar Errors}
+\begin{frame}[fragile]{Com Tractar els Errors}
 \begin{itemize}
 \item \LaTeX{} es pot confondre quan està intentant compilar el vostre document. 
     Si ho fa, s'atura amb un error, que heu de solucionar abans de produir cap sortida.
@@ -237,20 +228,20 @@ clica aquí per veure la solució}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Escrivint Matemàtiques}
-\begin{frame}[fragile]{\insertsubsection{}: Símbols de dòlar}
+\subsection{Escriure Matemàtiques}
+\begin{frame}[fragile]{Escriure Matemàtiques: Símbols de dòlar}
 \begin{itemize}
 \item Per què són especials els símbols de dòlar \keystrokebftt{\$}? Els utilitzem per marcar matemàtiques dins el text.\\[1ex]
 \begin{exampletwouptiny}
 % meh:
 Siguin a i b nombres enters 
-positius, i sigui c = a - b - 1
+positius, i sigui c > a - b + 1
 
 % millor:
 Siguin $a$ i $b$ nombres enters 
-positius, i sigui $c = a - b + 1$.
+positius, i sigui $c > a - b + 1$.
 \end{exampletwouptiny}
-\item Utilitza sempre els símbols de dòlar amb parelles -- un per començar les matemàtiques, i un per acabar-les.
+\item Utilitza sempre els símbols de dòlar amb pareller: un per començar les matemàtiques, i un per acabar-les.
 \item \LaTeX{} ignora els espais i els ajusta automàticament.
 \begin{exampletwouptiny}
 $y=ax^2+bx+c$ \dots
@@ -263,7 +254,7 @@ $y = a x^2 + b x + c $ \dots
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Notació}
+\begin{frame}[fragile]{Escriure Matemàtiques: Notació}
 \begin{itemize}
 \item Accent circumflex \keystrokebftt{\^} per superíndexs i barra baixa \keystrokebftt{\_} pels subíndexs.
 \begin{exampletwouptiny}
@@ -311,36 +302,11 @@ $\Omega = \sum_{k=1}^{n} \omega_k$
 % \end{itemize}
 % \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Entorns}
-\begin{itemize}
-\item \bftt{equation} is an \emph{environment} --- a context.
-\item A ordre can produce different output in different contexts.
-\begin{exampletwouptiny}
-We can write
-$ \Omega = \sum_{k=1}^{n} \omega_k $
-in text, or we can write
-\begin{equation}
-  \Omega = \sum_{k=1}^{n} \omega_k
-\end{equation}
-to display it.
-\end{exampletwouptiny}
-\vskip 2ex
-\item Note how the $\Sigma$ is bigger in the \bftt{equation} environment, i
-how the subscripts i superscripts change position, even though we used the
-same ordres.
-\vskip 1em
-{\scriptsize In fact, we could have written \bftt{\$...\$} as
-\cmdbegin{math}\bftt{...}\cmdend{math}.}
-\end{itemize}
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Entorns 2}
+\begin{frame}[fragile]{Entorns}
 \begin{itemize}
 \item Les ordres \cmdbs{begin} i \cmdbs{end} es fan servir per delimitar diferents entorns.
 \vskip 2ex
@@ -364,15 +330,38 @@ same ordres.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Entorns 2 (extra)}
+\begin{itemize}
+\item \bftt{equation} és l'entorn més comú per posar equacions numerades.
+\item Les mateixes ordres dins un entorn produeixen resultats diferents. 
+\begin{exampletwouptiny}
+Podem escriure el mateix dins un text: 
+$ \Omega = \sum_{k=1}^{n} \omega_k $
+
+O dir, com es veu a:
+\begin{equation}
+  \Omega = \sum_{k=1}^{n} \omega_k
+\end{equation}
+\end{exampletwouptiny}
+\vskip 2ex
+\item Fixeu-vos que $\Sigma$ és més gran dins d'\bftt{equation}, i els subíndexs i superíndex canvien de lloc.
+\vskip 1em
+{\scriptsize De fet, \bftt{\$...\$} és una drecera per l'entorn
+\cmdbegin{math}\bftt{...}\cmdend{math}.}
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Incís: Paquets}
 
 \begin{itemize}
-\item Totes les ordres i entorns que hem vist fins ara estan integrades a \LaTeX.
+\item Totes les ordres i entorns que hem vist fins ara venen integrades per defecte amb \LaTeX.
 
-\item Els \emph{Paquets} són llibreries que contenen ordres i entorns addicionals. N'hi ha milers de gratuïts.
+\item Els \emph{paquets} són llibreries que contenen ordres i entorns addicionals. N'hi ha milers de gratuïts.
 
 \item Si volem fer servir un paquet l'hem de carregar amb l'ordre 
-\cmdbs{usepackage} en el \emph{preàmbul}.
+    \cmdbs{usepackage} al \emph{preàmbul} \footnote{Un dels beneficis d'Overleaf és que ja té tots els paquets de \href{https://tug.org/texlive/}{TexLive} insta"lats.}.
 
 \item Exemple: \bftt{linguex} per exemples lingüístics. 
 \begin{minted}[fontsize=\small,frame=single]{latex}
@@ -389,7 +378,7 @@ same ordres.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{linguex}
-\begin{frame}[fragile]{\insertsubsection{}: exemples}
+\begin{frame}[fragile]{linguex: exemples}
 \begin{itemize}
 \item Les 3 ordres bàsiques de linguex són \cmdbs{ex.}, \cmdbs{a.} i \cmdbs{b.}. 
 \item \cmdbs{ex.} inicia l'exemple, i cal una línia en blanc per acabar-lo.
@@ -400,7 +389,7 @@ same ordres.
 \a. Segon nivell de l'exemple
 \b. Seguim al segon nivell 
 
-Com hem vist a \Last \dots
+Com hem vist a \LLast i \Last \dots
 
 En canvi a \Next veiem \dots
 
@@ -420,7 +409,7 @@ En canvi a \Next veiem \dots
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: exemples 2}
+\begin{frame}[fragile]{linguex: exemples 2}
 \begin{itemize}
 \item Per acabar un sol nivell s'utilitza \cmdbs{z.} 
 \begin{exampletwouptiny2}
@@ -441,7 +430,7 @@ En canvi a \Next veiem \dots
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: gramaticalitat}
+\begin{frame}[fragile]{linguex: gramaticalitat}
 \begin{itemize}
     \item Linguex admet els símbols *, ?, \# i \% per judicis de gramaticalitat (els posa al davant)\footnote{recordeu que \# i \% s'escriuen amb una \bs~al davant}.
 \begin{exampletwouptiny2}
@@ -460,7 +449,7 @@ En canvi a \Next veiem \dots
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: glosses}
+\begin{frame}[fragile]{linguex: glosses}
 \begin{itemize}
 \item Linguex és molt últil per morfologia. 
 \item Per glossar un exemple afegim `g' després de l'última lletra de l'ordre i linguex s'encarrega d'alinear les paraules (cal \keystrokebftt{\bs\bs}  per marcar el final de línia).
@@ -489,7 +478,7 @@ Martin-ERG Diego-ABS vist ha \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: glosses 2}
+\begin{frame}[fragile]{linguex: glosses 2}
 \begin{itemize}
 \item Podem modificar les glosses perquè tinguin l'aspecte que vulguem.
 \begin{exampletwouptiny}
@@ -510,7 +499,7 @@ Martin-ERG Diego-ABS vist ha \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: claudators}
+\begin{frame}[fragile]{linguex: claudators}
 \begin{itemize}
 \item Amb l'ordre \cmdbs{exi.} es pot fer servir notació amb claudators
 \item Si l'exemple conté una glossa, cal saltar-se elements amb `\{\}'
@@ -535,7 +524,7 @@ Martin-ERG Diego-ABS vist ha \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Extra}
-\begin{frame}[fragile]{\insertsubsection{}: arbres}
+\begin{frame}[fragile]{Extra: arbres}
 \begin{itemize}
 \item Hi ha dos paquets importants per fer arbres: forest i tikz-qtree.  
 \item Mireu els manuals per saber quin uns convé.
@@ -545,14 +534,14 @@ Martin-ERG Diego-ABS vist ha \\
 \end{forest}
 
 \end{exampletwouptiny}
-\item \textcolor{magenta}{\href{https://ling.auf.net/lingbuzz/003391}{Guia forest}}
+\item \href{https://ling.auf.net/lingbuzz/003391}{Guia forest}
 \end{itemize}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Examples with \bftt{amsmath}}
+\begin{frame}[fragile]{Extra: Examples with \bftt{amsmath}}
 \begin{itemize}
 \item Use \bftt{equation*} (``equation-star'') for unnumbered equations.
 \begin{exampletwouptiny}
@@ -585,7 +574,7 @@ mathematical operators.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsubsection{}: Examples with \bftt{amsmath}}
+\begin{frame}[fragile]{Extra: Examples with \bftt{amsmath}}
 \begin{itemize}{\small
 \item Align a sequence of equations at the equals sign
 \begin{align*}

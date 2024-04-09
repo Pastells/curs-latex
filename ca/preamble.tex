@@ -19,10 +19,15 @@
 \usepackage{amsmath}
 \usepackage{color}
 \usepackage{minted}
-\usepackage{hyperref}
 \usepackage{multicol}
 \usepackage{tabularx, booktabs}
 \usepackage{tikz}
+\usepackage{hyperref}
+%\hypersetup{hidelinks = true,}
+\hypersetup{colorlinks,breaklinks,
+            urlcolor=magenta,
+            linkcolor=black,
+            }
 
 % only inline todonotes work
 \usepackage{xkeyval}
@@ -136,7 +141,8 @@
 \newenvironment{MyMinted}{\VerbatimEnvironment\begin{minted}[fontsize=\scriptsize]{latex}}{\end{minted}} 
 
 \title{Fonaments de \LaTeX}
-\author{Pol Pastells}
+\author{Pol Pastells \\
+\small pol.pastells@ub.edu}
 \titlegraphic{%
 \includegraphics[height=24pt]{logo_UB.png}
 }
