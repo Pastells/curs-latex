@@ -1,4 +1,4 @@
-# latex-course
+# Curs de LaTeX (enfocat a la lingüística)
 
 Diapositives per a un curs d'introducció a LaTeX. Les diapositives i el codi es basen en
 [aquest repositori de github](https://github.com/jdleesmiller/latex-course) sota una llicència permissiva

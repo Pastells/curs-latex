@@ -1,6 +1,6 @@
 \input{preamble.tex}
 
-\subtitle{Part 3: Presentacions i altres}
+\subtitle{Tercera part}
 
 \newcommand{\mar}[1]{\todo[color=green!40]{#1}}
 \newcommand{\andreu}[1]{\todo[color=purple!40]{#1}}
@@ -17,34 +17,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{frame}{Setup}
-%\begin{itemize}
-%\item Go to this URL in Google Chrome (\emph{not} Internet Explorer) to open
-%these slides on your computer:
-%\vskip 2em
-%\begin{center}
-%\fbox{\url{http://bit.ly/12WWWqj}}
-%\end{center}
-%\vskip 2em
-%\item Here are the slides from the previous tutorial, for reference:
-%\begin{center}
-%\vskip 1em
-%\fbox{\href{https://dl.dropboxusercontent.com/u/31383671/site/latex_course_v2/part1.pdf}{Part 1: The Basics}}
-%\vskip 1em
-%\fbox{\href{https://dl.dropboxusercontent.com/u/31383671/site/latex_course_v2/part2.pdf}{Part 2: Structured Documents \& More}}
-%\end{center}
-%\end{itemize}
-%\end{frame}
+\section{Repassem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\LaTeX{} Recap}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection}
+\begin{frame}[fragile]{Repassem}
 \begin{itemize}
 \item You write your document in \texttt{plain text} with \cmd{ordres} that
 describe its structure i meaning.
@@ -67,7 +45,7 @@ The rain in Spain falls \emph{mainly} on the plain.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: ordres \& Arguments}
+\begin{frame}[fragile]{Repassem: ordres \& Arguments}
 \begin{itemize}
 \item A ordre starts with a \emph{backslash} \keystrokebftt{\bs}.
 \item Some ordres take an \emph{argument} in curly braces \keystrokebftt{\{}
@@ -90,7 +68,7 @@ The rain in Spain falls \emph{mainly} on the plain.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Environments}
+\begin{frame}[fragile]{Repassem: Environments}
 \begin{itemize}
 \item The \cmdbs{begin} i \cmdbs{end} ordres are used to create many
 different environments --- contexts.
@@ -115,7 +93,7 @@ different environments --- contexts.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Mathematics}
+\begin{frame}[fragile]{Repassem: Mathematics}
 \begin{itemize}
 \item The \bftt{equation} environment makes a numbered equation.
 \begin{exampletwouptiny}
@@ -147,7 +125,7 @@ to end it.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Document Structure}
+\begin{frame}[fragile]{Repassem: Document Structure}
 \begin{itemize}{\small
 \item Starts with the \cmdbs{documentclass} --- what type of document.
 \item Metadata (\cmdbs{title} i \cmdbs{author}) i packages in the
@@ -169,7 +147,7 @@ create numbered sections.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Exercise}
+\begin{frame}[fragile]{Repassem: Exercici}
 
 \begin{enumerate}
 \item Here is the text for a short article:\footnote{Based on \url{http://www.cgd.ucar.edu/cms/agu/scientific_talk.html}}
@@ -197,17 +175,17 @@ Click to open the model document}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Presentations with \protect\bftt{beamer}}
+\section{Presentacions amb \protect\bftt{beamer}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection}
+\begin{frame}[fragile]{Presentacions amb \protect\bftt{beamer}}
 \begin{itemize}
-\item Beamer is a package for creating presentations (such as this one!) in
-\LaTeX{}.
-\item It provides the \bftt{beamer} document class.
+\item Beamer és un paquet per fer presentacions (com aquesta).
+\item Es fa servir amb el tipus de document \bftt{beamer}.
 \item Use the \bftt{frame} environment to create slides.
+\item L'entorn \bftt{frame} crea diapositives. 
 \end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
@@ -222,7 +200,7 @@ Click to open the model document}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Following Along}
+\begin{frame}[fragile]{Presentacions amb \protect\bftt{beamer}: }
 
 \begin{itemize}
 \item As we go through the following slides, try out the examples by typing them
