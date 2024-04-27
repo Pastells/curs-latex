@@ -1,6 +1,6 @@
 \input{preamble.tex}
 
-\subtitle{Part 1: Fonaments}
+\subtitle{Primera part}
 
 \begin{document}
 
@@ -14,6 +14,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fonaments}
+
+\begin{frame}{Continguts}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Introducció}
+
 \begin{frame}{Per què \LaTeX{}?}
 \begin{itemize}
 \item Fa documents amb una bona presentació
@@ -85,15 +98,10 @@ La \textit{fonologia} estudia els \textbf{fonemes}.
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Fonaments}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Començant}
 \begin{frame}[fragile]{Començant}
 \begin{itemize}
 \item Un document de \LaTeX{} mínim:
@@ -306,6 +314,7 @@ $\Omega = \sum_{k=1}^{n} \omega_k$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Entorns}
 \begin{frame}[fragile]{Entorns}
 \begin{itemize}
 \item Les ordres \cmdbs{begin} i \cmdbs{end} es fan servir per delimitar diferents entorns.
@@ -363,10 +372,10 @@ O dir, com es veu a:
 \item Si volem fer servir un paquet l'hem de carregar amb l'ordre 
     \cmdbs{usepackage} al \emph{preàmbul} \footnote{Un dels beneficis d'Overleaf és que ja té tots els paquets de \href{https://tug.org/texlive/}{TexLive} insta"lats.}.
 
-\item Exemple: \bftt{linguex} per exemples lingüístics. 
+\item Exemple: \bftt{graphicx} per incloure imatges. 
 \begin{minted}[fontsize=\small,frame=single]{latex}
 \documentclass{article}
-\usepackage{linguex} % preàmbul
+\usepackage{graphicx} % preàmbul
 \begin{document}
 % ja podem fer servir ordres de linguex ... 
 \end{document}
@@ -377,263 +386,147 @@ O dir, com es veu a:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{linguex}
-\begin{frame}[fragile]{linguex: exemples}
-\begin{itemize}
-\item Les 3 ordres bàsiques de linguex són \cmdbs{ex.}, \cmdbs{a.} i \cmdbs{b.}. 
-\item \cmdbs{ex.} inicia l'exemple, i cal una línia en blanc per acabar-lo.
-\begin{exampletwouptiny2}
-\ex. Exemple
-
-\ex. Primer nivell de l'exemple
-\a. Segon nivell de l'exemple
-\b. Seguim al segon nivell 
-
-Com hem vist a \LLast i \Last \dots
-
-En canvi a \Next veiem \dots
-
-\ex. 
-\a. podem deixar buit 
-\b. el primer nivell
-\c. si volem ser ordenats
-\d. podem fer servir
-\e. tot l'abecedari
-\b. tot i que no cal
-
-\end{exampletwouptiny2}
-\item Les ordres \cmdbs{c.}, \cmdbs{d.}, etc.~són còpies de \cmdbs{b.}.
-\end{itemize}
+\section{Figures i Taules}
+\begin{frame}{Continguts}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{linguex: exemples 2}
+\subsection{Gràfics}
+\begin{frame}[fragile]{Gràfics}
 \begin{itemize}
-\item Per acabar un sol nivell s'utilitza \cmdbs{z.} 
-\begin{exampletwouptiny2}
-\ex. Animals 
-\a. Gats
-\a. miau
-\z.
-\b. Gossos
-\a. bup
-\z.
-\b. Fures
-
-\end{exampletwouptiny2}
+\item El paquet \bftt{graphicx} inclou l'ordre \cmdbs{includegraphics}.
+\item Aquest paquet admet JPG, JPEG, PNG i PDF.
 \end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{linguex: gramaticalitat}
-\begin{itemize}
-    \item Linguex admet els símbols *, ?, \# i \% per judicis de gramaticalitat (els posa al davant)\footnote{recordeu que \# i \% s'escriuen amb una \bs~al davant}.
-\begin{exampletwouptiny2}
-\ex. 
-\a. Exemple ben format 
-\b. * Agramatical frase? 
-\b. ** i molt agramatical molt
-\b. \# El formatge l'hi he posat 
-\c. ? Hi han maduixes 
-
-\end{exampletwouptiny2}
-\end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{linguex: glosses}
-\begin{itemize}
-\item Linguex és molt últil per morfologia. 
-\item Per glossar un exemple afegim `g' després de l'última lletra de l'ordre i linguex s'encarrega d'alinear les paraules (cal \keystrokebftt{\bs\bs}  per marcar el final de línia).
-\begin{exampletwouptiny2}
-\ex.\a. No gloss
-\bg. This is a first gloss\\
-Dies ist eine erste Glosse\\
-
-\exg.
-Dies ist nicht die erste Glosse\\
-This is not the first gloss\\
-
-\end{exampletwouptiny2}
-\item Podem afegir una tercera línia de traducció amb \cmdbs{glt} (gloss translation).
-\begin{exampletwouptiny2}
-\exg. 
-Martin-ek Diego-\zero{} ikusi du \\
-Martin-ERG Diego-ABS vist ha \\
-\glt `En Martin ha vist en Diego'
-
-\end{exampletwouptiny2}
-\end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{linguex: glosses 2}
-\begin{itemize}
-\item Podem modificar les glosses perquè tinguin l'aspecte que vulguem.
 \begin{exampletwouptiny}
-\renewcommand{\eachwordone}{\itshape}
-\renewcommand{\eachwordtwo}{\tiny}
+\includegraphics[
+  width=0.6\textwidth]{khaleesi.jpg}
 
-\exg. 
-Martin-ek Diego-\zero{} ikusi du \\
-Martin-ERG Diego-ABS vist ha \\
-\glt `En Martin ha vist en Diego'
-
-
+\includegraphics[
+  width=0.4\textwidth,
+  height=0.4\textwidth,
+  angle=30
+  ]{khaleesi} % no cal posar el format 
 \end{exampletwouptiny}
-\end{itemize}
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{linguex: claudators}
+\begin{frame}[fragile]{Incís: Aruments Opcionals}
 \begin{itemize}
-\item Amb l'ordre \cmdbs{exi.} es pot fer servir notació amb claudators
-\item Si l'exemple conté una glossa, cal saltar-se elements amb `\{\}'
-\begin{MyMinted}
-\exi.
-\a.  [SC that [ST John$_i$  [Sv $t_i$ likes Mary ]]]
-\bg. [SC dass [ST Peter$_i$ [Sv $t_i$ Mari liebt ]]] \\
-{} that {} Peter {} {} Mary loves \\
-\glt `that Peter loves Mary'
-\end{MyMinted}
-\exi.
-\a.  [SC that [ST John$_i$  [Sv $t_i$ likes Mary ]]]
-\bg. [SC dass [ST Peter$_i$ [Sv $t_i$ Mari liebt ]]] \\
-{} that {} Peter {} {} Mary loves \\
-\glt `that Peter loves Mary'
-
+\item Fem servir claudators \keystrokebftt{[} \keystrokebftt{]} per arguments opcionals,
+en comptes de claus \keystrokebftt{\{} \keystrokebftt{\}}.
+\item \cmdbs{includegraphics} admet arguments opcionals per modificar la imatge. 
+Per exemple, \bftt{width=0.3\cmdbs{textwidth}} fa que la image ocupi un 30\% de l'amplada
+del text (\cmdbs{textwidth}).
+\item \cmdbs{documentclass} també admet arguments opcionals. Exemple:
+\mint{latex}|\documentclass[12pt,twocolumn]{article}|
+augmenta el tamany de text (12pt) i fa servir 2 columnes (molt típic d'articles acadèmics).
+\item Com sabem quins arguments opcionals té una ordre? Cal buscar-ho a la documentació dels paquets.
+Més endevant veurem com es fa.
 \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection[fragile]{Floats}
+\begin{frame}{Floats}
+\begin{itemize}
+\item Deixa que \LaTeX{} decideixi on posar la figura (pot ``flotar'').
+\item En documents acadèmics caldrà afegir un peu de foto.
+\item També se li pot donar una etiqueta amb \cmdbs{label}, que ens permetrà referir-nos a la figura amb \cmdbs{ref}.
+\end{itemize}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {media-graphics.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=2in 5in 3in 1in]{media-graphics.pdf}
+\end{minipage}
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Extra}
-\begin{frame}[fragile]{Extra: arbres}
+\subsection{Taules}
+\begin{frame}[fragile]{Taules}
 \begin{itemize}
-\item Hi ha dos paquets importants per fer arbres: forest i tikz-qtree.  
-\item Mireu els manuals per saber quin uns convé.
-\begin{exampletwouptiny}
-\ex. \begin{forest}
-[SC[C][ST[T][SV[V][SN]]]]
-\end{forest}
-
-\end{exampletwouptiny}
-\item \href{https://ling.auf.net/lingbuzz/003391}{Guia forest}
+\item Les taules amb \LaTeX{} són una mica complexes.
+\item Cal el paquet \bftt{tabularx}.
+\item L'argument especifica l'alineament de les columnes --- \textbf{l}eft, \textbf{c}enter, \textbf{r}ight.
+\begin{exampletwouptiny2}
+\begin{tabular}{lcr} 
+    Item      & Num & Preu \$ \\
+    Pantalla  & 1   & 199.99  \\
+    Ordinador & 2   & 399.99  \\
+    Cables    & 3   & 19.99   \\
+\end{tabular}
+\end{exampletwouptiny2}
+\item \keystrokebftt{\&} marca el separador de columna i \keystrokebftt{\bs\bs} el final de línia. 
+\begin{exampletwouptiny2}
+\begin{table}  
+    \centering % centra la taula
+    \begin{tabular}{lcr}
+        Item      & Num & Preu \$ \\
+        Pantalla  & 1   & 199.99  \\
+        Ordinador & 2   & 399.99  \\
+        Cables    & 3   & 19.99   \\
+    \end{tabular}
+    \caption{Descriu preus.}
+    \label{taula:items}
+\end{table}
+\end{exampletwouptiny2}
 \end{itemize}
-
 \end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Extra: Examples with \bftt{amsmath}}
+\begin{frame}[fragile]{Taules 2}
 \begin{itemize}
-\item Use \bftt{equation*} (``equation-star'') for unnumbered equations.
+\item Els separadors \keystrokebftt{|} dins l'argument fan línies verticals (millor evitar-les),\\ 
+\cmdbs{hline} fa línies horizontals. 
 \begin{exampletwouptiny}
-\begin{equation*}
-  \Omega = \sum_{k=1}^{n} \omega_k
-\end{equation*}
+\begin{tabular}{|l|r|r|}
+    \hline
+    Item      & Num & Preu \$ \\
+    \hline
+    Pantalla  & 1   & 199.99  \\
+    Ordinador & 2   & 399.99  \\
+    Cables    & 3   & 19.99   \\
+    \hline
+\end{tabular}
 \end{exampletwouptiny}
-\item \LaTeX{} treats adjacent letters as variables multiplied together, which
-is not always what you want. \bftt{amsmath} defines ordres for many common
-mathematical operators.
+\item El paquet \bftt{booktabs} proporciona les ordres \cmdbs{toprule}, \cmdbs{midrule} i \cmdbs{bottomrule}. 
 \begin{exampletwouptiny}
-\begin{equation*} % bad!
- min_{x,y} (1-x)^2 + 100(y-x^2)^2
-\end{equation*}
-\begin{equation*} % good!
-\min_{x,y}{(1-x)^2 + 100(y-x^2)^2}
-\end{equation*}
-\end{exampletwouptiny}
-\item You can use \cmdbs{operatorname} for others.
-\begin{exampletwouptiny}
-\begin{equation*}
-\beta_i =
-\frac{\operatorname{Cov}(R_i, R_m)}
-     {\operatorname{Var}(R_m)}
-\end{equation*}
+\begin{tabular}{lrr}
+    \toprule
+    Item      & Num & Preu \$ \\
+    \midrule
+    Pantalla  & 1   & 199.99  \\
+    Ordinador & 2   & 399.99  \\
+    Cables    & 3   & 19.99   \\
+    \bottomrule
+\end{tabular}
 \end{exampletwouptiny}
 \end{itemize}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Extra: Examples with \bftt{amsmath}}
-\begin{itemize}{\small
-\item Align a sequence of equations at the equals sign
-\begin{align*}
-(x+1)^3 &= (x+1)(x+1)(x+1) \\
-        &= (x+1)(x^2 + 2x + 1) \\
-        &= x^3 + 3x^2 + 3x + 1
-\end{align*}
-with the \bftt{align*} environment.
-
-% for whatever reason, this doesn't play well with the twoup environment
-\begin{minted}[fontsize=\small,frame=single]{latex}
-\begin{align*}
-(x+1)^3 &= (x+1)(x+1)(x+1) \\
-        &= (x+1)(x^2 + 2x + 1) \\
-        &= x^3 + 3x^2 + 3x + 1
-\end{align*}
-\end{minted}
-\item An ampersand \keystrokebftt{\&} separates the left column (before the
-$=$) from the right column (after the $=$).
-\item A double backslash \keystrokebftt{\bs}\keystrokebftt{\bs} starts a new
-line.
-}\end{itemize}
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Typesetting Exercise 2}
-
-\begin{block}{Typeset this in \LaTeX:}
-Let $X_1, X_2, \dots, X_n$ be a sequence of independent i identically
-distributed random variables with $\operatorname{E}[X_i] = \mu$ i
-$\operatorname{Var}[X_i] = \sigma^2 < \infty$, i let
-\begin{equation*}
-S_n = \frac{1}{n}\sum_{i=1}^{n} X_i
-\end{equation*}
-denote their mean. Then as $n$ approaches infinity, the random variables
-$\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $N(0, \sigma^2)$.
-\end{block}
-\vskip 2ex
-\begin{center}
-\fbox{\href{\wlnewdoc{basics-exercise-2.tex}}{%
-Click to open this exercise in \wllogo{}}}
-\end{center}
-\begin{itemize}
-\item Hint: the ordre for $\infty$ is \cmdbs{infty}.
-\item Once you've tried,
-\fbox{\href{\wlnewdoc{basics-exercise-2-solution.tex}}{%
-click here to see my solution}}.
-\end{itemize}
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Final de la primera part}
 \begin{itemize}
-\item Ja hem aprés \dots 
+\item Ja hem aprés a \dots 
 \begin{itemize}
 \item Escriure text amb \LaTeX.
 \item Utilitzar diferents ordres.
@@ -641,8 +534,9 @@ click here to see my solution}}.
 \item Escriure matemàtiques. 
 \item Utilitzar diversos entorns diferents.
 \item Carregar paquets.
+\item Mostrar figures i taules.
 \end{itemize}
-\item A la segona part, veurem com utilitzar \LaTeX{} per escriure documents amb seccions, referències creuades, figures, taules i bibliografia. Fins llavors!
+\item A la segona part, veurem com utilitzar \LaTeX{} per escriure documents amb seccions, referències creuades i bibliografia. Fins llavors!
 \end{itemize}
 \end{frame}
 
