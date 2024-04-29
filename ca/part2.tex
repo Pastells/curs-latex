@@ -1,4 +1,5 @@
 \input{preamble.tex}
+\date{10 de maig de 2024}
 
 \subtitle{Segona part}
 
@@ -84,17 +85,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{cleveref: Millors Referències Creuades}
+\begin{frame}[fragile]{\protect\bftt{cleveref}: Millors Referències Creuades (opinió)}
 \begin{itemize}{\small
-\item \cmdbs{label} serveix per etiquetar i \cmdbs{ref} per referenciar.
-\item Les dues serveixen per seccions, figures, taules, exemples de linguex \dots
+\item \bftt{cleveref} permet tenir automàticament el nom del que estiguem referenciant.
+\item Només cal canviar \cmdbs{ref} per \cmdbs{cref}, i serveix per seccions, figures i taules.
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
-  {structure-crossref.tex}
+  {structure-cleveref.tex}
 \end{minipage}
 \begin{minipage}{0.35\linewidth}
-\includegraphics[width=\textwidth,clip,trim=1.5in 6in 4in 1in]{structure-crossref.pdf}
+\includegraphics[width=\textwidth,clip,trim=1.5in 6in 4in 1in]{structure-cleveref.pdf}
 \end{minipage}
 \end{frame}
 
