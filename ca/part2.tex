@@ -378,99 +378,9 @@ Martin-ERG Diego-ABS vist ha \\
 \end{itemize}
 
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Extra: Examples with \bftt{amsmath}}
-\begin{itemize}
-\item Use \bftt{equation*} (``equation-star'') for unnumbered equations.
-\begin{exampletwouptiny}
-\begin{equation*}
-  \Omega = \sum_{k=1}^{n} \omega_k
-\end{equation*}
-\end{exampletwouptiny}
-\item \LaTeX{} treats adjacent letters as variables multiplied together, which
-is not always what you want. \bftt{amsmath} defines ordres for many common
-mathematical operators.
-\begin{exampletwouptiny}
-\begin{equation*} % bad!
- min_{x,y} (1-x)^2 + 100(y-x^2)^2
-\end{equation*}
-\begin{equation*} % good!
-\min_{x,y}{(1-x)^2 + 100(y-x^2)^2}
-\end{equation*}
-\end{exampletwouptiny}
-\item You can use \cmdbs{operatorname} for others.
-\begin{exampletwouptiny}
-\begin{equation*}
-\beta_i =
-\frac{\operatorname{Cov}(R_i, R_m)}
-     {\operatorname{Var}(R_m)}
-\end{equation*}
-\end{exampletwouptiny}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Extra: Examples with \bftt{amsmath}}
-\begin{itemize}{\small
-\item Align a sequence of equations at the equals sign
-\begin{align*}
-(x+1)^3 &= (x+1)(x+1)(x+1) \\
-        &= (x+1)(x^2 + 2x + 1) \\
-        &= x^3 + 3x^2 + 3x + 1
-\end{align*}
-with the \bftt{align*} environment.
-
-% for whatever reason, this doesn't play well with the twoup environment
-\begin{minted}[fontsize=\small,frame=single]{latex}
-\begin{align*}
-(x+1)^3 &= (x+1)(x+1)(x+1) \\
-        &= (x+1)(x^2 + 2x + 1) \\
-        &= x^3 + 3x^2 + 3x + 1
-\end{align*}
-\end{minted}
-\item An ampersand \keystrokebftt{\&} separates the left column (before the
-$=$) from the right column (after the $=$).
-\item A double backslash \keystrokebftt{\bs}\keystrokebftt{\bs} starts a new
-line.
-}\end{itemize}
-\end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Typesetting Exercise 2}
 
-\begin{block}{Typeset this in \LaTeX:}
-Let $X_1, X_2, \dots, X_n$ be a sequence of independent i identically
-distributed random variables with $\operatorname{E}[X_i] = \mu$ i
-$\operatorname{Var}[X_i] = \sigma^2 < \infty$, i let
-\begin{equation*}
-S_n = \frac{1}{n}\sum_{i=1}^{n} X_i
-\end{equation*}
-denote their mean. Then as $n$ approaches infinity, the random variables
-$\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $N(0, \sigma^2)$.
-\end{block}
-\vskip 2ex
-\begin{center}
-\fbox{\href{\wlnewdoc{basics-exercise-2.tex}}{%
-Click to open this exercise in \wllogo{}}}
-\end{center}
-\begin{itemize}
-\item Hint: the ordre for $\infty$ is \cmdbs{infty}.
-\item Once you've tried,
-\fbox{\href{\wlnewdoc{basics-exercise-2-solution.tex}}{%
-click here to see my solution}}.
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Què més?}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

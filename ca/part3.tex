@@ -17,7 +17,66 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Anotacions amb \protect\bftt{todonotes}}
+\begin{frame}{Continguts}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Anotacions amb \protect\bftt{todonotes}}
+\begin{itemize}
+\item L'ordre \cmdbs{todo} del paquet \bftt{todonotes} és útil per deixar notes  
+per a un mateix o per co"laboradors.
+\begin{exampletwouptiny}
+\todo{afegir resultats}
+\todo[color=blue!20]{arreglar taula}
+\end{exampletwouptiny}
+\vskip 2ex
+\item Fes-ho senzill: defineix les teves pròpies ordres amb \cmdbs{newcommand}
+\begin{minted}[fontsize=\scriptsize,frame=single]{latex}
+\newcommand{\mar}[1]{\todo[color=green!40]{#1}}
+\newcommand{\andreu}[1]{\todo[color=purple!40]{#1}}
+\end{minted}
+Ja no cal escriure tant:
+\begin{exampletwouptiny}
+\mar{afegir resultats}
+\andreu{arreglar taula}
+\end{exampletwouptiny}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Anotacions amb \protect\bftt{todonotes}}
+\begin{columns}
+  \begin{column}{0.4\textwidth}
+    \begin{itemize}
+    \item Amb beamer només s'admeten les notes en línia, 
+        però les notes de marge són compatibles amb els documents normals.
+    \item També es poden enumerar les notes amb l'ordre \cmdbs{listoftodos}.
+    \end{itemize}
+  \end{column}
+  \begin{column}{0.6\textwidth}
+    \includegraphics[width=\textwidth,page=1]{todonotes-example}
+  \end{column}
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Presentacions amb \protect\bftt{beamer}}
+
+\begin{frame}{Continguts}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -42,11 +101,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Presentacions amb \protect\bftt{beamer}: }
+\begin{frame}[fragile]{Presentacions amb \protect\bftt{beamer}}
 
 \begin{itemize}
-\item As we go through the following slides, try out the examples by typing them
-into the example document on \wllogo.
+\item Podeu partir de l'exemple i anar provant coses.
 \end{itemize}
 \vskip 2ex
 \begin{center}
@@ -58,8 +116,9 @@ Click to open the example document in \wllogo{}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Marcs}
 \begin{frame}[fragile]
-\frametitle{Presentation amb \protect\bftt{beamer}: Frames}
+\frametitle{Presentation amb \protect\bftt{beamer}: Marcs}
 \begin{itemize}
 \item Use \cmdbs{frametitle} to give the frame a title.
 \item Then add content to the frame.
@@ -73,7 +132,8 @@ Click to open the example document in \wllogo{}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Sections}
+\subsection{Seccions}
+\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Seccions}
 \begin{itemize}
 \item You can use \cmdbs{section}s to group your \bftt{frame}s, i
 \bftt{beamer} will use them to create an automatic outline.
@@ -81,6 +141,14 @@ Click to open the example document in \wllogo{}}}
 one for this presentation. The \bftt{currentsection} option highlights the current section.
 \vskip 2ex
 \begin{exampletwouptiny}
+% comentaris
+
+% per
+
+% guanyar 
+
+% espai
+
 \tableofcontents[currentsection]
 \end{exampletwouptiny}
 \end{itemize}
@@ -89,6 +157,7 @@ one for this presentation. The \bftt{currentsection} option highlights the curre
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Columnes}
 \begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Multiple Columns}
 \begin{columns}
 \begin{column}{0.4\textwidth}
@@ -122,7 +191,7 @@ content into columns.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Highlights}
+\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Destacar}
 \begin{itemize}
 
 \item Use \cmdbs{emph} or \cmdbs{alert} to highlight:
@@ -156,6 +225,7 @@ for more colors \& custom colors.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Figures}
 \begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Figures}
 \begin{itemize}
 \item Use \cmdbs{includegraphics} from the \bftt{graphicx} package.
@@ -164,41 +234,11 @@ for more colors \& custom colors.
 \begin{exampletwouptiny}
 \begin{figure}
 \includegraphics[
-  width=0.5\textwidth]{gerbil}
+  width=0.5\textwidth]{gus}
 \end{figure}
 \end{exampletwouptiny}
 \end{itemize}
 
-\tiny{Image license: \href{https://pixabay.com/en/animal-apple-attractive-beautiful-1239390/}{CC0}}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Tables}
-\begin{itemize}
-\item Tables in \LaTeX{} take some getting used to.
-\item Use the \bftt{tabular} environment from the \bftt{tabularx} package.
-\item The argument specifies column alignment --- \textbf{l}eft, \textbf{r}ight, \textbf{r}ight.
-\begin{exampletwouptiny}
-\begin{tabular}{lrr}
-Item   & Qty & Unit \$ \\
-Widget & 1   & 199.99  \\
-Gadget & 2   & 399.99  \\
-Cable  & 3   & 19.99   \\
-\end{tabular}
-\end{exampletwouptiny}
-\item It also specifies vertical lines; use \cmdbs{hline} for horizontal lines.
-\begin{exampletwouptiny}
-\begin{tabular}{|l|r|r|} \hline
-Item   & Qty & Unit \$ \\\hline
-Widget & 1   & 199.99  \\
-Gadget & 2   & 399.99  \\
-Cable  & 3   & 19.99   \\\hline
-\end{tabular}
-\end{exampletwouptiny}
-\item Use an ampersand \keystrokebftt{\&} to separate columns i a double backslash \keystrokebftt{\bs}\keystrokebftt{\bs} to start a new row.
-\end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -287,54 +327,6 @@ files menu.
 Click to open the model document}}
 \end{center}
 \end{enumerate}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Anotacions amb \protect\bftt{todonotes}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Anotacions amb \protect\bftt{todonotes}}
-\begin{itemize}
-\item L'ordre \cmdbs{todo} del paquet \bftt{todonotes} és útil per deixar notes  
-per a un mateix o per co"laboradors.
-\begin{exampletwouptiny}
-\todo{afegir resultats}
-\todo[color=blue!20]{arreglar taula}
-\end{exampletwouptiny}
-\vskip 2ex
-\item Fes-ho senzill: defineix les teves pròpies ordres amb \cmdbs{newcommand}
-\begin{minted}[fontsize=\scriptsize,frame=single]{latex}
-\newcommand{\mar}[1]{\todo[color=green!40]{#1}}
-\newcommand{\andreu}[1]{\todo[color=purple!40]{#1}}
-\end{minted}
-Ja no cal escriure tant:
-\begin{exampletwouptiny}
-\mar{afegir resultats}
-\andreu{arreglar taula}
-\end{exampletwouptiny}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Anotacions amb \protect\bftt{todonotes}}
-\begin{columns}
-  \begin{column}{0.4\textwidth}
-    \begin{itemize}
-    \item Amb beamer només s'admeten les notes en línia, 
-        però les notes de marge són compatibles amb els documents normals.
-    \item També es poden enumerar les notes amb l'ordre \cmdbs{listoftodos}.
-    \end{itemize}
-  \end{column}
-  \begin{column}{0.6\textwidth}
-    \includegraphics[width=\textwidth,page=1]{todonotes-example}
-  \end{column}
-\end{columns}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
