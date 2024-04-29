@@ -1,0 +1,156 @@
+\input{preamble.tex}
+
+\subtitle{Repàs}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Repassem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Repassem}
+\begin{itemize}
+\item Escriviu el document a \texttt{text pla} amb \cmd{ordres} que
+descriuen la seva estructura i significat.
+\item Usa ordres per descriure `el contingut', no `el format'.
+\item El programa \texttt{latex} processa el text i les ordres per a produir un
+document amb un format bonic.
+\end{itemize}
+\vskip 2ex
+\begin{center}
+\begin{minted}[frame=single]{latex}
+La \textit{fonologia} estudia els \textbf{fonemes}.
+\end{minted}
+\vskip 2ex
+\tikz\node[single arrow,fill=gray,font=\ttfamily\bfseries,%
+  rotate=270,xshift=-1em]{latex};
+\vskip 2ex
+\fbox{La \textit{fonologia} estudia els \textbf{fonemes}.}
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Repassem: ordres i arguments}
+\begin{itemize}
+\item Les ordres comencen amb una \emph{barra inversa} \keystrokebftt{\bs}.
+\item Algunes ordres admeten un \emph{argument} entre claus \keystrokebftt{\{}
+\keystrokebftt{\}}.
+\item Altres també admeten \emph{arguments opcionals} entre claudàtors \keystrokebftt{[} \keystrokebftt{]}.
+\vskip 2ex
+\begin{exampletwouptiny}
+\includegraphics[
+  width=0.5\textwidth]{khaleesi}
+
+\includegraphics[
+  width=0.3\textwidth,
+  angle=270]{khaleesi}
+\end{exampletwouptiny}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Repassem: entorns}
+\begin{itemize}
+\item Les ordres \cmdbs{begin} i \cmdbs{end} es fan servir per delimitar diferents entorns.
+\vskip 2ex
+
+\item Els entorns \bftt{itemize} i \bftt{enumerate} generen llistes de punts i numèriques. 
+\begin{exampletwouptiny}
+\begin{itemize} % per punts 
+    \item Galetes
+    \item Iogurt
+\end{itemize}
+
+\begin{enumerate} % per nombres
+    \item Galetes
+    \item Iogurt
+\end{enumerate}
+\end{exampletwouptiny}
+\item No és necessari, però és bona pràctica augmentar el sagnat del text dins d'un entorn. 
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Repassem: Matemàtiques}
+\begin{itemize}
+\item Els símbols de dòlar \keystrokebftt{\$} marquen matemàtiques al text.
+\begin{exampletwouptiny}
+% meh:
+Siguin a i b nombres enters 
+positius, i sigui c > a - b + 1
+
+% millor:
+Siguin $a$ i $b$ nombres enters 
+positius, i sigui $c > a - b + 1$.
+\end{exampletwouptiny}
+\item Utilitza sempre els símbols de dòlar amb parelles: un per començar les matemàtiques, i un per acabar-les.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Repassem: Document Structure}
+\begin{itemize}{\small
+\item Comença amb \cmdbs{documentclass} --- quin tipus de document.
+\item Metadades (\cmdbs{title} i \cmdbs{author}) i paquets en el preàmbul. 
+\item Contingut entre \cmdbegin{document} i \cmdend{document}.
+\item L'ordre \cmdbs{maketitle} crea el títol; \cmdbs{section} crea seccions numerades.
+}\end{itemize}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {recap-structure.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+% trim: l b r t
+\includegraphics[width=\textwidth,clip,trim=1.5in 7in 3in 2in]{recap-structure.pdf}
+\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Repassem: Exercici}
+
+\begin{enumerate}
+\item Here is the text for a short article:\footnote{Based on \url{http://www.cgd.ucar.edu/cms/agu/scientific_talk.html}}
+\begin{center}
+\fbox{\href{\wlnewdoc{recap-exercise.tex}}{%
+Click to open this exercise in \wllogo{}}}
+\end{center}
+\vskip 2ex
+\item Add \LaTeX{} ordres to the text to make it look like this one:
+\begin{center}
+\fbox{\href{\fileuri/recap-exercise-solution.pdf}{%
+Click to open the model document}}
+\end{center}
+\end{enumerate}
+
+\begin{block}{Hints}
+\begin{itemize}
+\item Use the \bftt{enumerate} i \bftt{itemize} environments for lists.
+\item To typeset a \keystrokebftt{\%} percent sign, \emph{escape} it with a backslash (\cmdbs{\%}).
+\item To typeset the equation, use \cmdbs{frac} for the fraction i the \cmdbs{left(} i \cmdbs{right)} ordres for the parentheses.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}

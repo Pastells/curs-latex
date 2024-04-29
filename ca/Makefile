@@ -3,7 +3,7 @@ all: part1.pdf part2.pdf part3.pdf
 #
 # Part 1
 #
-part1.pdf: part1.tex preamble.tex
+part1.pdf: part1.tex preamble.tex media-graphics.pdf
 	pdflatex -shell-escape part1
 	pdflatex -shell-escape part1
 
@@ -42,7 +42,11 @@ bib-example.pdf: bib-example.tex bib-example.bib
 #
 # Part 3
 #
-part3.pdf: part3.tex preamble.tex recap-structure.pdf recap-exercise.pdf recap-exercise-solution.pdf beamer-minimal.pdf beamer-theme.pdf beamer-exercise.pdf beamer-exercise-solution.pdf
+recap.pdf: part3.tex preamble.tex recap-structure.pdf recap-exercise.pdf recap-exercise-solution.pdf
+	pdflatex -shell-escape recap
+	pdflatex -shell-escape recap
+
+part3.pdf: part3.tex preamble.tex beamer-minimal.pdf beamer-theme.pdf beamer-exercise.pdf beamer-exercise-solution.pdf
 	pdflatex -shell-escape part3
 	pdflatex -shell-escape part3
 

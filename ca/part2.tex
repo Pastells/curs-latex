@@ -84,29 +84,45 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Exercici}
-\begin{frame}[fragile]{Structured Documents Exercise}
+\begin{frame}[fragile]{cleveref: Millors Referències Creuades}
+\begin{itemize}{\small
+\item \cmdbs{label} serveix per etiquetar i \cmdbs{ref} per referenciar.
+\item Les dues serveixen per seccions, figures, taules, exemples de linguex \dots
+}\end{itemize}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {structure-crossref.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=1.5in 6in 4in 1in]{structure-crossref.pdf}
+\end{minipage}
+\end{frame}
 
-\begin{block}{Typeset this short paper in \LaTeX
-\footnote{From \url{http://pdos.csail.mit.edu/scigen/}, a random
-paper generator.}:}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Exercici}
+\begin{frame}[fragile]{Exercici Documents Estructurats}
+
+\begin{block}{Escriu el següent article amb \LaTeX
+\footnote{De \url{http://pdos.csail.mit.edu/scigen/}, 
+un generador d'articles aleatoris.}:}
 \begin{center}
-\fbox{\href{\fileuri/structure-exercise-solution.pdf}{%
-Click to open the paper}}
+\fbox{\href{\fileuri/structure-exercise-solution.pdf}{Clica per obrir l'article}}
 \end{center}
-Make your paper look like this one. Use \cmdbs{ref} i \cmdbs{eqref} to avoid
-explicitly writing section i equation numbers into the text.
+Fes que l'article tingui la mateixa pinta. 
+Utilitza \cmdbs{ref} per evitar escriure explícitament la secció i el número d'exemple.
 \end{block}
 \vskip 2ex
 \begin{center}
 \fbox{\href{\wlnewdoc{structure-exercise.tex}}{%
-Click to open this exercise in \wllogo{}}}
+Clica per obrir l'exercici a \wllogo{}}}
 \end{center}
 
 \begin{itemize}
-\item Once you've tried,
+\item Un cop ho hagis provat,
 \fbox{\href{\wlnewdoc{structure-exercise-solution.tex}}{%
-click here to see my solution}}.
+Clica per veure la solució}}.
 \end{itemize}
 \end{frame}
 

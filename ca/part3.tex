@@ -17,164 +17,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Repassem}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Repassem}
-\begin{itemize}
-\item You write your document in \texttt{plain text} with \cmd{ordres} that
-describe its structure i meaning.
-\item The \texttt{latex} program processes your text i ordres to produce a
-beautifully formatted document.
-\end{itemize}
-\vskip 2ex
-\begin{center}
-\begin{minted}[frame=single]{latex}
-The rain in Spain falls \emph{mainly} on the plain.
-\end{minted}
-\vskip 2ex
-\tikz\node[single arrow,fill=gray,font=\ttfamily\bfseries,%
-  rotate=270,xshift=-1em]{latex};
-\vskip 2ex
-\fbox{The rain in Spain falls \emph{mainly} on the plain.}
-\end{center}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Repassem: ordres \& Arguments}
-\begin{itemize}
-\item A ordre starts with a \emph{backslash} \keystrokebftt{\bs}.
-\item Some ordres take an \emph{argument} in curly braces \keystrokebftt{\{}
-\keystrokebftt{\}}.
-\item Some ordres also take \emph{optional arguments} in square brackets \keystrokebftt{[} \keystrokebftt{]}.
-\vskip 2ex
-\begin{exampletwouptiny}
-\includegraphics[
-  width=0.5\textwidth]{gerbil}
-
-\includegraphics[
-  width=0.3\textwidth,
-  angle=270]{gerbil}
-\end{exampletwouptiny}
-\end{itemize}
-
-\tiny{Image license: \href{https://pixabay.com/en/animal-apple-attractive-beautiful-1239390/}{CC0}}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Repassem: Environments}
-\begin{itemize}
-\item The \cmdbs{begin} i \cmdbs{end} ordres are used to create many
-different environments --- contexts.
-
-\item The \bftt{itemize} i \bftt{enumerate} environments make lists.
-\vskip 2ex
-\begin{exampletwouptiny}
-\begin{itemize} % for bullet points
-\item Biscuits
-\item Tea
-\end{itemize}
-
-\begin{enumerate} % for numbers
-\item Biscuits
-\item Tea
-\end{enumerate}
-\end{exampletwouptiny}
-
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Repassem: Mathematics}
-\begin{itemize}
-\item The \bftt{equation} environment makes a numbered equation.
-\begin{exampletwouptiny}
-\begin{equation}
-  \sum_{k=1}^{n} \frac{1}{2^k}
-\end{equation}
-\end{exampletwouptiny}
-\vskip 2ex
-
-\item Use dollar signs \keystrokebftt{\$} to mark mathematics in text.\\[1ex]
-\begin{exampletwouptiny}
-% not so good:
-Let a i b be distinct positive
-integers, i let c = a - b + 1.
-
-% much better:
-Let $a$ i $b$ be distinct positive
-integers, i let $c = a - b + 1$.
-\end{exampletwouptiny}
-\vskip 2ex
-\item Always use dollar signs in pairs --- one to begin the mathematics, i one
-to end it.
-\vskip 1em
-{\scriptsize In fact, we could have written \bftt{\$...\$} as
-\cmdbegin{math}\bftt{...}\cmdend{math}.}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Repassem: Document Structure}
-\begin{itemize}{\small
-\item Starts with the \cmdbs{documentclass} --- what type of document.
-\item Metadata (\cmdbs{title} i \cmdbs{author}) i packages in the
-preamble.
-\item Content between \cmdbegin{document} i \cmdend{document}.
-\item The \cmdbs{maketitle} ordre creates the title; \cmdbs{section} ordres
-create numbered sections.
-}\end{itemize}
-\begin{minipage}{0.55\linewidth}
-\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
-  {recap-structure.tex}
-\end{minipage}
-\begin{minipage}{0.35\linewidth}
-% trim: l b r t
-\includegraphics[width=\textwidth,clip,trim=1.5in 7in 3in 2in]{recap-structure.pdf}
-\end{minipage}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Repassem: Exercici}
-
-\begin{enumerate}
-\item Here is the text for a short article:\footnote{Based on \url{http://www.cgd.ucar.edu/cms/agu/scientific_talk.html}}
-\begin{center}
-\fbox{\href{\wlnewdoc{recap-exercise.tex}}{%
-Click to open this exercise in \wllogo{}}}
-\end{center}
-\vskip 2ex
-\item Add \LaTeX{} ordres to the text to make it look like this one:
-\begin{center}
-\fbox{\href{\fileuri/recap-exercise-solution.pdf}{%
-Click to open the model document}}
-\end{center}
-\end{enumerate}
-
-\begin{block}{Hints}
-\begin{itemize}
-\item Use the \bftt{enumerate} i \bftt{itemize} environments for lists.
-\item To typeset a \keystrokebftt{\%} percent sign, \emph{escape} it with a backslash (\cmdbs{\%}).
-\item To typeset the equation, use \cmdbs{frac} for the fraction i the \cmdbs{left(} i \cmdbs{right)} ordres for the parentheses.
-\end{itemize}
-\end{block}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Presentacions amb \protect\bftt{beamer}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -217,7 +59,7 @@ Click to open the example document in \wllogo{}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\frametitle{\insertsection: Frames}
+\frametitle{Presentation amb \protect\bftt{beamer}: Frames}
 \begin{itemize}
 \item Use \cmdbs{frametitle} to give the frame a title.
 \item Then add content to the frame.
@@ -231,7 +73,7 @@ Click to open the example document in \wllogo{}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Sections}
+\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Sections}
 \begin{itemize}
 \item You can use \cmdbs{section}s to group your \bftt{frame}s, i
 \bftt{beamer} will use them to create an automatic outline.
@@ -247,7 +89,7 @@ one for this presentation. The \bftt{currentsection} option highlights the curre
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Multiple Columns}
+\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Multiple Columns}
 \begin{columns}
 \begin{column}{0.4\textwidth}
 \begin{itemize}
@@ -280,7 +122,7 @@ content into columns.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Highlights}
+\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Highlights}
 \begin{itemize}
 
 \item Use \cmdbs{emph} or \cmdbs{alert} to highlight:
@@ -314,7 +156,7 @@ for more colors \& custom colors.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Figures}
+\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Figures}
 \begin{itemize}
 \item Use \cmdbs{includegraphics} from the \bftt{graphicx} package.
 \item The \bftt{figure} environment centers by default, in \bftt{beamer}.
@@ -333,7 +175,7 @@ for more colors \& custom colors.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Tables}
+\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Tables}
 \begin{itemize}
 \item Tables in \LaTeX{} take some getting used to.
 \item Use the \bftt{tabular} environment from the \bftt{tabularx} package.
@@ -362,7 +204,7 @@ Cable  & 3   & 19.99   \\\hline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Blocks}
+\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Blocks}
 \begin{itemize}
 \item A \bftt{block} environment makes a titled box.
 \begin{exampletwouptiny}
@@ -383,7 +225,7 @@ This is really important!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\frametitle{\insertsection: Themes}
+    \frametitle{Presentation amb \protect\bftt{beamer}: Themes}
 \begin{itemize}
 \item Customise the look of your presentation using themes.
 \item See \url{http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html}
@@ -402,7 +244,7 @@ for a large collection of themes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Animation}
+\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Animation}
 \begin{itemize}
 \item A frame can generate multiple slides.
 \item Use the \cmdbs{pause} ordre to show only part of a slide.
@@ -422,7 +264,7 @@ also the \cmdbs{only}, \cmdbs{alt}, i \cmdbs{uncover} ordres.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Exercise}
+\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Exercise}
 
 Recreate Peter Norvig's excellent ``Gettysburg Powerpoint Presentation'' in \bftt{beamer}.\footnote{\url{http://norvig.com/Gettysburg}}
 
@@ -450,216 +292,12 @@ Click to open the model document}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Drawings with \protect\tikzname}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection}
-\begin{itemize}
-\item \tikzname{} is a package for drawing figures in \LaTeX.
-\item It defines a powerful drawing language inside \LaTeX{}. Short programs can
-draw surprisingly complicated things.
-\begin{figure}
-\href{http://www.texample.net/tikz/examples/rotated-triangle/}{%
-  \includegraphics[width=0.35\textwidth]{rotated-triangle}}
-\end{figure}
-\item We'll start with simple things. To draw a line in \tikzname:
-\vskip 1ex
-\begin{exampletwouptiny}
-\begin{tikzpicture}
-\draw (0,0) -- (1,1); % a line
-\end{tikzpicture}
-\end{exampletwouptiny}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Coordinates}
-\begin{itemize}
-\item The default coordinates are centimeters, with the usual sense: 
-\begin{figure}
-\begin{tikzpicture}[scale=0.5]
-\draw[help lines] (0,0) grid (3,3);
-\node[below left] at (0,0) {$(0,0)$};
-\node[below right] at (3,0) {$(3,0)$};
-\node[above right] at (3,3) {$(3,3)$};
-\node[above left] at (0,3) {$(0,3)$};
-\end{tikzpicture}
-\end{figure}
-\item It helps to draw a grid when you are working with \tikzname:
-\vskip 1ex
-\begin{exampletwouptiny}
-\begin{tikzpicture}
-\draw[help lines] (0,0) grid (3,3);
-\end{tikzpicture}
-\end{exampletwouptiny}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Lines}
-\begin{itemize}
-\item Arrow heads i line styles are specified as options to the \cmdbs{draw} ordre.
-\item End each draw ordre with a \keystrokebftt{;} semicolon.
-\vskip 1ex
-\begin{exampletwouptiny}
-\begin{tikzpicture}
-\draw[help lines] (0,0) grid (3,3);
-\draw[->] (0,0) -- (1,1);
-\draw[<->, thick] (2,1) -- (1,2);
-\draw[<-, thick, dashed] (2,2)--(3,3);
-\end{tikzpicture}
-\end{exampletwouptiny}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Paths}
-\begin{itemize}
-\item You can specify multiple points to form a path.
-\item Arrows will appear only at the ends of the path.
-\vskip 1ex
-\begin{exampletwouptiny}
-\begin{tikzpicture}
-\draw[help lines] (0,0) grid (3,3);
-% axes:
-\draw[<->, thick] (0,3)--(0,0)--(3,0);
-% diamond:
-\draw (1.5,0.5) -- (2.5,1.5) -- 
-      (1.5,2.5) -- (0.5,1.5) --
-      cycle; % close the path
-\end{tikzpicture}
-\end{exampletwouptiny}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Colours}
-\begin{itemize}
-\item Colours are also specified as options to \cmdbs{draw}.
-\vskip 1ex
-\begin{exampletwouptiny}
-\begin{tikzpicture}
-\draw[help lines] (0,0) grid (3,3);
-% axes
-\draw[<->, thick, red]
-  (0,3)--(0,0)--(3,0); 
-% diamond
-\draw[thick, blue, fill=yellow]
-  (1.5,0.5) -- (2.5,1.5) -- 
-  (1.5,2.5) -- (0.5,1.5) --
-  cycle;
-\end{tikzpicture}
-\end{exampletwouptiny}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Shapes}
-\begin{itemize}
-\item \tikzname{} has built-in ordres for simple shapes.
-\vskip 1ex
-\begin{exampletwouptiny}
-\begin{tikzpicture}
-\draw[help lines] (0,0) grid (3,3);
-\draw (1.5,2.0) circle (0.5);
-\draw (0.5,0.5) rectangle (2.5,1.5);
-\end{tikzpicture}
-\end{exampletwouptiny}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Nodes \& Labels}
-\begin{itemize}
-\item Use nodes to place text (and math) in \tikzname{} drawings.
-\item You can also use nodes as coordinates --- useful for diagrams.
-\vskip 1ex
-\begin{exampletwouptiny}
-\begin{tikzpicture}
-\draw[help lines] (0,0) grid (3,3);
-\node (h) at (0,0) {H};
-\node (x) at (1.5,1.5) {$\xi$};
-\node (t) at (3,0) {T};
-\draw[->] (x) -- (h);
-\draw[->] (x) -- (t);
-\end{tikzpicture}
-\end{exampletwouptiny}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Functions}
-\begin{itemize}
-\item You can even plot some simple functions.
-\vskip 1ex
-\begin{exampletwouptiny}
-\begin{tikzpicture}[scale=0.5]
-% y axis
-\draw[<->, thick] (0,2) -- (0,-2);
-% x axis
-\draw[ ->, thick] (0,0) -- (7, 0); 
-% curves
-\draw[cyan,domain=0:2*pi]
-  plot (\x, {sin(\x r)});
-\draw[magenta,domain=0:2*pi]
-  plot (\x, {cos(\x r)});
-\end{tikzpicture}
-\end{exampletwouptiny}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Examples}
-\begin{itemize}
-\item Check out \fbox{\href{http://texample.net/tikz/}{\TeX{}ample.net}} for many \tikzname{} examples:
-\end{itemize}
-\begin{figure}
-\href{http://texample.net/tikz/examples/escher-brick-penrose-triangle/}{%
-  \includegraphics[width=0.3\textwidth]{escher-brick-penrose-triangle}}
-\href{http://texample.net/tikz/examples/computer-science-mindmap/}{%
-  \includegraphics[width=0.3\textwidth]{computer-science-mindmap}}
-\href{http://texample.net/tikz/examples/gajski-kuhn-y-chart/}{%
-  \includegraphics[width=0.3\textwidth]{gajski-kuhn-y-chart}}
-\end{figure}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection: Exercise}
-Draw this in \tikzname:\footnote{Based on \url{http://xkcd.com/1022}}
-\begin{figure}
-\input{tikz-exercise-solution}
-\end{figure}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Anotacions amb \protect\bftt{todonotes}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection}
+\begin{frame}[fragile]{Anotacions amb \protect\bftt{todonotes}}
 \begin{itemize}
 \item L'ordre \cmdbs{todo} del paquet \bftt{todonotes} és útil per deixar notes  
 per a un mateix o per co"laboradors.
@@ -684,7 +322,7 @@ Ja no cal escriure tant:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection}
+\begin{frame}[fragile]{Anotacions amb \protect\bftt{todonotes}}
 \begin{columns}
   \begin{column}{0.4\textwidth}
     \begin{itemize}
@@ -702,26 +340,24 @@ Ja no cal escriure tant:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Spreadsheets with \protect\bftt{spreadtab}}
+\section{Fulls de càlcul amb \protect\bftt{spreadtab}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\insertsection}
+\begin{frame}[fragile]{Fulls de càlcul amb \protect\bftt{spreadtab}}
 \begin{itemize}
-\item Now that you've seen how \LaTeX{} can replace Word i PowerPoint, what
-about Excel?
-\item Homework: try the \fbox{\href{http://www.ctan.org/pkg/spreadtab}{\bftt{spreadtab} package}}!
+\item Ara ja sabeu com fer servir \LaTeX{} en comptes de Word i PowerPoint.
+No n'heu tingut prou?
+\item Proveu \fbox{\href{http://www.ctan.org/pkg/spreadtab}{\bftt{spreadtab} per substituir Excel}}!
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\begin{center}
-Thanks, i happy \TeX{}ing!
-\end{center}
+\begin{frame}[standout]
+\Huge Gràcies!
 \end{frame}
 
 \end{document}
