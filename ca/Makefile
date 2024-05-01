@@ -1,4 +1,4 @@
-all: part1.pdf part2.pdf part3.pdf
+all: part1.pdf part2.pdf part3.pdf recap.pdf
 
 #
 # Part 1
