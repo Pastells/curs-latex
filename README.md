@@ -4,20 +4,23 @@ Diapositives per a un curs d'introducció a LaTeX. Les diapositives i el codi es
 [aquest repositori de github](https://github.com/jdleesmiller/latex-course) sota una llicència permissiva
 del MIT.
 
-L'objectiu és que els estudiants escriguin a LaTeX el més ràpidament possible. El material es presenta
+L'objectiu és que els estudiants escriguin amb LaTeX el més ràpidament possible. El material es presenta
 com un conjunt d'exemples, i a mesura que van sorgint s'expliquen conceptes i tècniques més àmplies. Cada
 part inclou exercicis que es poden completar a [Overleaf](https://www.overleaf.com), l'editor LaTeX
-gratuït en línia, de manera que no us haureu de preocupar d'instal·lar LaTeX i eines relacionades als
-ordinadors de tothom.
+gratuït en línia, de manera que no us haureu de preocupar d'instal·lar LaTeX i eines relacionades.
 
-1. [The Basics](http://jdleesmiller.github.io/latex-course/en/part1.pdf): ideas, syntax, equations,
-   environments, packages
+El material està dividit en 3 classes de dues hores:
 
-1. [Structed Documents & More](http://jdleesmiller.github.io/latex-course/en/part2.pdf): titles,
-   sections, cross-references, figures, tables, bibliographies.
+1. [Primera part](https://github.com/Pastells/curs-latex/ca/part1.pdf):
+   Sintaxi, entorns, paquets, figures i taules
 
-1. [Not Just Papers: Presentations & More](http://jdleesmiller.github.io/latex-course/en/part3.pdf):
-   recap exercise, presentations with beamer, drawings with tikz.
+2. [Segona part](https://github.com/Pastells/curs-latex/ca/part2.pdf) (EN PROCÉS):
+   Seccions, referències creuades, bibliografia, paquets lingüística (`linguex` i `tipa`).
+
+2.5. [Repàs](https://github.com/Pastells/curs-latex/ca/recap.pdf)
+
+3. [Tercera part](https://github.com/Pastells/curs-latex/ca/part3.pdf) (EN PROCÉS):
+   Notes i comentaris, presentacions amb `beamer`.
 
 ## Compilació
 

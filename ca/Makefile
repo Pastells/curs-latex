@@ -42,7 +42,7 @@ bib-example.pdf: bib-example.tex bib-example.bib
 #
 # Part 3
 #
-recap.pdf: part3.tex preamble.tex recap-structure.pdf recap-exercise.pdf recap-exercise-solution.pdf
+recap.pdf: recap.tex preamble.tex recap-structure.pdf recap-exercise.pdf recap-exercise-solution.pdf
 	pdflatex -shell-escape recap
 	pdflatex -shell-escape recap
 
