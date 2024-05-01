@@ -85,7 +85,7 @@ La \textit{fonologia} estudia els \textbf{fonemes}.
 \vskip 2ex
 \begin{exampletwoup}
 \begin{figure}
-\includegraphics{gerbil}
+\includegraphics{gus}
 \end{figure}
 \end{exampletwoup}
 \vskip 2ex
@@ -95,7 +95,6 @@ La \textit{fonologia} estudia els \textbf{fonemes}.
 \end{equation}
 \end{exampletwoup}
 
-\tiny{Imatge: \href{https://pixabay.com/en/animal-apple-attractive-beautiful-1239390/}{CC0}}
 \end{frame}
 
 
@@ -475,13 +474,13 @@ Més endevant veurem com es fa.
 \begin{exampletwouptiny2}
 \begin{table}  
     \centering % centra la taula
+    \caption{Descriu preus.}
     \begin{tabular}{lcr}
         Item      & Num & Preu \$ \\
         Pantalla  & 1   & 199.99  \\
         Ordinador & 2   & 399.99  \\
         Cables    & 3   & 19.99   \\
     \end{tabular}
-    \caption{Descriu preus.}
     \label{taula:items}
 \end{table}
 \end{exampletwouptiny2}
@@ -521,6 +520,31 @@ Més endevant veurem com es fa.
 \end{itemize}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Taules 3}
+Hi ha moltes opcions diferents per fer taules.
+\begin{itemize}
+\item Es poden fusionar columnes amb \cmdbs{multicolumn} i files amb \cmdbs{multirow} (cal el paquet \bftt{multirow}).
+\item Línies horitzontals més curtes amb \cmdbs{cline} o \cmdbs{cmidrule} de \bftt{booktabs}.
+
+\begin{exampletwouptiny}
+\begin{tabular}{lrr}
+\toprule
+Item & 
+\multicolumn{2}{c}{MultiColumna} \\
+\cline{2-3}
+Pantalla  & 1   & 199.99  \\
+\cmidrule{1-2}
+\multirow{2}{*}{MultiFila} & 2 & 3.99\\
+& 3   & 19.99   \\
+\bottomrule
+\end{tabular}
+\end{exampletwouptiny}
+\end{itemize}
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -538,6 +562,17 @@ Més endevant veurem com es fa.
 \item Mostrar figures i taules.
 \end{itemize}
 \item A la segona part, veurem com utilitzar \LaTeX{} per escriure documents amb seccions, referències creuades i bibliografia. Fins llavors!
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Referències en línia}
+\begin{itemize}
+\item \href{https://www.overleaf.com/learn}{The Overleaf Learn Wiki} --- tutorials i material de referència.
+\item \href{http://en.wikibooks.org/wiki/LaTeX}{The \LaTeX{} Wikibook} --- més tutorials i material de referència.
+\item \href{http://tex.stackexchange.com/}{\TeX{} Stack Exchange} --- preguntes i respostes 
+\item \href{http://www.latex-community.org/}{\LaTeX{} Community} --- fòrum 
+\item \href{http://ctan.org/}{Comprehensive \TeX{} Archive Network (CTAN)} --- documentació de paquets.
+\item Qualsevol buscador us portarà a alguna d'aquestes pàgines.
 \end{itemize}
 \end{frame}
 

@@ -30,8 +30,8 @@ structure-exercise-solution.pdf: structure-exercise-solution.tex
 	pdflatex structure-exercise-solution
 
 media-graphics.pdf: media-graphics.tex
-	pdflatex media-graphics
-	pdflatex media-graphics
+	lualatex media-graphics
+	lualatex media-graphics
 
 bib-example.pdf: bib-example.tex bib-example.bib
 	pdflatex bib-example
@@ -72,7 +72,7 @@ beamer-exercise-solution.pdf: beamer-exercise-solution.tex
 	pdflatex beamer-exercise-solution
 	pdflatex beamer-exercise-solution
 
-latex-course.tgz: part1.pdf part2.pdf part3.pdf basics-exercise-1-solution.tex basics-exercise-1.tex basics-exercise-2-solution.tex basics-exercise-2.tex basics.tex bib-example.tex preamble.tex structure-exercise-solution.tex structure-exercise-solution.pdf structure-exercise.tex gerbil.jpg khaleesi.jpg khaleesi2.jpg bib-exercise.bib recap-exercise.tex recap-exercise-solution.pdf beamer-minimal.tex beamer-exercise.tex beamer-exercise-solution.pdf gettysburg_graph.png
+latex-course.tgz: part1.pdf part2.pdf part3.pdf basics-exercise-1-solution.tex basics-exercise-1.tex basics-exercise-2-solution.tex basics-exercise-2.tex basics.tex bib-example.tex preamble.tex structure-exercise-solution.tex structure-exercise-solution.pdf structure-exercise.tex gus.png gus_gran.png khaleesi.jpg khaleesi2.jpg bib-exercise.bib recap-exercise.tex recap-exercise-solution.pdf beamer-minimal.tex beamer-exercise.tex beamer-exercise-solution.pdf gettysburg_graph.png
 	tar czf latex-course.tgz $^
 
 clean:
