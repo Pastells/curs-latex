@@ -146,8 +146,8 @@ Clica per veure la solució}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{bib\TeX}
-\begin{frame}[fragile]{bib\TeX{} 1}
+\subsection{Bib\LaTeX{}}
+\begin{frame}[fragile]{Bib\LaTeX{} 1}
 \begin{itemize}
 \item Poseu les referències a un fitxer \bftt{.bib} en format `bibtex':
 \vskip 1ex
@@ -159,7 +159,7 @@ Clica per veure la solució}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{bib\TeX{} 2}
+\begin{frame}[fragile]{Bib\LaTeX{} 2}
 \begin{itemize}
 \item Cada entrada del fitxer \bftt{.bib} té una clau que serveix per referenciar-la dins el text.
 Per exemple, \bftt{Jacobson1999Towards} és la clau d'aquest article:
@@ -177,12 +177,11 @@ Per exemple, \bftt{Jacobson1999Towards} és la clau d'aquest article:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{bib\TeX{} 3}
+\begin{frame}[fragile]{Bib\LaTeX{} 3}
 \begin{itemize}
-\item Feu servir el paquet \bftt{biblatex}\footnote{Hi ha un altre paquet (més vell) de referència, \bftt{natbib}. És possible que us el trobeu a alguna plantilla.}
- amb \cmdbs{cite} i \cmdbs{citetext}.
+\item Feu servir el paquet \bftt{biblatex}\footnote{Hi ha un altre paquet (més vell) de referència, \bftt{natbib}. És possible que us el trobeu a alguna plantilla. Fa servir \cmdbs{citet} i \cmdbs{citep}.}
+    amb \cmdbs{cite} (genèric), \cmdbs{citetext} (textual) i \cmdbs{parencite} (entre parèntesis).
 \item Al final del document poseu \cmdbs{printbibliography} 
-\end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
   {bib-example.tex}
@@ -190,6 +189,7 @@ Per exemple, \bftt{Jacobson1999Towards} és la clau d'aquest article:
 \begin{minipage}{0.35\linewidth}
 \includegraphics[width=1.4\textwidth,clip,trim=1.8in 5in 1.6in 1in]{bib-example.pdf}
 \end{minipage}
+\end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -204,9 +204,9 @@ Afegiu una imatge i bibliografia a l'article de l'exercici anterior.
 \item Baixau-vos aquests fitxers d'exemple.
 
 \begin{center}
-\fbox{\href{\fileuri/gerbil.jpg?dl=1}{Clica per baixar imatge d'exemple}}
+\fbox{\href{\fileuri/figures/gus_gran.png?dl=1}{Clica per baixar la imatge d'exemple}}
 
-\fbox{\href{\fileuri/bib-exercise.bib?dl=1}{Clica per descarregar fitxer bib d'exemple}}
+\fbox{\href{\fileuri/bib-exercise.bib?dl=1}{Clica per descarregar fitxer BIB d'exemple}}
 \end{center}
 
 \item Pujeu-los a Overleaf.
@@ -475,8 +475,8 @@ Finalment, us pot ser útil \href{https://www.overleaf.com/read/vsdvmbzywdrn\#d4
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Referències Online}
-\begin{frame}{Referències Online}
+\subsection{Referències en línia}
+\begin{frame}{Referències en línia}
 \begin{itemize}
 \item \href{https://www.overleaf.com/learn}{The Overleaf Learn Wiki} --- tutorials i material de referència.
 \item \href{http://en.wikibooks.org/wiki/LaTeX}{The \LaTeX{} Wikibook} --- més tutorials i material de referència.
@@ -486,6 +486,8 @@ Finalment, us pot ser útil \href{https://www.overleaf.com/read/vsdvmbzywdrn\#d4
 \item Qualsevol buscador us portarà a alguna d'aquestes pàgines.
 \end{itemize}
 \end{frame}
+
+\end{document}
 
 \subsection{Tipografia}
 \begin{frame}{Tipografia}
@@ -503,9 +505,6 @@ Finalment, us pot ser útil \href{https://www.overleaf.com/read/vsdvmbzywdrn\#d4
 \bftt{\~}  & tilde                     & spacing \\
 \end{tabular}
 \end{frame}
-
-
-\end{document}
 
 % -- latex understands words, sentences i paragraphs
 
@@ -627,7 +626,3 @@ F(x) = \int_{a}^{x}{f(t) dt}
 \begin{center}
 \fbox{\href{http://ctan.org/}{The Comprehensive \TeX Archive Network (CTAN)}}
 \end{center}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
