@@ -118,7 +118,7 @@ La \textit{fonologia} estudia els \textbf{fonemes}.
 \begin{frame}[fragile]{\wllogo}
 \begin{itemize}
 \item Overleaf és un lloc web per escriure documents a \LaTeX.
-\item `Compila' el teu \LaTeX{}  automàticament\footnote{Ctrl + Enter, o premeu `Recompile'} per a mostrar-te els resultats. 
+\item `Compila' el teu \LaTeX{}  automàticament\footnote{Ctrl + Enter, o premeu `Recompile'} per a mostrar-te els resultats.
 \vskip 2em
 \begin{center}
 \fbox{\href{\wlnewdoc{basics.tex}}{%
@@ -147,10 +147,10 @@ Feu clic aquí per a obrir el document d'exemple a \wllogo{}}}
     \item Els paràgrafs estan separats per \textbf{almenys} una línia en blanc.
 \end{itemize}
 
-\item Els espais del fitxer d'origen es co"lapsen a la sortida. 
+\item Els espais del fitxer d'origen es co"lapsen a la sortida.
 \begin{exampletwouptiny}
 La          fonologia
-    estudia els fonemes 
+    estudia els fonemes
 \end{exampletwouptiny}
 \item Pot ser útil començar cada frase en una nova línia (sobretot amb \href{https://git-scm.com/}{Git}).
 \end{itemize}
@@ -177,8 +177,8 @@ Cometes dobles: ``text''.
 \keystrokebftt{\&} & et (ampersand)            \\
 \keystrokebftt{\$} & signe de dòlar            \\
 \end{tabular}
-\item Si només els escriviu, segurament obtindreu un error. 
-    Si voleu que apareguin a la sortida, heu d'\textit{escapar-lo} precedint-lo amb una barra inversa \keystroke{\textbackslash}.
+\item Si només els escriviu, segurament obtindreu un error.
+    Si voleu que apareguin a la sortida, heu d'\textit{escapar-lo} precedint-lo amb una barra inversa \keystroke{\textbackslash}\footnote{Per la pròpia \keystrokebftt{\textbackslash} no funciona, cal \cmd{\textbackslash{}textbackslash{}}.}.
 \begin{exampletwoup}
 \$, \%, \&, \#
 \end{exampletwoup}
@@ -190,15 +190,15 @@ Cometes dobles: ``text''.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Com Tractar els Errors}
 \begin{itemize}
-\item \LaTeX{} es pot confondre quan està intentant compilar el vostre document. 
+\item \LaTeX{} es pot confondre quan està intentant compilar el vostre document.
     Si ho fa, s'atura amb un error, que heu de solucionar abans de produir cap sortida.
-\item Per exemple, si escriviu malament \cmdbs{textbf} com a \cmdbs{textfb}, \LaTeX{} s'aturarà amb un error 
+\item Per exemple, si escriviu malament \cmdbs{textbf} com a \cmdbs{textfb}, \LaTeX{} s'aturarà amb un error
 ``undefined control sequence'', perquè ``textfb'' no és una de les ordres que coneix.
 \end{itemize}
 \begin{block}{Consells sobre Errors}
 \begin{enumerate}
 \item No t'espantis! És comú trobar errors.
-\item Arregle'ls tan aviat com apareguin, si el que acabes d'escriure ha provocat un error, comença per allà. 
+\item Arregle'ls tan aviat com apareguin, si el que acabes d'escriure ha provocat un error, comença per allà.
 \item Si hi ha diversos errors, comença pel primer:
 la causa fins i tot pot estar per sobre.
 \end{enumerate}
@@ -224,7 +224,7 @@ Clica per obrir l'exercici a \wllogo{}}}
 \end{center}
 
 \begin{itemize}
-\item Pista: vigila amb els caràcters amb significat especial! 
+\item Pista: vigila amb els caràcters amb significat especial!
 \item Un cop ho hagis provat,
 \fbox{\href{\wlnewdoc{basics-exercise-1-solution.tex}}{%
 clica aquí per veure la solució}}.
@@ -240,11 +240,11 @@ clica aquí per veure la solució}}.
 \item Per què són especials els símbols de dòlar \keystrokebftt{\$}? Els utilitzem per marcar matemàtiques dins el text.\\[1ex]
 \begin{exampletwouptiny}
 % meh:
-Siguin a i b nombres enters 
+Siguin a i b nombres enters
 positius, i sigui c > a - b + 1
 
 % millor:
-Siguin $a$ i $b$ nombres enters 
+Siguin $a$ i $b$ nombres enters
 positius, i sigui $c > a - b + 1$.
 \end{exampletwouptiny}
 \item Utilitza sempre els símbols de dòlar amb parelles: un per començar les matemàtiques, i un per acabar-les.
@@ -276,7 +276,7 @@ $F_n = F_{n-1} + F_{n-2}$ % ok!
 \end{exampletwouptiny}
 \vskip 2ex
 
-\item Hi ha ordres per a les lletres gregues en notació comuna. 
+\item Hi ha ordres per a les lletres gregues en notació comuna.
 \begin{exampletwouptiny}
 $\mu = A e^{Q/RT}$
 
@@ -318,9 +318,9 @@ $\Omega = \sum_{k=1}^{n} \omega_k$
 \item Les ordres \cmdbs{begin} i \cmdbs{end} es fan servir per delimitar diferents entorns.
 \vskip 2ex
 
-\item Els entorns \bftt{itemize} i \bftt{enumerate} generen llistes de punts i numèriques. 
+\item Els entorns \bftt{itemize} i \bftt{enumerate} generen llistes de punts i numèriques.
 \begin{exampletwouptiny}
-\begin{itemize} % per punts 
+\begin{itemize} % per punts
     \item Galetes
     \item Iogurt
 \end{itemize}
@@ -330,7 +330,7 @@ $\Omega = \sum_{k=1}^{n} \omega_k$
     \item Iogurt
 \end{enumerate}
 \end{exampletwouptiny}
-\item No és necessari, però és bona pràctica augmentar el sagnat del text dins d'un entorn. 
+\item No és necessari, però és bona pràctica augmentar el sagnat del text dins d'un entorn.
 \end{itemize}
 \end{frame}
 
@@ -340,9 +340,9 @@ $\Omega = \sum_{k=1}^{n} \omega_k$
 \begin{frame}[fragile]{Entorns 2 (extra)}
 \begin{itemize}
 \item \bftt{equation} és l'entorn més comú per posar equacions numerades.
-\item Les mateixes ordres dins un entorn produeixen resultats diferents. 
+\item Les mateixes ordres dins un entorn produeixen resultats diferents.
 \begin{exampletwouptiny}
-Podem escriure el mateix dins un text: 
+Podem escriure el mateix dins un text:
 $ \Omega = \sum_{k=1}^{n} \omega_k $
 
 O dir, com es veu a:
@@ -367,15 +367,15 @@ O dir, com es veu a:
 
 \item Els \emph{paquets} són llibreries que contenen ordres i entorns addicionals. N'hi ha milers de gratuïts.
 
-\item Si volem fer servir un paquet l'hem de carregar amb l'ordre 
+\item Si volem fer servir un paquet l'hem de carregar amb l'ordre
     \cmdbs{usepackage} al \emph{preàmbul} \footnote{Un dels beneficis d'Overleaf és que ja té tots els paquets de \href{https://tug.org/texlive/}{TexLive} insta"lats.}.
 
-\item Exemple: \bftt{graphicx} per incloure imatges. 
+\item Exemple: \bftt{graphicx} per incloure imatges.
 \begin{minted}[fontsize=\small,frame=single]{latex}
 \documentclass{article}
 \usepackage{graphicx} % preàmbul
 \begin{document}
-% ja podem fer servir ordres de linguex ... 
+% ja podem fer servir ordres de linguex ...
 \end{document}
 \end{minted}
 \end{itemize}
@@ -406,7 +406,7 @@ O dir, com es veu a:
   width=0.4\textwidth,
   height=0.4\textwidth,
   angle=30
-  ]{khaleesi} % no cal posar el format 
+  ]{khaleesi} % no cal posar el format
 \end{exampletwouptiny}
 
 \end{frame}
@@ -418,7 +418,7 @@ O dir, com es veu a:
 \begin{itemize}
 \item Fem servir claudàtors \keystrokebftt{[} \keystrokebftt{]} per arguments opcionals,
 en comptes de claus \keystrokebftt{\{} \keystrokebftt{\}}.
-\item \cmdbs{includegraphics} admet arguments opcionals per modificar la imatge. 
+\item \cmdbs{includegraphics} admet arguments opcionals per modificar la imatge.
 Per exemple, \bftt{width=0.3\cmdbs{textwidth}} fa que la image ocupi un 30\% de l'amplada
 del text (\cmdbs{textwidth}).
 \item \cmdbs{documentclass} també admet arguments opcionals. Exemple:
@@ -446,6 +446,24 @@ Més endevant veurem com es fa.
 \begin{minipage}{0.35\linewidth}
 \includegraphics[width=\textwidth,clip,trim=2in 5in 3in 1in]{media-graphics.pdf}
 \end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Floats 2}
+\begin{itemize}
+\item Les opcions h (here), t (top), b (bottom), p (page) permeten indicar aproximadament on es vol el \textit{float} a la pàgina.
+\item Es poden combinar: l'odre de preferència es $h > t > p> b$
+\item Més informació a \href{https://www.overleaf.com/latex/examples/understanding-floats/qkjpvqptqrwd}{aquest tutorial en anglès, i les seves referències}.
+\end{itemize}
+\begin{exampletwouptiny}
+\begin{figure}[htbp]
+\centering
+\includegraphics[
+width=0.5\textwidth]{khaleesi2}
+\end{figure}
+\end{exampletwouptiny}
 
 \end{frame}
 
@@ -459,16 +477,16 @@ Més endevant veurem com es fa.
 \item Cal el paquet \bftt{tabularx}.
 \item L'argument especifica l'alineament de les columnes --- \textbf{l}eft, \textbf{c}enter, \textbf{r}ight.
 \begin{exampletwouptiny2}
-\begin{tabular}{lcr} 
+\begin{tabular}{lcr}
     Item      & Num & Preu \$ \\
     Pantalla  & 1   & 199.99  \\
     Ordinador & 2   & 399.99  \\
     Cables    & 3   & 19.99   \\
 \end{tabular}
 \end{exampletwouptiny2}
-\item \keystrokebftt{\&} marca el separador de columna i \keystrokebftt{\bs\bs} el final de línia. 
+\item \keystrokebftt{\&} marca el separador de columna i \keystrokebftt{\bs\bs} el final de línia.
 \begin{exampletwouptiny2}
-\begin{table}  
+\begin{table}
     \centering % centra la taula
     \caption{Descriu preus.}
     \begin{tabular}{lcr}
@@ -488,8 +506,8 @@ Més endevant veurem com es fa.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Taules 2}
 \begin{itemize}
-\item Els separadors \keystrokebftt{|} dins l'argument fan línies verticals (millor evitar-les),\\ 
-\cmdbs{hline} fa línies horizontals. 
+\item Els separadors \keystrokebftt{|} dins l'argument fan línies verticals (millor evitar-les),\\
+\cmdbs{hline} fa línies horizontals.
 \begin{exampletwouptiny}
 \begin{tabular}{|l|r|r|}
     \hline
@@ -501,7 +519,7 @@ Més endevant veurem com es fa.
     \hline
 \end{tabular}
 \end{exampletwouptiny}
-\item El paquet \bftt{booktabs} proporciona les ordres \cmdbs{toprule}, \cmdbs{midrule} i \cmdbs{bottomrule}. 
+\item El paquet \bftt{booktabs} proporciona les ordres \cmdbs{toprule}, \cmdbs{midrule} i \cmdbs{bottomrule}.
 \begin{exampletwouptiny}
 \begin{tabular}{lrr}
     \toprule
@@ -528,7 +546,7 @@ Hi ha moltes opcions diferents per fer taules.
 \begin{exampletwouptiny}
 \begin{tabular}{lrr}
 \toprule
-Item & 
+Item &
 \multicolumn{2}{c}{MultiColumna} \\
 \cline{2-3}
 Pantalla  & 1   & 199.99  \\
@@ -547,12 +565,12 @@ Pantalla  & 1   & 199.99  \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Final de la primera part}
 \begin{itemize}
-\item Ja hem aprés a \dots 
+\item Ja hem aprés a \dots
 \begin{itemize}
 \item Escriure text amb \LaTeX.
 \item Utilitzar diferents ordres.
-\item Tractar errors quan apareixen. 
-\item Escriure matemàtiques. 
+\item Tractar errors quan apareixen.
+\item Escriure matemàtiques.
 \item Utilitzar diversos entorns diferents.
 \item Carregar paquets.
 \item Mostrar figures i taules.
@@ -565,8 +583,8 @@ Pantalla  & 1   & 199.99  \\
 \begin{itemize}
 \item \href{https://www.overleaf.com/learn}{The Overleaf Learn Wiki} --- tutorials i material de referència.
 \item \href{http://en.wikibooks.org/wiki/LaTeX}{The \LaTeX{} Wikibook} --- més tutorials i material de referència.
-\item \href{http://tex.stackexchange.com/}{\TeX{} Stack Exchange} --- preguntes i respostes 
-\item \href{http://www.latex-community.org/}{\LaTeX{} Community} --- fòrum 
+\item \href{http://tex.stackexchange.com/}{\TeX{} Stack Exchange} --- preguntes i respostes
+\item \href{http://www.latex-community.org/}{\LaTeX{} Community} --- fòrum
 \item \href{http://ctan.org/}{Comprehensive \TeX{} Archive Network (CTAN)} --- documentació de paquets.
 \item Qualsevol buscador us portarà a alguna d'aquestes pàgines.
 \end{itemize}
