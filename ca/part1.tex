@@ -538,6 +538,23 @@ width=0.5\textwidth]{khaleesi2}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Taules 3}
+\begin{itemize}
+\item Exemple complet amb \bftt{booktabs}.
+\end{itemize}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {media-tables.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=2in 5in 3in 1in]{media-tables.pdf}
+\end{minipage}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Taules 3}
 Hi ha moltes opcions diferents per fer taules.
 \begin{itemize}
 \item Es poden fusionar columnes amb \cmdbs{multicolumn} i files amb \cmdbs{multirow} (cal el paquet \bftt{multirow}).

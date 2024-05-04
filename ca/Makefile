@@ -3,14 +3,14 @@ all: part1.pdf part2.pdf part3.pdf recap.pdf
 #
 # Part 1
 #
-part1.pdf: part1.tex preamble.tex media-graphics.pdf
+part1.pdf: part1.tex preamble.tex media-graphics.pdf media-tables.pdf
 	pdflatex -shell-escape part1
 	pdflatex -shell-escape part1
 
 #
 # Part 2
 #
-part2.pdf: part2.tex preamble.tex structure-title.pdf structure-sections.pdf structure-crossref.pdf media-graphics.pdf bib-example.pdf structure-exercise-solution.pdf
+part2.pdf: part2.tex preamble.tex structure-title.pdf structure-sections.pdf structure-crossref.pdf bib-example.pdf structure-exercise-solution.pdf
 	pdflatex -shell-escape part2
 	pdflatex -shell-escape part2
 
@@ -32,6 +32,10 @@ structure-exercise-solution.pdf: structure-exercise-solution.tex
 media-graphics.pdf: media-graphics.tex
 	lualatex media-graphics
 	lualatex media-graphics
+
+media-tables.pdf: media-tables.tex
+	pdflatex media-tables
+	pdflatex media-tables
 
 bib-example.pdf: bib-example.tex bib-example.bib
 	pdflatex bib-example
@@ -76,7 +80,7 @@ latex-course.tgz: part1.pdf part2.pdf part3.pdf basics-exercise-1-solution.tex b
 	tar czf latex-course.tgz $^
 
 clean:
-	rm -f *.log *.aux *.out *.nav *.snm *.toc *.vrb *.pyg *.bbl *.blg structure-crossref.pdf structure-sections.pdf structure-title.pdf media-graphics.pdf bib-example.pdf
+	rm -f *.log *.aux *.out *.nav *.snm *.toc *.vrb *.pyg *.bbl *.blg structure-crossref.pdf structure-sections.pdf structure-title.pdf media-graphics.pdf media-tables.pdf bib-example.pdf
 
 clobber: clean
 	rm -f part1.pdf part2.pdf part3.pdf
