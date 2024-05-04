@@ -18,7 +18,7 @@ media-tables.pdf: media-tables.tex
 #
 # Part 2
 #
-part2.pdf: part2.tex preamble.tex structure-title.pdf structure-sections.pdf structure-crossref.pdf structure-cleveref.pdf bib-example.pdf structure-exercise-solution.pdf media-graphics-tables.pdf recap-structure.pdf recap-exercise.pdf recap-exercise-solution.pdf
+part2.pdf: part2.tex preamble.tex structure-title.pdf structure-sections.pdf structure-sections-toc.pdf structure-crossref.pdf structure-cleveref.pdf bib-example.pdf structure-exercise-solution.pdf media-graphics-tables.pdf recap-structure.pdf recap-exercise.pdf recap-exercise-solution.pdf
 	pdflatex -shell-escape part2
 	pdflatex -shell-escape part2
 
@@ -27,6 +27,9 @@ structure-title.pdf: structure-title.tex
 
 structure-sections.pdf: structure-sections.tex
 	pdflatex structure-sections
+
+structure-sections-toc.pdf: structure-sections-toc.tex
+	pdflatex structure-sections-toc
 
 structure-crossref.pdf: structure-crossref.tex
 	pdflatex structure-crossref

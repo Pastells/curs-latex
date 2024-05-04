@@ -174,7 +174,7 @@ Es pot posar el següent al preàmbul (\href{https://tex.stackexchange.com/quest
 \subsection{Títol i Resum}
 \begin{frame}[fragile]{Títol i Resum}
 \begin{itemize}{\small
-\item A \LaTeX{}, \cmdbs{title}, \cmdbs{author} i \cmdbs{date} es defineixen al preàmbul.
+\item A \LaTeX{}, \cmdbs{title}, \cmdbs{author} i \cmdbs{date}\footnote{Si no volem data ho deixem buit.} es defineixen al preàmbul.
 \item Dins el document, \cmdbs{maketitle} crea el títol.
 \item Utilitza l'entorn \bftt{abstract} per crear un resum.
 \item El paquet \bftt{babel} defineix l'idioma del document.
@@ -207,13 +207,32 @@ Es pot posar el següent al preàmbul (\href{https://tex.stackexchange.com/quest
 \end{minipage}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Índexs}
+\begin{itemize}{\small
+    \item \cmdbs{tableofcontents} crea l'índex general.
+    \item \cmdbs{listoffigures} i \cmdbs{listoftables} creen l'índex de figures i de taules.
+    \item \LaTeX{} també facilita la creació d'\href{https://www.overleaf.com/learn/latex/Indices}{índexs analítics}.
+}\end{itemize}
+%Com els podem canviar el nom? 
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+  {structure-sections-toc.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=1.5in 4in 1.5in 2in]{structure-sections-toc.pdf}
+\end{minipage}
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Format: marges i interlineat}
 \begin{itemize}
-\item El paquet \bftt{geometry} ens permet modificar la \href{https://www.overleaf.com/learn/latex/Page_size_and_margins}{mida del document i els marges}.
+\item El paquet \bftt{geometry} ens permet modificar la \href{https://www.overleaf.com/learn/latex/Page_size_and_margins}{mida i els marges del document}.
 \item \bftt{setspace} defineix l'interlineat amb les ordres \cmdbs{singlespacing}, \cmdbs{onehalfspacing}, \cmdbs{doublespacing}\footnote{No hi ha una definició clara de què vol dir interlineat doble.}, o un valor personalitzat amb \cmdbs{setstretch}. Més informació sobre espaiat \href{https://www.overleaf.com/learn/latex/Articles/How_to_change_paragraph_spacing_in_LaTeX#The_setspace_package}{aquí}.
 \end{itemize}
 
@@ -310,7 +329,7 @@ un generador d'articles aleatoris.}:}
 \begin{center}
 \fbox{\href{\fileuri/structure-exercise-solution.pdf}{Clica per obrir l'article}}
 \end{center}
-Fes servir interlineat doble, marges de 2 cm als laterals, de 0cm a dalt i de 1,5 cm a baix.
+Fes servir interlineat doble, marges de 2 cm als laterals, de 1,5cm a dalt i a baix.
 Utilitza \cmdbs{ref} per evitar escriure explícitament el número de les seccions.
 Posa el paquet \bftt{hyperref} al preàmbul.
 \end{block}
@@ -445,18 +464,18 @@ Per exemple, \bftt{Jacobson1999Towards} és la clau d'aquest article:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Bib\LaTeX{} 3}
-\begin{itemize}
+\begin{itemize}\small{
 \item Feu servir el paquet \bftt{biblatex}\footnote{Hi ha un altre paquet (més vell) de referència, \bftt{natbib}. És possible que us el trobeu a alguna plantilla. Fa servir \cmdbs{citet} i \cmdbs{citep}.}
     amb \cmdbs{cite} (genèric), \cmdbs{citetext} (textual) i \cmdbs{parencite} (entre parèntesis).
 \item Al final del document poseu \cmdbs{printbibliography}
-\begin{minipage}{0.55\linewidth}
-\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+}\end{itemize}
+\begin{minipage}{0.45\linewidth}
+\inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
   {bib-example.tex}
 \end{minipage}
-\begin{minipage}{0.35\linewidth}
+\begin{minipage}{0.4\linewidth}
 \includegraphics[width=1.4\textwidth,clip,trim=1.8in 5in 1.6in 1in]{bib-example.pdf}
 \end{minipage}
-\end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -465,7 +484,8 @@ Per exemple, \bftt{Jacobson1999Towards} és la clau d'aquest article:
 \subsection{Exercici}
 \begin{frame}[fragile]{Exercici: Pose-m'ho tot junt}
 
-Afegiu una imatge i bibliografia a l'article de l'exercici anterior.
+Afegiu una imatge (referenciada al text) i bibliografia a l'article de l'exercici anterior.
+Feu almenys una cita textual i una de parentètica.
 
 \begin{enumerate}
 \item Baixeu-vos aquests fitxers d'exemple (o els vostres propis).
@@ -485,21 +505,27 @@ Afegiu una imatge i bibliografia a l'article de l'exercici anterior.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Paquets lingüística}
+\begin{frame}{Continguts}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{linguex}
 \begin{frame}[fragile]{linguex: exemples}
 \begin{itemize}
 \item Les 3 ordres bàsiques de linguex són \cmdbs{ex.}, \cmdbs{a.} i \cmdbs{b.}.
-\item \cmdbs{ex.} inicia l'exemple, i cal una línia en blanc per acabar-lo.
+\item \cmdbs{ex.} inicia l'exemple, i \textbf{cal una línia en blanc} per acabar-lo.
 \begin{exampletwouptiny2}
 \ex. Exemple
 
 \ex. Primer nivell de l'exemple
 \a. Segon nivell de l'exemple
 \b. Seguim al segon nivell
-
-Com hem vist a \LLast i \Last \dots
-
-En canvi a \Next veiem \dots
 
 \ex.
 \a. podem deixar buit
@@ -511,7 +537,46 @@ En canvi a \Next veiem \dots
 
 \end{exampletwouptiny2}
 \item Les ordres \cmdbs{c.}, \cmdbs{d.}, etc.~són còpies de \cmdbs{b.}.
+\item \bftt{linguex} és senzill, però, tot i poder-se modificar, és limitat. Hi ha paquets més potents però amb una sintaxi més complexa. \href{https://www.jostellings.com/numbex.html}{Vegeu aquesta breu explicació}. 
 \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{linguex}
+\begin{frame}[fragile]{linguex: referències}
+\begin{itemize}
+\item Podem fer servir \cmdbs{label} i \cmdbs{ref}.
+\item També podem referir-nos als exemples més propers amb \cmdbs{Next}, \cmdbs{Last}, \cmdbs{NNext} i \cmdbs{LLast}, fins i tot si no tenen una etiqueta.
+\end{itemize}
+\begin{exampletwouptiny2}
+A l'exemple \ref{ex:1} hi ha faltes. 
+\ex. Ejenple
+\label{ex:1}
+
+\ex. Primer nivell de l'exemple
+\a. Segon nivell de l'exemple
+
+Com hem vist a \LLast i \Last \dots
+
+En canvi a \Next i \NNext veiem \dots
+
+\ex.
+\a. podem deixar buit
+\b. el primer nivell
+
+\ex. 
+\label{ex:2}
+\a. podem citar subexemples 
+\label{ex:2a}
+\b. posant label a sota 
+\label{ex:2b}
+
+Exemple \ref{ex:2} amb subexemples 
+\ref{ex:2a} i \ref{ex:2b}.
+
+\end{exampletwouptiny2}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -540,7 +605,7 @@ En canvi a \Next veiem \dots
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{linguex: gramaticalitat}
 \begin{itemize}
-    \item Linguex admet els símbols *, ?, \# i \% per judicis de gramaticalitat (els posa al davant)\footnote{recordeu que \# i \% s'escriuen amb una \bs~al davant}.
+    \item Linguex admet els símbols *, ?, \# i \% per judicis de gramaticalitat (els posa al davant)\footnote{recordeu que \# i \% s'escriuen amb una \keystroke{\textbackslash} davant}.
 \begin{exampletwouptiny2}
 \ex.
 \a. Exemple ben format
@@ -644,6 +709,44 @@ Martin-ERG Diego-ABS vist ha \\
 \end{exampletwouptiny}
 \item \href{https://ling.auf.net/lingbuzz/003391}{Guia forest}
 \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Exemples comentats}
+\begin{frame}{Exemples comentats}
+De senzill a complex:
+\begin{itemize}
+    \item \href{https://www.overleaf.com/read/rgxbsfvqsgbw\#ba04b9}{Breu transcripció fonètica} --- amb \bftt{tipauni} o \bftt{tipa} (comentat).
+    \item \href{https://www.overleaf.com/read/mxysfjcnnppm\#294a25}{Treball de transcripció fonètica} --- més extens que l'anterior, barreja de \bftt{tipa} i unicode.
+    \item \href{https://www.overleaf.com/read/sxkcdfrpmbcb\#10abd3}{Treball morfologia basca} --- conté:
+\begin{itemize}
+    \item Un treball estructurat amb diversos fitxers, glosses personalitzades, taules amb format avançat i exemples de bibliografia tant amb biblatex com amb apacite.
+    \item Una presentació amb \bftt{beamer}.
+\end{itemize}
+\end{itemize}
+
+Finalment, us pot ser útil \href{https://www.overleaf.com/read/vsdvmbzywdrn\#d43fce}{aquesta plantilla senzilla}.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Referències en línia}
+\begin{itemize}
+\item \href{https://www.overleaf.com/learn}{The Overleaf Learn Wiki} --- tutorials i material de referència.
+\item \href{http://en.wikibooks.org/wiki/LaTeX}{The \LaTeX{} Wikibook} --- més tutorials i material de referència.
+\item \href{http://tex.stackexchange.com/}{\TeX{} Stack Exchange} --- preguntes i respostes
+\item \href{http://www.latex-community.org/}{\LaTeX{} Community} --- fòrum
+\item \href{http://ctan.org/}{Comprehensive \TeX{} Archive Network (CTAN)} --- documentació de paquets.
+\item Qualsevol buscador us portarà a alguna d'aquestes pàgines.
+\end{itemize}
+
+Repositori del curs: \href{https://github.com/Pastells/curs-latex}{Pastells/curs-latex}
 
 \end{frame}
 
