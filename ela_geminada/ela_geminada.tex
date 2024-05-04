@@ -1,0 +1,55 @@
+% Font: https://tex.stackexchange.com/questions/80406/catalan-language-ela-geminada
+\usepackage{newunicodechar}
+\newunicodechar{Ŀ}{L·}
+\newunicodechar{ŀ}{l·}
+
+\renewcommand{\lgem}{l·l}
+\renewcommand{\Lgem}{L·L}
+
+\def\xgem{%
+   \ifmmode
+ \csname normal@char\string"\endcsname l%
+   \else
+ \leftllkern=0pt\rightllkern=0pt\raiselldim=0.15em
+ \setbox0\hbox{l}\setbox1\hbox{l\/}\setbox2\hbox{$\cdot$}%
+ \advance\raiselldim by \the\fontdimen5\the\font
+ \advance\raiselldim by -\ht2
+ \leftllkern=-.25\wd0%
+ \advance\leftllkern by \wd1
+ \advance\leftllkern by -\wd0
+ \rightllkern=-.25\wd0%
+ \advance\rightllkern by -\wd1
+ \advance\rightllkern by \wd0
+ \allowhyphens\discretionary{-}{}%
+ {\kern\leftllkern\raise\raiselldim\hbox{$\cdot$}%
+   \kern\rightllkern}\allowhyphens
+   \fi
+   }
+\def\Xgem{%
+   \ifmmode
+ \csname normal@char\string"\endcsname L%
+   \else
+ \leftllkern=0pt\rightllkern=0pt\raiselldim=0pt
+ \setbox0\hbox{L}\setbox1\hbox{L\/}\setbox2\hbox{$\cdot$}%
+ \advance\raiselldim by .5\ht0
+ \advance\raiselldim by -.5\ht2
+ \leftllkern=-.125\wd0%
+ \advance\leftllkern by \wd1
+ \advance\leftllkern by -\wd0
+ \rightllkern=-\wd0%
+ \divide\rightllkern by 6
+ \advance\rightllkern by -\wd1
+ \advance\rightllkern by \wd0
+ \allowhyphens\discretionary{-}{}%
+ {\kern\leftllkern\raise\raiselldim\hbox{$\cdot$}%
+   \kern\rightllkern}\allowhyphens
+   \fi
+   }
+
+
+\DeclareTextCommand{\textperiodcentered}{T1}[1]{%
+   \ifnum\spacefactor=998
+ \Xgem
+   \else
+ \xgem
+   \fi#1}

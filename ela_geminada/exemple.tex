@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[catalan]{babel}
+\usepackage{hyperref}
+\input{ela_geminada} % proveu a comentar-ho
+\title{Ela Geminada amb \LaTeX}
+\date{Maig 2024}
+\author{Pol Pastells}
+\begin{document}
+\maketitle
+
+En català l'ela geminada se sol escriure amb el punt volat com a caràcter entre dues eles (l·l), però la manera ``correcta'' d'escriure-la amb \LaTeX{} és amb:
+\begin{itemize}
+    \item "l 
+    \item \lgem{}
+    \item \l.l
+\end{itemize}
+(per totes cal fer servir el paquet babel en català). Si heu d'escriure gaire en català és recomenable redefinir l·l perquè tipogràficament tingui la mateixa pinta que les tres opcions amb babel.
+Ja que hi som també volem que si copiem un text que conté elapunt amb Unicode (\href{http://www.l·l.cat/info/formes-erronies-descriure-la-ela-geminada}{tot i que sigui un error de codificació}), sigui també igual.
+
+Per fer tot això només cal que copieu el contingut del fitxer `ela\_geminada.tex' al preàmbul o bé l'importeu amb \textbf{input} com a aquest document.
+
+Referència del codi:\\
+\url{https://tex.stackexchange.com/questions/80406/catalan-language-ela-geminada}
+
+\subsection*{Exemple}
+Novel·la \\
+Noveŀla \\
+Nove"la \\
+Nove\lgem a \\
+Nove\l.la \\
+NOVEL·LA \\
+NOVEĿLA \\
+NOVE"LA \\
+NOVE\Lgem A \\
+NOVE\L.LA
+
+\end{document}
