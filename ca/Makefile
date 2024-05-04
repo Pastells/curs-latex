@@ -7,10 +7,18 @@ part1.pdf: part1.tex preamble.tex media-graphics.pdf media-tables.pdf
 	pdflatex -shell-escape part1
 	pdflatex -shell-escape part1
 
+media-graphics.pdf: media-graphics.tex
+	lualatex media-graphics
+	lualatex media-graphics
+
+media-tables.pdf: media-tables.tex
+	pdflatex media-tables
+	pdflatex media-tables
+
 #
 # Part 2
 #
-part2.pdf: part2.tex preamble.tex structure-title.pdf structure-sections.pdf structure-crossref.pdf bib-example.pdf structure-exercise-solution.pdf
+part2.pdf: part2.tex preamble.tex structure-title.pdf structure-sections.pdf structure-crossref.pdf structure-cleveref.pdf bib-example.pdf structure-exercise-solution.pdf
 	pdflatex -shell-escape part2
 	pdflatex -shell-escape part2
 
@@ -24,18 +32,15 @@ structure-crossref.pdf: structure-crossref.tex
 	pdflatex structure-crossref
 	pdflatex structure-crossref
 
+structure-cleveref.pdf: structure-cleveref.tex 
+	pdflatex structure-cleveref
+	pdflatex structure-cleveref
+
 structure-exercise-solution.pdf: structure-exercise-solution.tex
 	pdflatex structure-exercise-solution
 	pdflatex structure-exercise-solution
 	pdflatex structure-exercise-solution
 
-media-graphics.pdf: media-graphics.tex
-	lualatex media-graphics
-	lualatex media-graphics
-
-media-tables.pdf: media-tables.tex
-	pdflatex media-tables
-	pdflatex media-tables
 
 bib-example.pdf: bib-example.tex bib-example.bib
 	pdflatex bib-example
@@ -44,15 +49,14 @@ bib-example.pdf: bib-example.tex bib-example.bib
 	pdflatex bib-example
 
 #
-# Part 3
+# Recap 
 #
 recap.pdf: recap.tex preamble.tex recap-structure.pdf recap-exercise.pdf recap-exercise-solution.pdf
 	pdflatex -shell-escape recap
 	pdflatex -shell-escape recap
 
-part3.pdf: part3.tex preamble.tex beamer-minimal.pdf beamer-theme.pdf beamer-exercise.pdf beamer-exercise-solution.pdf
-	pdflatex -shell-escape part3
-	pdflatex -shell-escape part3
+recap-structure.pdf: recap-structure.tex
+	pdflatex recap-structure
 
 recap-exercise.pdf: recap-exercise.tex
 	pdflatex recap-exercise
@@ -60,8 +64,12 @@ recap-exercise.pdf: recap-exercise.tex
 recap-exercise-solution.pdf: recap-exercise-solution.tex
 	pdflatex recap-exercise-solution
 
-recap-structure.pdf: recap-structure.tex
-	pdflatex recap-structure
+#
+# Part 3
+#
+part3.pdf: part3.tex preamble.tex beamer-minimal.pdf beamer-theme.pdf beamer-exercise.pdf beamer-exercise-solution.pdf
+	pdflatex -shell-escape part3
+	pdflatex -shell-escape part3
 
 beamer-minimal.pdf: beamer-minimal.tex
 	pdflatex beamer-minimal
