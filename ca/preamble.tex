@@ -95,6 +95,16 @@
    \end{minipage}
    \end{tabular}}}
 
+\newenvironment{exampletiny}
+  {\VerbatimEnvironment
+   \begin{VerbatimOut}{example.out}}
+  {\end{VerbatimOut}
+   \setlength{\parindent}{0pt}
+   \fbox{
+   \begin{minipage}{0.50\linewidth}
+     \inputminted[fontsize=\scriptsize,resetmargins]{latex}{example.out}
+   \end{minipage}}}
+
 \newenvironment{exampletwouptiny}
   {\VerbatimEnvironment
    \begin{VerbatimOut}{example.out}}

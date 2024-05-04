@@ -15,11 +15,45 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Documents Estructurats}
+\section{Dubtes classe anterior}
+\begin{frame}{Continguts}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Dubtes classe anterior}
+\begin{itemize}
+    \item \textbf{Com s'escapa una seqüència sencera?}\\
+    Cal escapar la pròpia barra inversa \keystroke{\textbackslash} amb \cmd{\textbackslash{}textbackslash{}}.
+
+\begin{exampletwouptiny}
+% podem separar l'ordre amb espai
+\textbackslash includegraphics
+
+% o amb claus
+\textbackslash{}includegraphics
+\end{exampletwouptiny}
+\item \textbf{Com s'evita que es tallin paraules amb guió a final de línia?}
+Es pot posar el següent al preàmbul (\href{https://tex.stackexchange.com/questions/5036/how-to-prevent-latex-from-hyphenating-the-entire-document}{font}):
+
+\begin{exampletiny}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+\end{exampletiny}
+\end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Documents Estructurats}
 \begin{frame}{Continguts}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
@@ -32,9 +66,10 @@
 \subsection{Títol i Resum}
 \begin{frame}[fragile]{Títol i Resum}
 \begin{itemize}{\small
-\item A \LaTeX{}, \cmdbs{title}, \cmdbs{author} i \cmdbs{date} es defineixen al preàmbul. 
+\item A \LaTeX{}, \cmdbs{title}, \cmdbs{author} i \cmdbs{date} es defineixen al preàmbul.
 \item Dins el document, \cmdbs{maketitle} crea el títol.
 \item Utilitza l'entorn \bftt{abstract} per crear un resum.
+\item El paquet \bftt{babel} defineix l'idioma del document.
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
@@ -51,7 +86,7 @@
 \subsection{Seccions}
 \begin{frame}{Seccions}
 \begin{itemize}{\small
-    \item Només cal fer servir \cmdbs{section} i \cmdbs{subsection} 
+    \item \cmdbs{section} i \cmdbs{subsection}
         (\href{https://www.overleaf.com/learn/latex/Sections_and_chapters}{hi ha més nivells})
 \item Què creus que fan \cmdbs{section*} i \cmdbs{subsection*}?
 }\end{itemize}
@@ -71,7 +106,7 @@
 \begin{frame}[fragile]{Etiquetes i Referències Creuades}
 \begin{itemize}{\small
 \item \cmdbs{label} serveix per etiquetar i \cmdbs{ref} per referenciar.
-\item Les dues serveixen per seccions, figures, taules, exemples de linguex \dots
+\item Les dues serveixen per seccions, figures, taules \dots
 }\end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
@@ -106,12 +141,12 @@
 \begin{frame}[fragile]{Exercici Documents Estructurats}
 
 \begin{block}{Escriu el següent article amb \LaTeX
-\footnote{De \url{http://pdos.csail.mit.edu/scigen/}, 
+\footnote{De \url{http://pdos.csail.mit.edu/scigen/},
 un generador d'articles aleatoris.}:}
 \begin{center}
 \fbox{\href{\fileuri/structure-exercise-solution.pdf}{Clica per obrir l'article}}
 \end{center}
-Fes que l'article tingui la mateixa pinta. 
+Fes que l'article tingui la mateixa pinta.
 Utilitza \cmdbs{ref} per evitar escriure explícitament la secció i el número d'exemple.
 \end{block}
 \vskip 2ex
@@ -131,12 +166,7 @@ Clica per veure la solució}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\addtocontents{toc}{\newpage}
 \section{Bibliografies}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Continguts}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
@@ -152,7 +182,7 @@ Clica per veure la solució}}.
 \item Poseu les referències a un fitxer \bftt{.bib} en format `bibtex':
 \vskip 1ex
 \inputminted[fontsize=\scriptsize,frame=single]{latex}{bib-example.bib}
-\item La majoria de gestors i buscadors d'articles ofereixen aquesta opció. 
+\item La majoria de gestors i buscadors d'articles ofereixen aquesta opció.
 \end{itemize}
 \end{frame}
 
@@ -181,7 +211,7 @@ Per exemple, \bftt{Jacobson1999Towards} és la clau d'aquest article:
 \begin{itemize}
 \item Feu servir el paquet \bftt{biblatex}\footnote{Hi ha un altre paquet (més vell) de referència, \bftt{natbib}. És possible que us el trobeu a alguna plantilla. Fa servir \cmdbs{citet} i \cmdbs{citep}.}
     amb \cmdbs{cite} (genèric), \cmdbs{citetext} (textual) i \cmdbs{parencite} (entre parèntesis).
-\item Al final del document poseu \cmdbs{printbibliography} 
+\item Al final del document poseu \cmdbs{printbibliography}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
   {bib-example.tex}
@@ -201,7 +231,7 @@ Per exemple, \bftt{Jacobson1999Towards} és la clau d'aquest article:
 Afegiu una imatge i bibliografia a l'article de l'exercici anterior.
 
 \begin{enumerate}
-\item Baixau-vos aquests fitxers d'exemple.
+\item Baixeu-vos aquests fitxers d'exemple (o els vostres propis).
 
 \begin{center}
 \fbox{\href{\fileuri/figures/gus_gran.png?dl=1}{Clica per baixar la imatge d'exemple}}
@@ -221,21 +251,21 @@ Afegiu una imatge i bibliografia a l'article de l'exercici anterior.
 \subsection{linguex}
 \begin{frame}[fragile]{linguex: exemples}
 \begin{itemize}
-\item Les 3 ordres bàsiques de linguex són \cmdbs{ex.}, \cmdbs{a.} i \cmdbs{b.}. 
+\item Les 3 ordres bàsiques de linguex són \cmdbs{ex.}, \cmdbs{a.} i \cmdbs{b.}.
 \item \cmdbs{ex.} inicia l'exemple, i cal una línia en blanc per acabar-lo.
 \begin{exampletwouptiny2}
 \ex. Exemple
 
 \ex. Primer nivell de l'exemple
 \a. Segon nivell de l'exemple
-\b. Seguim al segon nivell 
+\b. Seguim al segon nivell
 
 Com hem vist a \LLast i \Last \dots
 
 En canvi a \Next veiem \dots
 
-\ex. 
-\a. podem deixar buit 
+\ex.
+\a. podem deixar buit
 \b. el primer nivell
 \c. si volem ser ordenats
 \d. podem fer servir
@@ -252,9 +282,9 @@ En canvi a \Next veiem \dots
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{linguex: exemples 2}
 \begin{itemize}
-\item Per acabar un sol nivell s'utilitza \cmdbs{z.} 
+\item Per acabar un sol nivell s'utilitza \cmdbs{z.}
 \begin{exampletwouptiny2}
-\ex. Animals 
+\ex. Animals
 \a. Gats
 \a. miau
 \z.
@@ -275,12 +305,12 @@ En canvi a \Next veiem \dots
 \begin{itemize}
     \item Linguex admet els símbols *, ?, \# i \% per judicis de gramaticalitat (els posa al davant)\footnote{recordeu que \# i \% s'escriuen amb una \bs~al davant}.
 \begin{exampletwouptiny2}
-\ex. 
-\a. Exemple ben format 
-\b. * Agramatical frase? 
+\ex.
+\a. Exemple ben format
+\b. * Agramatical frase?
 \b. ** i molt agramatical molt
-\b. \# El formatge l'hi he posat 
-\c. ? Hi han maduixes 
+\b. \# El formatge l'hi he posat
+\c. ? Hi han maduixes
 
 \end{exampletwouptiny2}
 \end{itemize}
@@ -292,7 +322,7 @@ En canvi a \Next veiem \dots
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{linguex: glosses}
 \begin{itemize}
-\item Linguex és molt últil per morfologia. 
+\item Linguex és molt últil per morfologia.
 \item Per glossar un exemple afegim `g' després de l'última lletra de l'ordre i linguex s'encarrega d'alinear les paraules (cal \keystrokebftt{\bs\bs}  per marcar el final de línia).
 \begin{exampletwouptiny2}
 \ex.\a. No gloss
@@ -306,7 +336,7 @@ This is not the first gloss\\
 \end{exampletwouptiny2}
 \item Podem afegir una tercera línia de traducció amb \cmdbs{glt} (gloss translation).
 \begin{exampletwouptiny2}
-\exg. 
+\exg.
 Martin-ek Diego-\zero{} ikusi du \\
 Martin-ERG Diego-ABS vist ha \\
 \glt `En Martin ha vist en Diego'
@@ -326,7 +356,7 @@ Martin-ERG Diego-ABS vist ha \\
 \renewcommand{\eachwordone}{\itshape}
 \renewcommand{\eachwordtwo}{\tiny}
 
-\exg. 
+\exg.
 Martin-ek Diego-\zero{} ikusi du \\
 Martin-ERG Diego-ABS vist ha \\
 \glt `En Martin ha vist en Diego'
@@ -367,7 +397,7 @@ Martin-ERG Diego-ABS vist ha \\
 \subsection{Extra}
 \begin{frame}[fragile]{Extra: arbres}
 \begin{itemize}
-\item Hi ha dos paquets importants per fer arbres: forest i tikz-qtree.  
+\item Hi ha dos paquets importants per fer arbres: forest i tikz-qtree.
 \item Mireu els manuals per saber quin uns convé.
 \begin{exampletwouptiny}
 \ex. \begin{forest}
@@ -382,11 +412,11 @@ Martin-ERG Diego-ABS vist ha \\
 
 
 
-\section{Què més?}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Què més?}
 \begin{frame}{Continguts}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
@@ -399,7 +429,7 @@ Martin-ERG Diego-ABS vist ha \\
 \subsection{Altres coses interessants}
 \begin{frame}[fragile]{Altres}
 \begin{itemize}
-\item L'ordre \cmdbs{tableofcontents} genera un índex automàticament a partir  
+\item L'ordre \cmdbs{tableofcontents} genera un índex automàticament a partir
 dels títols de les seccions i subseccions.
 
 \item Change the \cmdbs{documentclass} to
@@ -426,8 +456,8 @@ $$
 \begin{itemize}
 \item \bftt{beamer}: per presentacions (com aquesta!)
 \item \bftt{todonotes}: comenataris i coses pendents (TODO)
-\item \bftt{tikz}: gràfics, una mica difícil. 
-\item \bftt{tikz-qtree}: arbres per sintaxi, relacions genètiques \dots 
+\item \bftt{tikz}: gràfics, una mica difícil.
+\item \bftt{tikz-qtree}: arbres per sintaxi, relacions genètiques \dots
 \item \bftt{pgfplots}: create graphs in \LaTeX
 \item \bftt{langnames}: per noms d'idiomes de manera sistemàtica.
 \end{itemize}
@@ -441,8 +471,8 @@ per exemples.
 \subsection{Instalar \LaTeX{}}
 \begin{frame}{Instalar \LaTeX}
 \begin{itemize}
-\item Per fer servir \LaTeX{} al vostre ordinador, us caldrà una \emph{distribució}: 
-    inclou el programa \bftt{latex} i un munt de paquets. 
+\item Per fer servir \LaTeX{} al vostre ordinador, us caldrà una \emph{distribució}:
+    inclou el programa \bftt{latex} i un munt de paquets.
 \begin{itemize}
 \item Windows: \href{http://miktex.org/}{Mik\TeX} o \href{http://tug.org/texlive/}{\TeX Live}
 \item Linux: \href{http://tug.org/texlive/}{\TeX Live}
@@ -459,7 +489,7 @@ per exemples.
 \begin{frame}{Exemples comentats}
 De senzill a complex:
 \begin{itemize}
-    \item \href{https://www.overleaf.com/read/rgxbsfvqsgbw\#ba04b9}{Breu transcripció fonètica} --- amb \bftt{tipauni} o \bftt{tipa} (comentat). 
+    \item \href{https://www.overleaf.com/read/rgxbsfvqsgbw\#ba04b9}{Breu transcripció fonètica} --- amb \bftt{tipauni} o \bftt{tipa} (comentat).
     \item \href{https://www.overleaf.com/read/mxysfjcnnppm\#294a25}{Treball de transcripció fonètica} --- més extens que l'anterior, barreja de \bftt{tipa} i unicode.
     \item \href{https://www.overleaf.com/read/sxkcdfrpmbcb\#10abd3}{Treball morfologia basca} --- conté:
 \begin{itemize}
@@ -480,8 +510,8 @@ Finalment, us pot ser útil \href{https://www.overleaf.com/read/vsdvmbzywdrn\#d4
 \begin{itemize}
 \item \href{https://www.overleaf.com/learn}{The Overleaf Learn Wiki} --- tutorials i material de referència.
 \item \href{http://en.wikibooks.org/wiki/LaTeX}{The \LaTeX{} Wikibook} --- més tutorials i material de referència.
-\item \href{http://tex.stackexchange.com/}{\TeX{} Stack Exchange} --- preguntes i respostes 
-\item \href{http://www.latex-community.org/}{\LaTeX{} Community} --- fòrum 
+\item \href{http://tex.stackexchange.com/}{\TeX{} Stack Exchange} --- preguntes i respostes
+\item \href{http://www.latex-community.org/}{\LaTeX{} Community} --- fòrum
 \item \href{http://ctan.org/}{Comprehensive \TeX{} Archive Network (CTAN)} --- documentació de paquets.
 \item Qualsevol buscador us portarà a alguna d'aquestes pàgines.
 \end{itemize}
