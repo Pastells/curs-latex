@@ -17,8 +17,6 @@ El material està dividit en 3 classes de dues hores:
 2. [Segona part](https://github.com/Pastells/curs-latex/blob/master/ca/part2.pdf) (EN PROCÉS):
    Seccions, referències creuades, bibliografia, paquets lingüística (`linguex` i `tipa`).
 
-2.5. [Repàs](https://github.com/Pastells/curs-latex/blob/master/ca/recap.pdf)
-
 3. [Tercera part](https://github.com/Pastells/curs-latex/blob/master/ca/part3.pdf) (EN PROCÉS):
    Notes i comentaris, presentacions amb `beamer`.
 
