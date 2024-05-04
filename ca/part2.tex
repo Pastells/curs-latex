@@ -161,7 +161,7 @@ Es pot posar el següent al preàmbul (\href{https://tex.stackexchange.com/quest
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Documents Estructurats}
+\section{Estructura i format}
 \begin{frame}{Continguts}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
@@ -207,38 +207,6 @@ Es pot posar el següent al preàmbul (\href{https://tex.stackexchange.com/quest
 \end{minipage}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Format}
-\begin{frame}[fragile]{Format: tipus de document}
-\begin{itemize}
-\item A part d'\textbf{article} les classes més típiques són \textbf{report} (llibres curts o tesis), \textbf{book} i \textbf{beamer} (diapositives).
-\item Tot i això, hi ha \href{https://ctan.org/topic/class}{una multitud de classes}, bàsicament pensades per revistes concretes, com \textbf{apa} o \textbf{amsart}.
-\item Famílies de paquets com \href{https://ctan.org/pkg/koma-script}{KOMA-Script} tenen moltes opcions, amb equivalents per article (\textbf{scrartcl}), report (\textbf{scrreprt}) i book (\textbf{scrbook}). Si les voleu utilitzar carregueu també el paquet \bftt{lmodern}. Una altra família és \href{https://ctan.org/pkg/minimalist}{minimalist} (conté l'estil \textbf{ClassicThesis})
-\item \href{https://ctan.org/pkg/memoir}{memoir} s'utilitza per escriure llibres professionalment.
-\end{itemize}
-
-\begin{exampletiny}
-\documentclass{scrartcl}
-\usepackage{lmodern}
-\end{exampletiny}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Format}
-\begin{frame}[fragile]{Format: font i mida del text}
-\begin{itemize}
-\item 
-\end{itemize}
-
-\begin{exampletiny}
-\end{exampletiny}
-
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -289,7 +257,7 @@ bottom=25mm,
 \begin{frame}[fragile]{Etiquetes i Referències Creuades: hyperref}
 \begin{itemize}{\small
 \item El paquet \bftt{hyperref} converteix totes les referències creuades en ``hyperlinks''. Només cal afegir-lo amb \cmdbs{usepackage}.
-\item Per sort, podem canviar els colors. Per exemple, per aquesta presentació:
+\item Podem canviar l'aparença de les referències. Per exemple, per aquesta presentació:
 \begin{exampletiny}
 \usepackage{hyperref}
 \hypersetup{colorlinks,breaklinks,urlcolor=magenta,linkcolor=black}
@@ -334,7 +302,7 @@ bottom=25mm,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Exercici}
-\begin{frame}[fragile]{Exercici Documents Estructurats}
+\begin{frame}[fragile]{Exercici Document Estructurat}
 
 \begin{block}{Escriu el següent article amb \LaTeX
 \footnote{De \url{http://pdos.csail.mit.edu/scigen/},
@@ -342,8 +310,9 @@ un generador d'articles aleatoris.}:}
 \begin{center}
 \fbox{\href{\fileuri/structure-exercise-solution.pdf}{Clica per obrir l'article}}
 \end{center}
-Fes que l'article tingui la mateixa pinta.
-Utilitza \cmdbs{ref} per evitar escriure explícitament la secció i el número d'exemple.
+Fes servir interlineat doble, marges de 2 cm als laterals, de 0cm a dalt i de 1,5 cm a baix.
+Utilitza \cmdbs{ref} per evitar escriure explícitament el número de les seccions.
+Posa el paquet \bftt{hyperref} al preàmbul.
 \end{block}
 \vskip 2ex
 \begin{center}
@@ -356,6 +325,78 @@ Clica per obrir l'exercici a \wllogo{}}}
 \fbox{\href{\wlnewdoc{structure-exercise-solution.tex}}{%
 Clica per veure la solució}}.
 \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Format}
+\begin{frame}[fragile]{Format: tipus de document}
+\begin{itemize}
+\item A part d'\textbf{article} les classes més típiques són \textbf{report} (llibres curts o tesis), \textbf{book} i \textbf{beamer} (diapositives).
+\item Tot i això, hi ha \href{https://ctan.org/topic/class}{una multitud de classes}, bàsicament pensades per revistes concretes, com \textbf{apa} o \textbf{amsart}.
+\item Famílies de paquets com \href{https://ctan.org/pkg/koma-script}{KOMA-Script} tenen moltes opcions, amb equivalents per article (\textbf{scrartcl}), report (\textbf{scrreprt}) i book (\textbf{scrbook}). Si les voleu utilitzar carregueu també el paquet \bftt{lmodern}. Una altra família és \href{https://ctan.org/pkg/minimalist}{minimalist} (conté l'estil \textbf{ClassicThesis})
+\item \href{https://ctan.org/pkg/memoir}{memoir} s'utilitza per escriure llibres professionalment.
+\end{itemize}
+
+\begin{exampletiny}
+\documentclass{scrartcl}
+\usepackage{lmodern}
+\end{exampletiny}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Format: font i mida del text}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\begin{exampletiny}
+\end{exampletiny}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Format: negreta, cursiva, subratllat \dots}
+\small{Ja hem vist que la negreta es fa amb \cmdbs{textbf} i la cursiva amb \cmdbs{textit}. \\
+Què més es pot fer? \\
+-- Canviar \href{https://www.overleaf.com/learn/latex/Font_sizes%2C_families%2C_and_styles}{la mida}
+    o \href{https://www.overleaf.com/learn/latex/Using_colors_in_LaTeX}{el color} (paquet \bftt{xcolor})
+}
+\begin{exampletwouptiny2}
+\textsc{Versaletes (Small Caps)}
+
+\underline{subrallat}
+
+\tiny{text}
+\scriptsize{text}
+\footnotesize{text}
+\small{text}
+\normalsize{text}
+\large{text}
+\Large{text}
+\LARGE{text}
+\huge{text}
+\end{exampletwouptiny2}
+\begin{exampletwouptiny2}
+\begin{itemize}
+\color{blue}
+\item primer 
+\item segon
+\end{itemize}
+
+\textcolor{red}{Text en vermell}
+\colorbox{orange}{o amb color de fons}
+
+\textcolor{cyan}{\underline{\large{
+    \textit{\textbf{Tot junt}}}}}
+\end{exampletwouptiny2}
+
 \end{frame}
 
 
