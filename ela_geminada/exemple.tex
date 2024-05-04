@@ -9,16 +9,17 @@
 \begin{document}
 \maketitle
 
-En català l'ela geminada se sol escriure amb el punt volat com a caràcter entre dues eles (l·l), però la manera ``correcta'' d'escriure-la amb \LaTeX{} és amb:
+En català la ela geminada se sol escriure amb el punt volat com a caràcter entre dues eles (l·l), però la manera ``correcta'' d'escriure-la amb \LaTeX{} és amb:
 \begin{itemize}
     \item "l 
     \item \lgem{}
     \item \l.l
 \end{itemize}
-(per totes cal fer servir el paquet babel en català). Si heu d'escriure gaire en català és recomenable redefinir l·l perquè tipogràficament tingui la mateixa pinta que les tres opcions amb babel.
+(per totes cal fer servir el paquet babel en català). Si heu d'escriure gaire en català és recomanable redefinir l·l perquè tipogràficament tingui la mateixa pinta que les tres opcions amb babel.
 Ja que hi som també volem que si copiem un text que conté elapunt amb Unicode (\href{http://www.l·l.cat/info/formes-erronies-descriure-la-ela-geminada}{tot i que sigui un error de codificació}), sigui també igual.
 
 Per fer tot això només cal que copieu el contingut del fitxer `ela\_geminada.tex' al preàmbul o bé l'importeu amb \textbf{input} com a aquest document.
+
 Compte, però, que només funciona amb \textit{pdfLaTex}, no \textit{XeLaTeX} o \textit{LuaLaTeX}.
 
 Referència del codi:\\
