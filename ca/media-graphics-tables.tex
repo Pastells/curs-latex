@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{tabularx, booktabs}
+\graphicspath{{figures/}}  % Busca imatges a una carpeta
+\begin{document}
+
+La Figura \ref{fig:khal} i la Taula \ref{taula:items}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{khaleesi2}
+    \caption{Una dàlmata}
+    \label{fig:khal}
+\end{figure}
+
+\begin{table}[t]
+    \centering
+    \begin{tabular}{lcr}
+        \toprule
+        Item      & Num & Preu \$ \\
+        \midrule
+        Pantalla  & 1 & 199.99 \\
+        Ordinador & 2 & 399.99 \\
+        Cables    & 3 & 19.99 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Descriu preus.}
+    \label{taula:items}
+\end{table}
+
+\end{document}

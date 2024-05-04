@@ -333,18 +333,107 @@ Click to open the model document}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Fulls de càlcul amb \protect\bftt{spreadtab}}
+\section{Què més?}
+\begin{frame}{Continguts}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Fulls de càlcul amb \protect\bftt{spreadtab}}
+\subsection{Altres coses interessants}
+\begin{frame}[fragile]{Altres}
 \begin{itemize}
-\item Ara ja sabeu com fer servir \LaTeX{} en comptes de Word i PowerPoint.
-No n'heu tingut prou?
-\item Proveu \fbox{\href{http://www.ctan.org/pkg/spreadtab}{\bftt{spreadtab} per substituir Excel}}!
+\item L'ordre \cmdbs{tableofcontents} genera un índex automàticament a partir
+dels títols de les seccions i subseccions.
+
+\item Change the \cmdbs{documentclass} to
+\mint{latex}!\documentclass{scrartcl}!
+or
+\mint{latex}!\documentclass[12pt]{IEEEtran}!
+
+\item Define your own ordre for a complicated equation:
+\begin{exampletwouptiny}
+\newcommand{\rperf}{%
+  \rho_{\text{perf}}}
+$$
+\rperf = {\bf c}'{\bf X} + \varepsilon
+$$
+\end{exampletwouptiny}
 \end{itemize}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Altres paquets}
+\begin{frame}{Altres paquets}
+\begin{itemize}
+\item \bftt{tikz}: gràfics, una mica difícil.
+\item \bftt{tikz-qtree}: arbres per sintaxi, relacions genètiques \dots
+\item \bftt{pgfplots}: create graphs in \LaTeX
+\item \bftt{langnames}: per noms d'idiomes de manera sistemàtica.
+\end{itemize}
+Vegeu \url{https://www.overleaf.com/latex/examples} i \url{http://texample.net}
+per exemples.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Instalar \LaTeX{}}
+\begin{frame}{Instalar \LaTeX}
+\begin{itemize}
+\item Per fer servir \LaTeX{} al vostre ordinador, us caldrà una \emph{distribució}:
+    inclou el programa \bftt{latex} i un munt de paquets.
+\begin{itemize}
+\item Windows: \href{http://miktex.org/}{Mik\TeX} o \href{http://tug.org/texlive/}{\TeX Live}
+\item Linux: \href{http://tug.org/texlive/}{\TeX Live}
+\item Mac: \href{http://tug.org/mactex/}{Mac\TeX}
+\end{itemize}
+\item També us caldrà un editor amb suport per \LaTeX{}. A \url{http://en.wikipedia.org/wiki/Comparison_of_TeX_editors} hi teniu una llista exhaustiva.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Exemples comentats}
+\begin{frame}{Exemples comentats}
+De senzill a complex:
+\begin{itemize}
+    \item \href{https://www.overleaf.com/read/rgxbsfvqsgbw\#ba04b9}{Breu transcripció fonètica} --- amb \bftt{tipauni} o \bftt{tipa} (comentat).
+    \item \href{https://www.overleaf.com/read/mxysfjcnnppm\#294a25}{Treball de transcripció fonètica} --- més extens que l'anterior, barreja de \bftt{tipa} i unicode.
+    \item \href{https://www.overleaf.com/read/sxkcdfrpmbcb\#10abd3}{Treball morfologia basca} --- conté:
+\begin{itemize}
+    \item Un treball estructurat amb diversos fitxers, glosses personalitzades, taules amb format avançat i exemples de bibliografia tant amb biblatex com amb apacite.
+    \item Una presentació amb \bftt{beamer}.
+\end{itemize}
+\end{itemize}
+
+Finalment, us pot ser útil \href{https://www.overleaf.com/read/vsdvmbzywdrn\#d43fce}{aquesta plantilla senzilla}.
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Referències en línia}
+\begin{frame}{Referències en línia}
+\begin{itemize}
+\item \href{https://www.overleaf.com/learn}{The Overleaf Learn Wiki} --- tutorials i material de referència.
+\item \href{http://en.wikibooks.org/wiki/LaTeX}{The \LaTeX{} Wikibook} --- més tutorials i material de referència.
+\item \href{http://tex.stackexchange.com/}{\TeX{} Stack Exchange} --- preguntes i respostes
+\item \href{http://www.latex-community.org/}{\LaTeX{} Community} --- fòrum
+\item \href{http://ctan.org/}{Comprehensive \TeX{} Archive Network (CTAN)} --- documentació de paquets.
+\item Qualsevol buscador us portarà a alguna d'aquestes pàgines.
+\end{itemize}
+
+Repositori del curs: \href{https://github.com/Pastells/curs-latex}{Pastells/curs-latex}
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

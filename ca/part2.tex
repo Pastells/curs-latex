@@ -15,7 +15,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Dubtes classe anterior}
+\section{Repassem}
 \begin{frame}{Continguts}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
@@ -25,7 +25,115 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Dubtes classe anterior}
+\begin{frame}[fragile]{Repassem}
+\begin{itemize}
+\item Les ordres comencen amb una \emph{barra inversa} \keystrokebftt{\bs}.
+\item Algunes ordres admeten un \emph{argument} entre claus \keystrokebftt{\{}
+\keystrokebftt{\}}.
+\item Altres també admeten \emph{arguments opcionals} entre claudàtors \keystrokebftt{[} \keystrokebftt{]}.
+\end{itemize}
+Un document segueix l'estructura:
+\begin{exampletiny}
+% 1. Tipus de document
+\documentclass{article}
+
+% 2. Preamble
+\usepackage{graphicx}
+\usepackage{tabularx}
+
+% 3. Document dins de l'entorn document
+\begin{document}
+Contingut
+\end{document}
+\end{exampletiny}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Repassem: entorns}
+\begin{itemize}
+\item Les ordres \cmdbs{begin} i \cmdbs{end} es fan servir per delimitar diferents entorns.
+\vskip 2ex
+
+\item Els entorns \bftt{itemize} i \bftt{enumerate} generen llistes de punts i numèriques. 
+\begin{exampletwouptiny}
+\begin{itemize} % per punts 
+    \item Galetes
+    \item Iogurt
+\end{itemize}
+
+\begin{enumerate} % per nombres
+    \item Galetes
+    \item Iogurt
+\end{enumerate}
+\end{exampletwouptiny}
+\item No és necessari, però és bona pràctica augmentar el sagnat del text dins d'un entorn. 
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Repassem: figures i taules}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
+  {media-graphics-tables.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=2in 3in 3in 1in]{media-graphics-tables.pdf}
+\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Repassem: Matemàtiques}
+\begin{itemize}
+\item Els símbols de dòlar \keystrokebftt{\$} marquen matemàtiques al text.
+\begin{exampletwouptiny}
+% meh:
+Siguin a i b nombres enters 
+positius, i sigui c > a - b + 1
+
+% millor:
+Siguin $a$ i $b$ nombres enters 
+positius, i sigui $c > a - b + 1$.
+\end{exampletwouptiny}
+\item Utilitza sempre els símbols de dòlar amb parelles: un per començar les matemàtiques, i un per acabar-les.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Taules: més opcions}
+Hi ha moltes opcions diferents per fer taules.
+\begin{itemize}
+\item Es poden fusionar columnes amb \cmdbs{multicolumn} i files amb \cmdbs{multirow} (cal el paquet \bftt{multirow}).
+\item Línies horitzontals més curtes amb \cmdbs{cline} o \cmdbs{cmidrule} de \bftt{booktabs}.
+\end{itemize}
+
+\begin{exampletwouptiny}
+\begin{tabular}{lrr}
+\toprule
+Item &
+\multicolumn{2}{c}{MultiColumna} \\
+\cline{2-3}
+Pantalla                   & 1 & 2.99\\
+\cmidrule{1-2}
+\multirow{2}{*}{MultiFila} & 2 & 3.99\\
+                           & 3 & 1.99\\
+\bottomrule
+\end{tabular}
+\end{exampletwouptiny}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Repassem: Dubtes classe anterior}
 \begin{itemize}
     \item \textbf{Com s'escapa una seqüència sencera?}\\
     Cal escapar la pròpia barra inversa \keystroke{\textbackslash} amb \cmd{\textbackslash{}textbackslash{}}.
@@ -102,17 +210,75 @@ Es pot posar el següent al preàmbul (\href{https://tex.stackexchange.com/quest
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Format}
+\begin{frame}[fragile]{Format: tipus de document}
+\begin{itemize}
+\item A part d'\textbf{article} les classes més típiques són \textbf{report} (llibres curts o tesis), \textbf{book} i \textbf{beamer} (diapositives).
+\item Tot i això, hi ha \href{https://ctan.org/topic/class}{una multitud de classes}, bàsicament pensades per revistes concretes, com \textbf{apa} o \textbf{amsart}.
+\item Famílies de paquets com \href{https://ctan.org/pkg/koma-script}{KOMA-Script} tenen moltes opcions, amb equivalents per article (\textbf{scrartcl}), report (\textbf{scrreprt}) i book (\textbf{scrbook}). Si les voleu utilitzar carregueu també el paquet \bftt{lmodern}. Una altra família és \href{https://ctan.org/pkg/minimalist}{minimalist} (conté l'estil \textbf{ClassicThesis})
+\item \href{https://ctan.org/pkg/memoir}{memoir} s'utilitza per escriure llibres professionalment.
+\end{itemize}
+
+\begin{exampletiny}
+\documentclass{scrartcl}
+\usepackage{lmodern}
+\end{exampletiny}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Format}
+\begin{frame}[fragile]{Format: font i mida del text}
+\begin{itemize}
+\item 
+\end{itemize}
+
+\begin{exampletiny}
+\end{exampletiny}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Format: marges i interlineat}
+\begin{itemize}
+\item El paquet \bftt{geometry} ens permet modificar la \href{https://www.overleaf.com/learn/latex/Page_size_and_margins}{mida del document i els marges}.
+\item \bftt{setspace} defineix l'interlineat amb les ordres \cmdbs{singlespacing}, \cmdbs{onehalfspacing}, \cmdbs{doublespacing}\footnote{No hi ha una definició clara de què vol dir interlineat doble.}, o un valor personalitzat amb \cmdbs{setstretch}. Més informació sobre espaiat \href{https://www.overleaf.com/learn/latex/Articles/How_to_change_paragraph_spacing_in_LaTeX#The_setspace_package}{aquí}.
+\end{itemize}
+
+\begin{exampletiny}
+\usepackage{geometry}
+\geometry{
+a4paper,
+left=30mm,
+right=30mm,
+top=25mm,
+bottom=25mm,
+}
+
+\usepackage{setspace}
+\setstretch{1.6}  
+\end{exampletiny}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Etiquetes i Referències Creuades}
 \begin{frame}[fragile]{Etiquetes i Referències Creuades}
 \begin{itemize}{\small
 \item \cmdbs{label} serveix per etiquetar i \cmdbs{ref} per referenciar.
 \item Les dues serveixen per seccions, figures, taules \dots
 }\end{itemize}
-\begin{minipage}{0.55\linewidth}
+\begin{minipage}{0.60\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
   {structure-crossref.tex}
 \end{minipage}
-\begin{minipage}{0.35\linewidth}
+\begin{minipage}{0.3\linewidth}
 \includegraphics[width=\textwidth,clip,trim=1.5in 6in 4in 1in]{structure-crossref.pdf}
 \end{minipage}
 \end{frame}
@@ -120,19 +286,49 @@ Es pot posar el següent al preàmbul (\href{https://tex.stackexchange.com/quest
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{\protect\bftt{cleveref}: Millors Referències Creuades (opinió)}
+\begin{frame}[fragile]{Etiquetes i Referències Creuades: hyperref}
 \begin{itemize}{\small
-\item \bftt{cleveref} permet tenir automàticament el nom del que estiguem referenciant.
-\item Només cal canviar \cmdbs{ref} per \cmdbs{cref}, i serveix per seccions, figures i taules.
+\item El paquet \bftt{hyperref} converteix totes les referències creuades en ``hyperlinks''. Només cal afegir-lo amb \cmdbs{usepackage}.
+\item Per sort, podem canviar els colors. Per exemple, per aquesta presentació:
+\begin{exampletiny}
+\usepackage{hyperref}
+\hypersetup{colorlinks,breaklinks,urlcolor=magenta,linkcolor=black}
+\end{exampletiny}
+\item Si voleu mantenir els enllaços, però sense cap color, feu servir:
+\begin{exampletiny}
+\hypersetup{hidelinks=true}
+\end{exampletiny}
+
+\item També defineix les ordres \cmdbs{url}\footnote{Si només voleu una URL també existeix el paquet \bftt{url}.}
+    i \cmdbs{href} per referir-se a pàgines web.
 }\end{itemize}
-\begin{minipage}{0.55\linewidth}
-\inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
-  {structure-cleveref.tex}
-\end{minipage}
-\begin{minipage}{0.35\linewidth}
-\includegraphics[width=\textwidth,clip,trim=1.5in 6in 4in 1in]{structure-cleveref.pdf}
-\end{minipage}
+\begin{exampletiny}
+\url{https://www.overleaf.com/learn/latex/Hyperlinks}
+
+\href{https://www.overleaf.com/learn/latex/Hyperlinks}{Exemple}
+\end{exampletiny}
+
+\url{https://www.overleaf.com/learn/latex/Hyperlinks}
+
+\href{https://www.overleaf.com/learn/latex/Hyperlinks}{Exemple}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}[fragile]{\protect\bftt{cleveref}: Millors Referències Creuades (opinió)}
+% \begin{itemize}{\small
+% \item \bftt{cleveref} permet tenir automàticament el nom del que estiguem referenciant.
+% \item Només cal canviar \cmdbs{ref} per \cmdbs{cref}, i serveix per seccions, figures i taules.
+% }\end{itemize}
+% \begin{minipage}{0.55\linewidth}
+% \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+%   {structure-cleveref.tex}
+% \end{minipage}
+% \begin{minipage}{0.35\linewidth}
+% \includegraphics[width=\textwidth,clip,trim=1.5in 6in 4in 1in]{structure-cleveref.pdf}
+% \end{minipage}
+% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -416,108 +612,6 @@ Martin-ERG Diego-ABS vist ha \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Què més?}
-\begin{frame}{Continguts}
-\begin{multicols}{2}
-\tableofcontents[currentsection]
-\end{multicols}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Altres coses interessants}
-\begin{frame}[fragile]{Altres}
-\begin{itemize}
-\item L'ordre \cmdbs{tableofcontents} genera un índex automàticament a partir
-dels títols de les seccions i subseccions.
-
-\item Change the \cmdbs{documentclass} to
-\mint{latex}!\documentclass{scrartcl}!
-or
-\mint{latex}!\documentclass[12pt]{IEEEtran}!
-
-\item Define your own ordre for a complicated equation:
-\begin{exampletwouptiny}
-\newcommand{\rperf}{%
-  \rho_{\text{perf}}}
-$$
-\rperf = {\bf c}'{\bf X} + \varepsilon
-$$
-\end{exampletwouptiny}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Altres paquets}
-\begin{frame}{Altres paquets}
-\begin{itemize}
-\item \bftt{beamer}: per presentacions (com aquesta!)
-\item \bftt{todonotes}: comenataris i coses pendents (TODO)
-\item \bftt{tikz}: gràfics, una mica difícil.
-\item \bftt{tikz-qtree}: arbres per sintaxi, relacions genètiques \dots
-\item \bftt{pgfplots}: create graphs in \LaTeX
-\item \bftt{langnames}: per noms d'idiomes de manera sistemàtica.
-\end{itemize}
-Vegeu \url{https://www.overleaf.com/latex/examples} i \url{http://texample.net}
-per exemples.
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Instalar \LaTeX{}}
-\begin{frame}{Instalar \LaTeX}
-\begin{itemize}
-\item Per fer servir \LaTeX{} al vostre ordinador, us caldrà una \emph{distribució}:
-    inclou el programa \bftt{latex} i un munt de paquets.
-\begin{itemize}
-\item Windows: \href{http://miktex.org/}{Mik\TeX} o \href{http://tug.org/texlive/}{\TeX Live}
-\item Linux: \href{http://tug.org/texlive/}{\TeX Live}
-\item Mac: \href{http://tug.org/mactex/}{Mac\TeX}
-\end{itemize}
-\item També us caldrà un editor amb suport per \LaTeX{}. A \url{http://en.wikipedia.org/wiki/Comparison_of_TeX_editors} hi teniu una llista exhaustiva.
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Exemples comentats}
-\begin{frame}{Exemples comentats}
-De senzill a complex:
-\begin{itemize}
-    \item \href{https://www.overleaf.com/read/rgxbsfvqsgbw\#ba04b9}{Breu transcripció fonètica} --- amb \bftt{tipauni} o \bftt{tipa} (comentat).
-    \item \href{https://www.overleaf.com/read/mxysfjcnnppm\#294a25}{Treball de transcripció fonètica} --- més extens que l'anterior, barreja de \bftt{tipa} i unicode.
-    \item \href{https://www.overleaf.com/read/sxkcdfrpmbcb\#10abd3}{Treball morfologia basca} --- conté:
-\begin{itemize}
-    \item Un treball estructurat amb diversos fitxers, glosses personalitzades, taules amb format avançat i exemples de bibliografia tant amb biblatex com amb apacite.
-    \item Una presentació amb \bftt{beamer}.
-\end{itemize}
-\end{itemize}
-
-Finalment, us pot ser útil \href{https://www.overleaf.com/read/vsdvmbzywdrn\#d43fce}{aquesta plantilla senzilla}.
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Referències en línia}
-\begin{frame}{Referències en línia}
-\begin{itemize}
-\item \href{https://www.overleaf.com/learn}{The Overleaf Learn Wiki} --- tutorials i material de referència.
-\item \href{http://en.wikibooks.org/wiki/LaTeX}{The \LaTeX{} Wikibook} --- més tutorials i material de referència.
-\item \href{http://tex.stackexchange.com/}{\TeX{} Stack Exchange} --- preguntes i respostes
-\item \href{http://www.latex-community.org/}{\LaTeX{} Community} --- fòrum
-\item \href{http://ctan.org/}{Comprehensive \TeX{} Archive Network (CTAN)} --- documentació de paquets.
-\item Qualsevol buscador us portarà a alguna d'aquestes pàgines.
-\end{itemize}
-
-Repositori del curs: \href{https://github.com/Pastells/curs-latex}{Pastells/curs-latex}
-\end{frame}
 
 \end{document}
 

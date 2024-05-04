@@ -22,44 +22,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Repassem}
 \begin{itemize}
-\item Escriviu el document a \texttt{text pla} amb \cmd{ordres} que
-descriuen la seva estructura i significat.
-\item Usa ordres per descriure `el contingut', no `el format'.
-\item El programa \texttt{latex} processa el text i les ordres per a produir un
-document amb un format bonic.
-\end{itemize}
-\vskip 2ex
-\begin{center}
-\begin{minted}[frame=single]{latex}
-La \textit{fonologia} estudia els \textbf{fonemes}.
-\end{minted}
-\vskip 2ex
-\tikz\node[single arrow,fill=gray,font=\ttfamily\bfseries,%
-  rotate=270,xshift=-1em]{latex};
-\vskip 2ex
-\fbox{La \textit{fonologia} estudia els \textbf{fonemes}.}
-\end{center}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Repassem: ordres i arguments}
-\begin{itemize}
 \item Les ordres comencen amb una \emph{barra inversa} \keystrokebftt{\bs}.
 \item Algunes ordres admeten un \emph{argument} entre claus \keystrokebftt{\{}
 \keystrokebftt{\}}.
 \item Altres també admeten \emph{arguments opcionals} entre claudàtors \keystrokebftt{[} \keystrokebftt{]}.
-\vskip 2ex
-\begin{exampletwouptiny}
-\includegraphics[
-  width=0.5\textwidth]{khaleesi}
-
-\includegraphics[
-  angle=270]{gus}
-\end{exampletwouptiny}
 \end{itemize}
+Un document segueix l'estructura:
+\begin{exampletiny}
+% 1. Tipus de document
+\documentclass{article}
 
+% 2. Preamble
+\usepackage{graphicx}
+\usepackage{tabularx}
+
+% 3. Document dins de l'entorn document
+\begin{document}
+Contingut
+\end{document}
+\end{exampletiny}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -89,6 +70,19 @@ La \textit{fonologia} estudia els \textbf{fonemes}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Repassem: figures i taules}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
+  {media-graphics-tables.tex}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+\includegraphics[width=\textwidth,clip,trim=2in 3in 3in 1in]{media-graphics-tables.pdf}
+\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Repassem: Matemàtiques}
 \begin{itemize}
 \item Els símbols de dòlar \keystrokebftt{\$} marquen matemàtiques al text.
@@ -104,6 +98,33 @@ positius, i sigui $c > a - b + 1$.
 \item Utilitza sempre els símbols de dòlar amb parelles: un per començar les matemàtiques, i un per acabar-les.
 \end{itemize}
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Taules: més opcions}
+Hi ha moltes opcions diferents per fer taules.
+\begin{itemize}
+\item Es poden fusionar columnes amb \cmdbs{multicolumn} i files amb \cmdbs{multirow} (cal el paquet \bftt{multirow}).
+\item Línies horitzontals més curtes amb \cmdbs{cline} o \cmdbs{cmidrule} de \bftt{booktabs}.
+\end{itemize}
+
+\begin{exampletwouptiny}
+\begin{tabular}{lrr}
+\toprule
+Item &
+\multicolumn{2}{c}{MultiColumna} \\
+\cline{2-3}
+Pantalla                   & 1 & 2.99\\
+\cmidrule{1-2}
+\multirow{2}{*}{MultiFila} & 2 & 3.99\\
+                           & 3 & 1.99\\
+\bottomrule
+\end{tabular}
+\end{exampletwouptiny}
+\end{frame}
+
+\end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -151,5 +172,3 @@ Cliqueu per obrir el document model}}
 \end{itemize}
 \end{block}
 \end{frame}
-
-\end{document}
