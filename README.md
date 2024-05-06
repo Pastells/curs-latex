@@ -20,6 +20,8 @@ El material està dividit en 3 classes de dues hores:
 3. [Tercera part](https://github.com/Pastells/curs-latex/blob/master/ca/part3.pdf) (EN PROCÉS):
    Notes i comentaris, presentacions amb `beamer`.
 
+A més es presenta una [breu discussió sobre la tipografia de la ela geminada](https://www.overleaf.com/read/qzvfzjwgqwgd#389fd3).
+
 ## Compilació
 
 Calen alguns paquets extres per compilar-ho en local.
