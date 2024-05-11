@@ -15,10 +15,10 @@ El material està dividit en 3 classes de dues hores:
    Sintaxi, entorns, paquets, figures i taules
 
 2. [Segona part](https://github.com/Pastells/curs-latex/blob/master/ca/part2.pdf):
-   Seccions, referències creuades, bibliografia, paquets lingüística (`linguex` i `tipa`).
+   Títol, seccions, referències creuades i bibliografia.
 
 3. [Tercera part](https://github.com/Pastells/curs-latex/blob/master/ca/part3.pdf) (EN PROCÉS):
-   Notes i comentaris, presentacions amb `beamer`.
+   Paquets lingüística (`linguex` i `tipa`), notes i comentaris, presentacions amb `beamer`.
 
 A més es presenta una [breu discussió sobre la tipografia de la ela geminada](https://www.overleaf.com/read/qzvfzjwgqwgd#389fd3).
 

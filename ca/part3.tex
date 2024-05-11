@@ -12,16 +12,239 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\titlepage
+\titlepage{}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Transcripció fonètica}
+\begin{frame}[fragile]{Repassem: Dubtes classe anterior}
+\begin{itemize}
+    \item \textbf{Com es referencia una secció pel seu nom?}\\
+    El paquet \bftt{hyperref} també carrega l'ordre \cmdbs{nameref}.
+\begin{exampletwouptiny}
+\nameref{sec:exemples_ling}
+\end{exampletwouptiny}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exemples lingüístics}\label{sec:exemples_ling}
+\begin{frame}{Continguts}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{linguex}
+\begin{frame}[fragile]{linguex: exemples}
+\begin{itemize}
+\item Les 3 ordres bàsiques de linguex són \cmdbs{ex.}, \cmdbs{a.} i \cmdbs{b.}.
+\item \cmdbs{ex.} inicia l'exemple, i \textbf{cal una línia en blanc} per acabar-lo.
+\begin{exampletwouptiny2}
+\ex. Exemple
+
+\ex. Primer nivell de l'exemple
+\a. Segon nivell de l'exemple
+\b. Seguim al segon nivell
+
+\ex.
+\a. podem deixar buit
+\b. el primer nivell
+\c. si volem ser ordenats
+\d. podem fer servir
+\e. tot l'abecedari
+\b. tot i que no cal
+
+\end{exampletwouptiny2}
+\item Les ordres \cmdbs{c.}, \cmdbs{d.}, etc.~són còpies de \cmdbs{b.}.
+\item \bftt{linguex} és senzill, però, tot i poder-se modificar, és limitat. Hi ha paquets més potents però amb una sintaxi més complexa. \href{https://www.jostellings.com/numbex.html}{Vegeu aquesta breu explicació}.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{linguex: referències}
+\begin{itemize}
+\item Podem fer servir \cmdbs{label} i \cmdbs{ref}.
+\item També podem referir-nos als exemples més propers amb \cmdbs{Next}, \cmdbs{Last}, \cmdbs{NNext} i \cmdbs{LLast}, fins i tot si no tenen una etiqueta.
+\end{itemize}
+\begin{exampletwouptiny2}
+A l'exemple~\ref{ex:1} hi ha faltes.
+\ex. Ejenple
+\label{ex:1}
+
+\ex. Primer nivell de l'exemple
+\a. Segon nivell de l'exemple
+
+Com hem vist a \LLast i \Last \dots
+
+En canvi a \Next i \NNext veiem \dots
+
+\ex.
+\a. podem deixar buit
+\b. el primer nivell
+
+\ex.
+\label{ex:2}
+\a. podem citar subexemples
+\label{ex:2a}
+\b. posant label a sota
+\label{ex:2b}
+
+Exemple \ref{ex:2} amb subexemples
+\ref{ex:2a} i \ref{ex:2b}.
+
+\end{exampletwouptiny2}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{linguex: exemples 2}
+\begin{itemize}
+\item Per acabar un sol nivell s'utilitza \cmdbs{z.}
+\begin{exampletwouptiny2}
+\ex. Animals
+\a. Gats
+\a. miau
+\z.
+\b. Gossos
+\a. bup
+\z.
+\b. Fures
+
+\end{exampletwouptiny2}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{linguex: gramaticalitat}
+\begin{itemize}
+    \item Linguex admet els símbols *, ?, \# i \% per judicis de gramaticalitat (els posa al davant)\footnote{recordeu que \# i \% s'escriuen amb una \keystroke{\textbackslash} davant}.
+\begin{exampletwouptiny2}
+\ex.
+\a. Exemple ben format
+\b. * Agramatical frase?
+\b. ** i molt agramatical molt
+\b. \# El formatge l'hi he posat
+\c. ? Hi han maduixes
+
+\end{exampletwouptiny2}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{linguex: glosses}
+\begin{itemize}
+\item Linguex és molt últil per morfologia.
+\item Per glossar un exemple afegim `g' després de l'última lletra de l'ordre i linguex s'encarrega d'alinear les paraules (cal \keystrokebftt{\bs\bs}  per marcar el final de línia).
+\begin{exampletwouptiny2}
+\ex.\a. No gloss
+\bg. This is a first gloss\\
+Dies ist eine erste Glosse\\
+
+\exg.
+Dies ist nicht die erste Glosse\\
+This is not the first gloss\\
+
+\end{exampletwouptiny2}
+\item Podem afegir una tercera línia de traducció amb \cmdbs{glt} (gloss translation).
+\begin{exampletwouptiny2}
+\exg.
+Martin-ek Diego-\zero{} ikusi du \\
+Martin-ERG Diego-ABS vist ha \\
+\glt `En Martin ha vist en Diego'
+
+\end{exampletwouptiny2}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{linguex: glosses 2}
+\begin{itemize}
+\item Podem modificar les glosses perquè tinguin l'aspecte que vulguem.
+\begin{exampletwouptiny}
+\renewcommand{\eachwordone}{\itshape}
+\renewcommand{\eachwordtwo}{\tiny}
+
+\exg.
+Martin-ek Diego-\zero{} ikusi du \\
+Martin-ERG Diego-ABS vist ha \\
+\glt `En Martin ha vist en Diego'
+
+
+\end{exampletwouptiny}
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{linguex: claudators}
+\begin{itemize}
+\item Amb l'ordre \cmdbs{exi.} es pot fer servir notació amb claudators
+\item Si l'exemple conté una glossa, cal saltar-se elements amb `\{\}'
+\begin{MyMinted}
+\exi.
+\a.  [SC that [ST John$_i$  [Sv $t_i$ likes Mary ]]]
+\bg. [SC dass [ST Peter$_i$ [Sv $t_i$ Mari liebt ]]] \\
+{} that {} Peter {} {} Mary loves \\
+\glt `that Peter loves Mary'
+\end{MyMinted}
+\exi.
+\a.  [SC that [ST John$_i$  [Sv $t_i$ likes Mary ]]]
+\bg. [SC dass [ST Peter$_i$ [Sv $t_i$ Mari liebt ]]] \\
+{} that {} Peter {} {} Mary loves \\
+\glt `that Peter loves Mary'
+
+\end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Extra: arbres}
+\begin{itemize}
+\item Hi ha dos paquets importants per fer arbres: \bftt{forest} i \bftt{tikz-qtree}.
+\item Mireu els manuals per saber quin uns convé.
+\begin{exampletwouptiny}
+\ex. \begin{forest}
+[SC[C][ST[T][SV[V][SN]]]]
+\end{forest}
+
+\end{exampletwouptiny}
+\item \href{https://ling.auf.net/lingbuzz/003391}{Guia forest}
+\end{itemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Transcripció fonètica}
 \begin{frame}[fragile]{tipa}
 \begin{itemize}
-\item 
+\item
 \end{itemize}
 \begin{exampletwouptiny2}
 \end{exampletwouptiny2}
@@ -59,7 +282,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Anotacions amb \protect\bftt{todonotes}}
 \begin{itemize}
-\item L'ordre \cmdbs{todo} del paquet \bftt{todonotes} és útil per deixar notes  
+\item L'ordre \cmdbs{todo} del paquet \bftt{todonotes} és útil per deixar notes
 per a un mateix o per co"laboradors.
 \begin{exampletwouptiny}
 \todo{afegir resultats}
@@ -86,7 +309,7 @@ Ja no cal escriure tant:
 \begin{columns}
   \begin{column}{0.4\textwidth}
     \begin{itemize}
-    \item Amb beamer només s'admeten les notes en línia, 
+    \item Amb beamer només s'admeten les notes en línia,
         però les notes de marge són compatibles amb els documents normals.
     \item També es poden enumerar les notes amb l'ordre \cmdbs{listoftodos}.
     \end{itemize}
@@ -116,7 +339,7 @@ Ja no cal escriure tant:
 \item Beamer és un paquet per fer presentacions (com aquesta).
 \item Es fa servir amb el tipus de document \bftt{beamer}.
 \item Use the \bftt{frame} environment to create slides.
-\item L'entorn \bftt{frame} crea diapositives. 
+\item L'entorn \bftt{frame} crea diapositives.
 \end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
@@ -175,7 +398,7 @@ one for this presentation. The \bftt{currentsection} option highlights the curre
 
 % per
 
-% guanyar 
+% guanyar
 
 % espai
 
@@ -321,7 +544,7 @@ for a large collection of themes.
 \vskip 2ex
 \begin{exampletwouptinynoframe}
 \begin{itemize}
-\item Can you feel the 
+\item Can you feel the
 \pause \item anticipation?
 \end{itemize}
 \end{exampletwouptinynoframe}
@@ -375,8 +598,25 @@ Click to open the model document}}
 \subsection{Altres coses interessants}
 \begin{frame}[fragile]{Altres}
 \begin{itemize}
-\item L'ordre \cmdbs{tableofcontents} genera un índex automàticament a partir
-dels títols de les seccions i subseccions.
+    \item \cmdbs{\textbackslash} per forçar canvi de línia i \cmdbs{newpage} per canvi de pàgina (\href{https://www.overleaf.com/learn/latex/Line_breaks_and_blank_spaces#Line_breaks}{més sobre espaiat}).
+\item \cmdbs{footnote} per notes al peu de pàgina.
+\item \cmdbs{input} permet incloure documents de \LaTeX{} dins d'altres documents.
+    Útil per:
+        \begin{itemize}{\footnotesize
+        \item Seccions de documents
+        \item Taules complexes
+        \item Separar el preàmbul (i reutilitzar-lo)
+        }\end{itemize}
+        \footnotesize{Vegeu \textit{treball morfologia basca} als exemples finals.}
+        \href{https://www.overleaf.com/learn/latex/Management_in_a_large_project}{Existeixen altres opcions per tractar amb documents grans}.
+    \item Podem canviar la indentació dels paràgrafs (\href{https://www.overleaf.com/learn/latex/Articles/How_to_change_paragraph_spacing_in_LaTeX}{més sobre espaiat de paràgrafs}). \\
+    \footnotesize{Vegeu \textit{treball de transcripció fonètica} als exemples finals.}
+\begin{exampletiny}
+%  Treu el sagnat
+\setlength{\parindent}{0pt}
+%  Passada la \tableofcontents afegeix espai en blanc
+\setlength{\parskip}{\baselineskip}
+\end{exampletiny}
 \end{itemize}
 \end{frame}
 
@@ -388,7 +628,7 @@ dels títols de les seccions i subseccions.
 \begin{itemize}
 \item \bftt{tikz}: gràfics, una mica difícil.
 \item \bftt{tikz-qtree}: arbres per sintaxi, relacions genètiques \dots
-\item \bftt{pgfplots}: create graphs in \LaTeX
+\item \bftt{pgfplots}: create graphs in \LaTeX{}
 \item \bftt{langnames}: per noms d'idiomes de manera sistemàtica.
 \end{itemize}
 Vegeu \url{https://www.overleaf.com/latex/examples} i \url{http://texample.net}
@@ -415,7 +655,7 @@ per exemples.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Exemples comentats}
+\subsection{Exemples comentats}\label{sec:exemples_comentats}
 \begin{frame}{Exemples comentats}
 De senzill a complex:
 \begin{itemize}

@@ -56,9 +56,9 @@ Contingut
 \item Les ordres \cmdbs{begin} i \cmdbs{end} es fan servir per delimitar diferents entorns.
 \vskip 2ex
 
-\item Els entorns \bftt{itemize} i \bftt{enumerate} generen llistes de punts i numèriques. 
+\item Els entorns \bftt{itemize} i \bftt{enumerate} generen llistes de punts i numèriques.
 \begin{exampletwouptiny}
-\begin{itemize} % per punts 
+\begin{itemize} % per punts
     \item Galetes
     \item Iogurt
 \end{itemize}
@@ -68,7 +68,7 @@ Contingut
     \item Iogurt
 \end{enumerate}
 \end{exampletwouptiny}
-\item No és necessari, però és bona pràctica augmentar el sagnat del text dins d'un entorn. 
+\item No és necessari, però és bona pràctica augmentar el sagnat del text dins d'un entorn.
 \end{itemize}
 \end{frame}
 
@@ -93,11 +93,11 @@ Contingut
 \item Els símbols de dòlar \keystrokebftt{\$} marquen matemàtiques al text.
 \begin{exampletwouptiny}
 % meh:
-Siguin a i b nombres enters 
+Siguin a i b nombres enters
 positius, i sigui c > a - b + 1
 
 % millor:
-Siguin $a$ i $b$ nombres enters 
+Siguin $a$ i $b$ nombres enters
 positius, i sigui $c > a - b + 1$.
 \end{exampletwouptiny}
 \item Utilitza sempre els símbols de dòlar amb parelles: un per començar les matemàtiques, i un per acabar-les.
@@ -216,7 +216,7 @@ Es pot posar el següent al preàmbul (\href{https://tex.stackexchange.com/quest
     \item \cmdbs{listoffigures} i \cmdbs{listoftables} creen l'índex de figures i de taules.
     \item \LaTeX{} també facilita la creació d'\href{https://www.overleaf.com/learn/latex/Indices}{índexs analítics}.
 }\end{itemize}
-%Com els podem canviar el nom? 
+%Com els podem canviar el nom?
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
   {structure-sections-toc.tex}
@@ -247,7 +247,7 @@ bottom=25mm,
 }
 
 \usepackage{setspace}
-\setstretch{1.6}  
+\setstretch{1.6}
 \end{exampletiny}
 
 \end{frame}
@@ -393,7 +393,7 @@ Què més es pot fer? \\
 \begin{exampletwouptiny2}
 \begin{itemize}
 \color{blue}
-\item primer 
+\item primer
 \item segon
 \end{itemize}
 
@@ -489,228 +489,6 @@ Feu almenys una cita textual i una de parentètica.
 \end{enumerate}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Exemples lingüístics}
-\begin{frame}{Continguts}
-\begin{multicols}{2}
-\tableofcontents[currentsection]
-\end{multicols}
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{linguex}
-\begin{frame}[fragile]{linguex: exemples}
-\begin{itemize}
-\item Les 3 ordres bàsiques de linguex són \cmdbs{ex.}, \cmdbs{a.} i \cmdbs{b.}.
-\item \cmdbs{ex.} inicia l'exemple, i \textbf{cal una línia en blanc} per acabar-lo.
-\begin{exampletwouptiny2}
-\ex. Exemple
-
-\ex. Primer nivell de l'exemple
-\a. Segon nivell de l'exemple
-\b. Seguim al segon nivell
-
-\ex.
-\a. podem deixar buit
-\b. el primer nivell
-\c. si volem ser ordenats
-\d. podem fer servir
-\e. tot l'abecedari
-\b. tot i que no cal
-
-\end{exampletwouptiny2}
-\item Les ordres \cmdbs{c.}, \cmdbs{d.}, etc.~són còpies de \cmdbs{b.}.
-\item \bftt{linguex} és senzill, però, tot i poder-se modificar, és limitat. Hi ha paquets més potents però amb una sintaxi més complexa. \href{https://www.jostellings.com/numbex.html}{Vegeu aquesta breu explicació}. 
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{linguex: referències}
-\begin{itemize}
-\item Podem fer servir \cmdbs{label} i \cmdbs{ref}.
-\item També podem referir-nos als exemples més propers amb \cmdbs{Next}, \cmdbs{Last}, \cmdbs{NNext} i \cmdbs{LLast}, fins i tot si no tenen una etiqueta.
-\end{itemize}
-\begin{exampletwouptiny2}
-A l'exemple \ref{ex:1} hi ha faltes. 
-\ex. Ejenple
-\label{ex:1}
-
-\ex. Primer nivell de l'exemple
-\a. Segon nivell de l'exemple
-
-Com hem vist a \LLast i \Last \dots
-
-En canvi a \Next i \NNext veiem \dots
-
-\ex.
-\a. podem deixar buit
-\b. el primer nivell
-
-\ex. 
-\label{ex:2}
-\a. podem citar subexemples 
-\label{ex:2a}
-\b. posant label a sota 
-\label{ex:2b}
-
-Exemple \ref{ex:2} amb subexemples 
-\ref{ex:2a} i \ref{ex:2b}.
-
-\end{exampletwouptiny2}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{linguex: exemples 2}
-\begin{itemize}
-\item Per acabar un sol nivell s'utilitza \cmdbs{z.}
-\begin{exampletwouptiny2}
-\ex. Animals
-\a. Gats
-\a. miau
-\z.
-\b. Gossos
-\a. bup
-\z.
-\b. Fures
-
-\end{exampletwouptiny2}
-\end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{linguex: gramaticalitat}
-\begin{itemize}
-    \item Linguex admet els símbols *, ?, \# i \% per judicis de gramaticalitat (els posa al davant)\footnote{recordeu que \# i \% s'escriuen amb una \keystroke{\textbackslash} davant}.
-\begin{exampletwouptiny2}
-\ex.
-\a. Exemple ben format
-\b. * Agramatical frase?
-\b. ** i molt agramatical molt
-\b. \# El formatge l'hi he posat
-\c. ? Hi han maduixes
-
-\end{exampletwouptiny2}
-\end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{linguex: glosses}
-\begin{itemize}
-\item Linguex és molt últil per morfologia.
-\item Per glossar un exemple afegim `g' després de l'última lletra de l'ordre i linguex s'encarrega d'alinear les paraules (cal \keystrokebftt{\bs\bs}  per marcar el final de línia).
-\begin{exampletwouptiny2}
-\ex.\a. No gloss
-\bg. This is a first gloss\\
-Dies ist eine erste Glosse\\
-
-\exg.
-Dies ist nicht die erste Glosse\\
-This is not the first gloss\\
-
-\end{exampletwouptiny2}
-\item Podem afegir una tercera línia de traducció amb \cmdbs{glt} (gloss translation).
-\begin{exampletwouptiny2}
-\exg.
-Martin-ek Diego-\zero{} ikusi du \\
-Martin-ERG Diego-ABS vist ha \\
-\glt `En Martin ha vist en Diego'
-
-\end{exampletwouptiny2}
-\end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{linguex: glosses 2}
-\begin{itemize}
-\item Podem modificar les glosses perquè tinguin l'aspecte que vulguem.
-\begin{exampletwouptiny}
-\renewcommand{\eachwordone}{\itshape}
-\renewcommand{\eachwordtwo}{\tiny}
-
-\exg.
-Martin-ek Diego-\zero{} ikusi du \\
-Martin-ERG Diego-ABS vist ha \\
-\glt `En Martin ha vist en Diego'
-
-
-\end{exampletwouptiny}
-\end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{linguex: claudators}
-\begin{itemize}
-\item Amb l'ordre \cmdbs{exi.} es pot fer servir notació amb claudators
-\item Si l'exemple conté una glossa, cal saltar-se elements amb `\{\}'
-\begin{MyMinted}
-\exi.
-\a.  [SC that [ST John$_i$  [Sv $t_i$ likes Mary ]]]
-\bg. [SC dass [ST Peter$_i$ [Sv $t_i$ Mari liebt ]]] \\
-{} that {} Peter {} {} Mary loves \\
-\glt `that Peter loves Mary'
-\end{MyMinted}
-\exi.
-\a.  [SC that [ST John$_i$  [Sv $t_i$ likes Mary ]]]
-\bg. [SC dass [ST Peter$_i$ [Sv $t_i$ Mari liebt ]]] \\
-{} that {} Peter {} {} Mary loves \\
-\glt `that Peter loves Mary'
-
-\end{itemize}
-
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Extra: arbres}
-\begin{itemize}
-\item Hi ha dos paquets importants per fer arbres: \bftt{forest} i \bftt{tikz-qtree}.
-\item Mireu els manuals per saber quin uns convé.
-\begin{exampletwouptiny}
-\ex. \begin{forest}
-[SC[C][ST[T][SV[V][SN]]]]
-\end{forest}
-
-\end{exampletwouptiny}
-\item \href{https://ling.auf.net/lingbuzz/003391}{Guia forest}
-\end{itemize}
-
-\end{frame}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Exemple comentat}
-\begin{frame}{Exemple comentat}
-\href{https://www.overleaf.com/read/sxkcdfrpmbcb\#10abd3}{Treball morfologia basca} --- conté:
-\begin{itemize}
-    \item Un treball estructurat amb diversos fitxers, glosses personalitzades, taules amb format avançat i exemples de bibliografia tant amb biblatex com amb apacite.
-    \item Una presentació amb \bftt{beamer} (ho veurem el següent dia).
-\end{itemize}
-
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
