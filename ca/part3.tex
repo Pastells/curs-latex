@@ -113,23 +113,31 @@ Ja no cal escriure tant:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{tipauni}
-\begin{itemize}
-    \item És recomenable carregar el paquet \bftt{tipauni} en comptes de \bftt{tipa}. Funciona exactament igual, però ens permetrà copiar els caràcters en Unicode.
-    \item Per defecte utilitza la font \emph{DoulosSIL}. Si voleu la mateixa font a tot el document, i que tingui negreta i cursiva, podeu fer servir \emph{charisSIL}.
-    \item Vegeu \href{https://jon.dehdari.org/tutorials/tipachart_mod.pdf}{aquesta taula resum} per un resum dels símbols i diacrítics, o \href{https://ctan.org/pkg/tipa}{el manual de tipa} per la informació completa.
+\begin{frame}[fragile]{Incís: Fonts, Unicode, Xe\LaTeX{} i Lua\LaTeX{}}
+
+\begin{itemize} 
+    \item L'entrada de text per defecte a \LaTeX{} és UTF-8, però la sortida no!
+    Proveu a copiar el text d'un pdf que tingui accents o dièresis i veureu què passa.
+    Per `arreglar-ho' afegiu \cmdbs{usepackage[T1]\{fontenc\}} al preàmbul.
+    \item Si volem que la sortida contingui qualsevol caràcter d'Unicode cal fer servir Lua\LaTeX{} o Xe\LaTeX.
+    \item \LaTeX{} permet \href{https://www.overleaf.com/learn/latex/Font_typefaces}{canviar la font del text}, però és una mica limitat. 
+    \item Lua\LaTeX{} i Xe\LaTeX{} tenen més possiblitats per \href{https://www.overleaf.com/learn/latex/XeLaTeX}{canviar les fonts}. Mireu \href{https://www.overleaf.com/read/qhjpxrztjjhg\#fa21ab}{aquest document d'exemple}.
+    \alert{Compte}: no totes les fonts tenen tots els símbols. 
+    \item La ela geminada catalana ("l) pot ser complicada de tractar. Vegeu \href{https://www.overleaf.com/read/qzvfzjwgqwgd#389fd3}{aquest document}.
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Incís: Fonts, Unicode, Xe\LaTeX{} i Lua\LaTeX{}}
+\begin{frame}[fragile]{tipauni}
 \begin{itemize}
-    \item És recomenable carregar el paquet \bftt{tipauni} en comptes de \bftt{tipa}. Funciona exactament igual, però ens permetrà copiar els caràcters en Unicode.
+    \item És recomenable carregar el paquet \bftt{tipauni} (amb Lua\LaTeX{} o Xe\LaTeX) en comptes de \bftt{tipa}. Funciona exactament igual, però ens permetrà copiar els caràcters en Unicode.
     \item Per defecte utilitza la font \emph{DoulosSIL}. Si voleu la mateixa font a tot el document, i que tingui negreta i cursiva, podeu fer servir \emph{charisSIL}.
+    \item Vegeu \href{https://jon.dehdari.org/tutorials/tipachart_mod.pdf}{aquesta taula resum} per un resum dels símbols i diacrítics, o \href{https://ctan.org/pkg/tipa}{el manual de tipa} per la informació completa.
 \end{itemize}
 \end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -686,11 +694,13 @@ El ``Combin.\ Journal''
 \begin{frame}{Altres paquets i recursos}
 \begin{itemize}
     \item \bftt{tikz}: per crear gràfics, una mica difícil.
+    \item \bftt{leipzig}: abreviatures glosses. 
     \item \bftt{langnames}: per noms d'idiomes de manera sistemàtica.
     \item \url{https://meluhha.com/tableau/} per taules de ``optimality theory''
     \item \href{https://detexify.kirelabs.org/classify.html}{Detexify} --- dibuixes el símbol i et diu com fer-lo amb \LaTeX.
     \item \href{https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}{Llista de símbols que es poden fer a \LaTeX}.
     \item \href{https://arxiv.org}{arxiv} permet descarregar-se l'article amb \LaTeX de la majoria d'articles.
+    \item \href{https://www.doi2bib.org/}{doi2bib} converteix DOI a BibTex.
 \end{itemize}
 Vegeu \url{https://www.overleaf.com/latex/examples} i \url{http://texample.net} 
 per exemples.
