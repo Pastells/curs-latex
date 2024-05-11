@@ -17,8 +17,8 @@ El material està dividit en 3 classes de dues hores:
 2. [Segona part](https://github.com/Pastells/curs-latex/blob/master/ca/part2.pdf):
    Títol, seccions, referències creuades i bibliografia.
 
-3. [Tercera part](https://github.com/Pastells/curs-latex/blob/master/ca/part3.pdf) (EN PROCÉS):
-   Paquets lingüística (`linguex` i `tipa`), notes i comentaris, presentacions amb `beamer`.
+3. [Tercera part](https://github.com/Pastells/curs-latex/blob/master/ca/part3.pdf):
+   Paquets lingüística (`linguex` i `tipa`), notes i comentaris, presentacions amb `beamer`; enllaços a exemples comentats.
 
 A més es presenta una [breu discussió sobre la tipografia de la ela geminada](https://www.overleaf.com/read/qzvfzjwgqwgd#389fd3).
 

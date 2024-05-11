@@ -31,6 +31,126 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Anotacions amb \protect\bftt{todonotes}}
+\begin{frame}{Continguts}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Anotacions amb \protect\bftt{todonotes}}
+\begin{itemize}
+\item L'ordre \cmdbs{todo} del paquet \bftt{todonotes} és útil per deixar notes
+per a un mateix o per co"laboradors.
+\begin{exampletwouptiny}
+\todo{afegir resultats}
+\todo[color=blue!20]{arreglar taula}
+\end{exampletwouptiny}
+\vskip 2ex
+\item Fes-ho senzill: defineix les teves pròpies ordres amb \cmdbs{newcommand}
+\begin{minted}[fontsize=\scriptsize,frame=single]{latex}
+% el primer 1 marca que rep una variable (el text)
+% #1 és la variable dins l'ordre
+\newcommand{\mar}[1]{\todo[color=green!40]{#1}}
+\newcommand{\andreu}[1]{\todo[color=purple!40]{#1}}
+\end{minted}
+Ja no cal escriure tant:
+\begin{exampletwouptiny}
+\mar{afegir resultats}
+\andreu{arreglar taula}
+\end{exampletwouptiny}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Anotacions amb \protect\bftt{todonotes}}
+\begin{columns}
+  \begin{column}{0.4\textwidth}
+    \begin{itemize}
+    \item Es poden enumerar les notes amb l'ordre \cmdbs{listoftodos}.
+    \end{itemize}
+  \end{column}
+  \begin{column}{0.6\textwidth}
+    \includegraphics[width=\textwidth,page=1]{todonotes-example}
+  \end{column}
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Transcripció fonètica}
+\begin{frame}{Continguts}
+\begin{multicols}{2}
+\tableofcontents[currentsection]
+\end{multicols}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{tipa}
+\begin{itemize}
+    \item El paquet \bftt{tipa} facilita la introducció de símols de l'alfabet fonètic internacional. 
+    \item Per símbols que no són un sol caràcter, es pot definir una nova variable al preàmbul. 
+\end{itemize}
+
+\begin{minipage}{0.45\linewidth}
+\inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
+  {ipa.tex}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
+\includegraphics[width=\textwidth,clip,trim=1.5in 8in 4.5in 1.5in]{ipa.pdf}
+\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{tipauni}
+\begin{itemize}
+    \item És recomenable carregar el paquet \bftt{tipauni} en comptes de \bftt{tipa}. Funciona exactament igual, però ens permetrà copiar els caràcters en Unicode.
+    \item Per defecte utilitza la font \emph{DoulosSIL}. Si voleu la mateixa font a tot el document, i que tingui negreta i cursiva, podeu fer servir \emph{charisSIL}.
+    \item Vegeu \href{https://jon.dehdari.org/tutorials/tipachart_mod.pdf}{aquesta taula resum} per un resum dels símbols i diacrítics, o \href{https://ctan.org/pkg/tipa}{el manual de tipa} per la informació completa.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Incís: Fonts, Unicode, Xe\LaTeX{} i Lua\LaTeX{}}
+\begin{itemize}
+    \item És recomenable carregar el paquet \bftt{tipauni} en comptes de \bftt{tipa}. Funciona exactament igual, però ens permetrà copiar els caràcters en Unicode.
+    \item Per defecte utilitza la font \emph{DoulosSIL}. Si voleu la mateixa font a tot el document, i que tingui negreta i cursiva, podeu fer servir \emph{charisSIL}.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Extra: diagrama vocals}
+\begin{itemize}
+\item El paquet \bftt{vowel} permet crear diagrames de vocals.
+\end{itemize}
+\begin{minipage}{0.55\linewidth}
+\inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
+  {ipa-vowel.tex}
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\linewidth}
+\includegraphics[width=\textwidth,clip,trim=2in 8.5in 4.5in 1.5in]{ipa-vowel.pdf}
+\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Exemples lingüístics}\label{sec:exemples_ling}
 \begin{frame}{Continguts}
 \begin{multicols}{2}
@@ -42,7 +162,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{linguex}
 \begin{frame}[fragile]{linguex: exemples}
 \begin{itemize}
 \item Les 3 ordres bàsiques de linguex són \cmdbs{ex.}, \cmdbs{a.} i \cmdbs{b.}.
@@ -238,87 +357,7 @@ Martin-ERG Diego-ABS vist ha \\
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Transcripció fonètica}
-\begin{frame}[fragile]{tipa}
-\begin{itemize}
-\item
-\end{itemize}
-\begin{exampletwouptiny2}
-\end{exampletwouptiny2}
-\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Extra: diagrama vocals}
-\begin{itemize}
-\item El paquet \bftt{vowel} permet crear diagrames de vocals.
-\end{itemize}
-\begin{minipage}{0.55\linewidth}
-\inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
-  {ipa-vowel.tex}
-\end{minipage}
-\hfill
-\begin{minipage}{0.4\linewidth}
-\includegraphics[width=\textwidth]{ipa-vowel.png}
-\end{minipage}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Anotacions amb \protect\bftt{todonotes}}
-\begin{frame}{Continguts}
-\begin{multicols}{2}
-\tableofcontents[currentsection]
-\end{multicols}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Anotacions amb \protect\bftt{todonotes}}
-\begin{itemize}
-\item L'ordre \cmdbs{todo} del paquet \bftt{todonotes} és útil per deixar notes
-per a un mateix o per co"laboradors.
-\begin{exampletwouptiny}
-\todo{afegir resultats}
-\todo[color=blue!20]{arreglar taula}
-\end{exampletwouptiny}
-\vskip 2ex
-\item Fes-ho senzill: defineix les teves pròpies ordres amb \cmdbs{newcommand}
-\begin{minted}[fontsize=\scriptsize,frame=single]{latex}
-\newcommand{\mar}[1]{\todo[color=green!40]{#1}}
-\newcommand{\andreu}[1]{\todo[color=purple!40]{#1}}
-\end{minted}
-Ja no cal escriure tant:
-\begin{exampletwouptiny}
-\mar{afegir resultats}
-\andreu{arreglar taula}
-\end{exampletwouptiny}
-\end{itemize}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Anotacions amb \protect\bftt{todonotes}}
-\begin{columns}
-  \begin{column}{0.4\textwidth}
-    \begin{itemize}
-    \item Amb beamer només s'admeten les notes en línia,
-        però les notes de marge són compatibles amb els documents normals.
-    \item També es poden enumerar les notes amb l'ordre \cmdbs{listoftodos}.
-    \end{itemize}
-  \end{column}
-  \begin{column}{0.6\textwidth}
-    \includegraphics[width=\textwidth,page=1]{todonotes-example}
-  \end{column}
-\end{columns}
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -337,8 +376,7 @@ Ja no cal escriure tant:
 \begin{frame}[fragile]{Presentacions amb \protect\bftt{beamer}}
 \begin{itemize}
 \item Beamer és un paquet per fer presentacions (com aquesta).
-\item Es fa servir amb el tipus de document \bftt{beamer}.
-\item Use the \bftt{frame} environment to create slides.
+\item Es fa servir amb el tipus de document \bftt{beamer}. Carrega automàticament alguns paquets, com \bftt{graphicx}, \bftt{hyperref} i \bftt{xcolor}.
 \item L'entorn \bftt{frame} crea diapositives.
 \end{itemize}
 \begin{minipage}{0.55\linewidth}
@@ -362,20 +400,19 @@ Ja no cal escriure tant:
 \vskip 2ex
 \begin{center}
 \fbox{\href{\wlnewdoc{beamer-minimal.tex}}{%
-Click to open the example document in \wllogo{}}}
+Cliqueu per obrir el document d'exemple a \wllogo{}}}
 \end{center}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Marcs}
 \begin{frame}[fragile]
-\frametitle{Presentation amb \protect\bftt{beamer}: Marcs}
+\frametitle{Presentacions amb \protect\bftt{beamer}: Marcs}
 \begin{itemize}
-\item Use \cmdbs{frametitle} to give the frame a title.
-\item Then add content to the frame.
-\item The source for this frame looks like:
+\item \cmdbs{frametitle} posa el títol de la diapositiva.
+\item Afegeix més continguts 
+\item El codi per aquest requadres és: 
 \vskip 2ex
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
   {beamer-frame.tex}
@@ -385,13 +422,11 @@ Click to open the example document in \wllogo{}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Seccions}
-\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Seccions}
+\begin{frame}[fragile]{Presentacions amb \protect\bftt{beamer}: Seccions}
 \begin{itemize}
-\item You can use \cmdbs{section}s to group your \bftt{frame}s, i
-\bftt{beamer} will use them to create an automatic outline.
-\item To generate an outline, use the \cmdbs{tableofcontents} ordre. Here's
-one for this presentation. The \bftt{currentsection} option highlights the current section.
+    \item Es poden agrupar els \bftt{frame}s en \cmdbs{section}s. \bftt{beamer} les farà servir per crear l'índex. 
+    \item L'índex es crea amb \cmdbs{tableofcontents} igual que per articles.
+    \item L'opció \bftt{currentsection} destaca la secció actual. 
 \vskip 2ex
 \begin{exampletwouptiny}
 % comentaris
@@ -402,6 +437,8 @@ one for this presentation. The \bftt{currentsection} option highlights the curre
 
 % espai
 
+% a la dreta
+
 \tableofcontents[currentsection]
 \end{exampletwouptiny}
 \end{itemize}
@@ -410,30 +447,28 @@ one for this presentation. The \bftt{currentsection} option highlights the curre
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Columnes}
-\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Multiple Columns}
+\begin{frame}[fragile]{Presentacions amb \protect\bftt{beamer}: Columnes}
+Hi ha diverses maneres de dividir una diapositiva en columnes.
 \begin{columns}
 \begin{column}{0.4\textwidth}
-\begin{itemize}
-\item Use the \bftt{columns} i \bftt{column} environments to break the slide
-into columns.
-\item The argument for each \bftt{column} determines its width.
-\item See also the \bftt{multicol} package, which automatically breaks your
-content into columns.
-\end{itemize}
+\begin{enumerate}
+\item Els entorns \bftt{columns} i \bftt{column} en són una.
+      L'argument per cada \bftt{column} determina la seva amplada. 
+\item El paquet \bftt{multicol} automàticament divideix un text en columnes. 
+\end{enumerate}
 \end{column}
 \begin{column}{0.6\textwidth}
 \begin{minted}[fontsize=\scriptsize,frame=single]{latex}
 \begin{columns}
   \begin{column}{0.4\textwidth}
     \begin{itemize}
-    \item Use the columns ...
-    \item The argument ...
-    \item See also the ...
+    \item Contingut de la  
+    \item columna de  
+    \item l'esquerra 
     \end{itemize}
   \end{column}
   \begin{column}{0.6\textwidth}
-    % second column
+    % segona columna 
   \end{column}
 \end{columns}
 \end{minted}
@@ -444,50 +479,49 @@ content into columns.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Destacar}
+\begin{frame}[fragile]{Presentacions amb \protect\bftt{beamer}: Destacar}
 \begin{itemize}
 
-\item Use \cmdbs{emph} or \cmdbs{alert} to highlight:
+\item \cmdbs{emph} o \cmdbs{alert} per destacar.
 \vskip 1ex
 \begin{exampletwouptiny}
-I should \emph{emphasise} that
-this is an \alert{important} point.
+Vull \emph{emfatitzar} que
+soc un text \alert{important}.
 \end{exampletwouptiny}
 \vskip 1ex
 
-\item Or specify bold face or italics:
+\item Òbviament segueixen existint les ordres que ja hem vist per articles: 
 \vskip 1ex
 \begin{exampletwouptiny}
-Text in \textbf{bold face}.
-Text in \textit{italics}.
+Text en \textbf{negreta}.
+Text en \textit{cursiva}.
 \end{exampletwouptiny}
 \vskip 1ex
 
-\item Or specify a color (American spelling):
+\item I podem fer servir colors\footnote{\bftt{beamer} carrega automàticament \href{https://ctan.javinator9889.com/macros/latex/contrib/xcolor/xcolor.pdf}{xcolor}, que té una àmplia paleta de colors, o ens podem definir els nostres propis. Per passar una opció a \bftt{xcolor} la podem passar directament a \bftt{beamer}, com \textbackslash documentclass[x11names]\{beamer\}.}
 \vskip 1ex
 \begin{exampletwouptiny}
-It \textcolor{red}{stops}
-and \textcolor{green}{starts}.
+Algo \textcolor{RoyalBlue1}{a destacar}
+o \textcolor{DarkSeaGreen4}{diferent}.
 \end{exampletwouptiny}
 \vskip 1ex
-\item See \url{http://www.math.umbc.edu/~rouben/beamer/quickstart-Z-H-25.html}
-for more colors \& custom colors.
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Figures}
-\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Figures}
+\begin{frame}[fragile]{Presentacions amb \protect\bftt{beamer}: Imatges}
 \begin{itemize}
-\item Use \cmdbs{includegraphics} from the \bftt{graphicx} package.
-\item The \bftt{figure} environment centers by default, in \bftt{beamer}.
+\item \cmdbs{includegraphics} del paquet \bftt{graphicx}.
+\item L'entorn \bftt{figure} centra la imatge per defecta a \bftt{beamer}.
 \vskip 2ex
 \begin{exampletwouptiny}
 \begin{figure}
 \includegraphics[
   width=0.5\textwidth]{gus_gran}
+  \caption{En Gus}
+  \label{fig:gus}
 \end{figure}
 \end{exampletwouptiny}
 \end{itemize}
@@ -497,20 +531,20 @@ for more colors \& custom colors.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Blocks}
+\begin{frame}[fragile]{Presentacions amb \protect\bftt{beamer}: Blocks}
 \begin{itemize}
-\item A \bftt{block} environment makes a titled box.
+\item L'entorn \bftt{block} fa capses amb títol. 
 \begin{exampletwouptiny}
-\begin{block}{Interesting Fact}
-This is important.
+\begin{block}{Dades interessants}
+Resultats importants.
 \end{block}
 
-\begin{alertblock}{Cautionary Tale}
-This is really important!
+\begin{alertblock}{Compte}
+    Pot ser important.
 \end{alertblock}
 \end{exampletwouptiny}
 
-\item How exactly they look depends on the theme\dots
+\item De la mateixa manera que \cmdbs{emph}, l'aspecte dels blocks dependrà del tema de \bftt{beamer}.
 \end{itemize}
 \end{frame}
 
@@ -518,11 +552,10 @@ This is really important!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-    \frametitle{Presentation amb \protect\bftt{beamer}: Themes}
+    \frametitle{Presentacions amb \protect\bftt{beamer}: Temes}
 \begin{itemize}
-\item Customise the look of your presentation using themes.
-\item See \url{http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html}
-for a large collection of themes.
+    \item Es pot canviar el tema (aspecte). La majoria de temes clàssics de \LaTeX{} són tirant a lletjos, però s'en poden trobar de \href{https://github.com/martinbjeldbak/ultimate-beamer-theme-list?tab=readme-ov-file}{moderns} més decents. Aquesta presentació fa servir el tema \textbf{metropolis}.\footnote{Segons quin tema trobeu en línia, és possible que no estigui instalat a Overleaf o la vostra instalació local. En aquest cas caldrà descarrear-se'l i posar-lo a la mateixa carpeta del projecte.}
+    \item O podeu veure exemples a \href{https://www.overleaf.com/gallery/tagged/beamer}{Overleaf}.
 \end{itemize}
 \begin{minipage}{0.55\linewidth}
 \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
@@ -537,47 +570,50 @@ for a large collection of themes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Animation}
+\begin{frame}[fragile]{Presentacions amb \protect\bftt{beamer}: Animacions}
 \begin{itemize}
-\item A frame can generate multiple slides.
-\item Use the \cmdbs{pause} ordre to show only part of a slide.
+    \item Un \bftt{frame} pot generar diverses diapositives.
+    \item L'ordre \cmdbs{pause} mostra talla la diapositiva al punt on apareix. 
 \vskip 2ex
 \begin{exampletwouptinynoframe}
 \begin{itemize}
-\item Can you feel the
-\pause \item anticipation?
+\item Pots sentir la
+\pause \item intriga?
 \end{itemize}
 \end{exampletwouptinynoframe}
 \vskip 2ex
-\item There many more clever ways of making animations in \bftt{beamer}; see
-also the \cmdbs{only}, \cmdbs{alt}, i \cmdbs{uncover} ordres.
+\item Hi ha més maneres de fer animacions a \bftt{beamer}; vegeu
+les ordres \cmdbs{only}, \cmdbs{alt}, i \cmdbs{uncover}.
 \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]{Presentation amb \protect\bftt{beamer}: Exercise}
+\begin{frame}[fragile]{Presentacions amb \protect\bftt{beamer}: Exercici}
 
-Recreate Peter Norvig's excellent ``Gettysburg Powerpoint Presentation'' in \bftt{beamer}.\footnote{\url{http://norvig.com/Gettysburg}}
+Recreeu la ``Gettysburg Powerpoint Presentation'' amb \bftt{beamer}.\footnote{\url{http://norvig.com/Gettysburg}}
 
 \begin{enumerate}
-\item Open this exercise in \wllogo{}:
+\item Obriu l'exercici:
 \begin{center}
 \fbox{\href{\wlnewdoc{beamer-exercise.tex}}{%
-Click to open this exercise in \wllogo{}}}
+Cliqueu per obrir l'exercici a \wllogo{}}}
 \end{center}
 \vskip 2ex
-\item Download this image to your computer i upload it to \wllogo{} via the
+\item Descarregueu-vos la imatge \wllogo{} via the
 files menu.
 \begin{center}
-\fbox{\href{\fileuri/gettysburg_graph.png?dl=1}{Click to download image}}
+\fbox{\href{\fileuri/figures/gettysburg_graph.png?dl=1}{Cliqueu per descarregar la imatge}}
 \end{center}
 \vskip 2ex
-\item Add \LaTeX{} ordres to the text to make it look like this one:
+\item Feu que el document s'assembli al següent:
 \begin{center}
 \fbox{\href{\fileuri/beamer-exercise-solution.pdf}{%
-Click to open the model document}}
+Cliqueu per obrir el document model}}
+\vfill
+\fbox{\href{\wlnewdoc{beamer-exercise-solution.tex}}{%
+Podeu veure la solució aquí}}
 \end{center}
 \end{enumerate}
 \end{frame}
@@ -585,7 +621,7 @@ Click to open the model document}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Què més?}
+\section{Què més?}\label{sec:altres}
 \begin{frame}{Continguts}
 \begin{multicols}{2}
 \tableofcontents[currentsection]
@@ -597,10 +633,33 @@ Click to open the model document}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Altres coses interessants}
 \begin{frame}[fragile]{Altres}
+\begin{itemize}\small
+    \item \cmdbs{\textbackslash} força canvi de línia i \cmdbs{newpage} canvi de pàgina (\href{https://www.overleaf.com/learn/latex/Line_breaks_and_blank_spaces#Line_breaks}{més sobre espaiat}).
+    \item La titlla (``virguililla, tilde'') \keystroke{\~} és un caràcter especial a \LaTeX{}, cal escapar-la si es vol impresa. Es fa servir per evitar separar dues paraules en línies diferents (non-breaking space). És recomenable fer-la servir entre el nom i la referència.
+    \item Típicament, una frase acaba en lletra minúscula seguida de punt. \LaTeX{} interpreta lletra majúscula seguida de punt com a acrònim. Si això no es compleix cal explicitar-ho per tenir l'espaiat adequat\footnote{La secció de bibliografia ja té això en compte.}:
+    \begin{itemize}
+        \item \cmd{.\textbackslash} marca un punt que no acaba la frase.
+        \item \cmdbs{@} marca que una majúscula acaba la frase.
+    \end{itemize}
+
+\begin{exampletwouptiny}
+Figura~\ref{fig:gus} \\
+entre 0 i~1 \\
+Donald~E. Knuth \\
+Prof.~Adam\\
+Treballa a l'ONU\@ \\
+El ``Combin.\ Journal''
+\end{exampletwouptiny}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{Altres 2}
 \begin{itemize}
-    \item \cmdbs{\textbackslash} per forçar canvi de línia i \cmdbs{newpage} per canvi de pàgina (\href{https://www.overleaf.com/learn/latex/Line_breaks_and_blank_spaces#Line_breaks}{més sobre espaiat}).
-\item \cmdbs{footnote} per notes al peu de pàgina.
-\item \cmdbs{input} permet incloure documents de \LaTeX{} dins d'altres documents.
+    \item \cmdbs{footnote} per notes al peu de pàgina.
+    \item \cmdbs{input} permet incloure documents de \LaTeX{} dins d'altres documents.
     Útil per:
         \begin{itemize}{\footnotesize
         \item Seccions de documents
@@ -608,8 +667,9 @@ Click to open the model document}}
         \item Separar el preàmbul (i reutilitzar-lo)
         }\end{itemize}
         \footnotesize{Vegeu \textit{treball morfologia basca} als exemples finals.}
-        \href{https://www.overleaf.com/learn/latex/Management_in_a_large_project}{Existeixen altres opcions per tractar amb documents grans}.
-    \item Podem canviar la indentació dels paràgrafs (\href{https://www.overleaf.com/learn/latex/Articles/How_to_change_paragraph_spacing_in_LaTeX}{més sobre espaiat de paràgrafs}). \\
+        També hi ha
+        \href{https://www.overleaf.com/learn/latex/Management_in_a_large_project}{altres opcions per tractar amb documents grans}.
+    \item \normalsize Podem canviar la indentació dels paràgrafs (\href{https://www.overleaf.com/learn/latex/Articles/How_to_change_paragraph_spacing_in_LaTeX}{més sobre espaiat de paràgrafs}). \\
     \footnotesize{Vegeu \textit{treball de transcripció fonètica} als exemples finals.}
 \begin{exampletiny}
 %  Treu el sagnat
@@ -619,19 +679,20 @@ Click to open the model document}}
 \end{exampletiny}
 \end{itemize}
 \end{frame}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Altres paquets}
-\begin{frame}{Altres paquets}
+\begin{frame}{Altres paquets i recursos}
 \begin{itemize}
-\item \bftt{tikz}: gràfics, una mica difícil.
-\item \bftt{tikz-qtree}: arbres per sintaxi, relacions genètiques \dots
-\item \bftt{pgfplots}: create graphs in \LaTeX{}
-\item \bftt{langnames}: per noms d'idiomes de manera sistemàtica.
+    \item \bftt{tikz}: per crear gràfics, una mica difícil.
+    \item \bftt{langnames}: per noms d'idiomes de manera sistemàtica.
+    \item \url{https://meluhha.com/tableau/} per taules de ``optimality theory''
+    \item \href{https://detexify.kirelabs.org/classify.html}{Detexify} --- dibuixes el símbol i et diu com fer-lo amb \LaTeX.
+    \item \href{https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf}{Llista de símbols que es poden fer a \LaTeX}.
+    \item \href{https://arxiv.org}{arxiv} permet descarregar-se l'article amb \LaTeX de la majoria d'articles.
 \end{itemize}
-Vegeu \url{https://www.overleaf.com/latex/examples} i \url{http://texample.net}
+Vegeu \url{https://www.overleaf.com/latex/examples} i \url{http://texample.net} 
 per exemples.
 \end{frame}
 
@@ -668,7 +729,7 @@ De senzill a complex:
 \end{itemize}
 \end{itemize}
 
-Finalment, us pot ser útil \href{https://www.overleaf.com/read/vsdvmbzywdrn\#d43fce}{aquesta plantilla senzilla}.
+Finalment, us pot ser útil \href{https://www.overleaf.com/read/zkfhtdnpbdwq\#2f636f}{aquesta plantilla senzilla}.
 
 \end{frame}
 

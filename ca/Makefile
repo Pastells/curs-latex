@@ -74,9 +74,15 @@ recap-exercise-solution.pdf: recap-exercise-solution.tex
 #
 # Part 3
 #
-part3.pdf: part3.tex preamble.tex beamer-minimal.pdf beamer-theme.pdf beamer-exercise.pdf beamer-exercise-solution.pdf
+part3.pdf: part3.tex preamble.tex ipa.pdf ipa-vowel.pdf beamer-minimal.pdf beamer-theme.pdf beamer-exercise.pdf beamer-exercise-solution.pdf
 	pdflatex -shell-escape part3
 	pdflatex -shell-escape part3
+
+ipa.pdf: ipa.tex
+	lualatex ipa 
+
+ipa-vowel.pdf: ipa-vowel.tex
+	lualatex ipa-vowel 
 
 beamer-minimal.pdf: beamer-minimal.tex
 	pdflatex beamer-minimal
