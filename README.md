@@ -18,7 +18,7 @@ El material està dividit en 3 classes de dues hores:
    Títol, seccions, referències creuades i bibliografia.
 
 3. [Tercera part](https://github.com/Pastells/curs-latex/blob/master/ca/part3.pdf):
-   Paquets lingüística (`linguex` i `tipa`), notes i comentaris, presentacions amb `beamer`; enllaços a exemples comentats.
+   Paquets lingüística (`linguex` i `tipa`), notes i comentaris, presentacions amb `beamer`.
 
 A més es presenta una [breu discussió sobre la tipografia de la ela geminada](https://www.overleaf.com/read/qzvfzjwgqwgd#389fd3).
 
